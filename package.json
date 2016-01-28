@@ -1,0 +1,23 @@
+{
+  "name": "date2osmdiffs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rub21/date2osmdiffs.git"
+  },
+  "author": "Ruben Lopez M <ruben@mapbox.com> (http://rub21.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rub21/date2osmdiffs/issues"
+  },
+  "homepage": "https://github.com/Rub21/date2osmdiffs#readme",
+  "dependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
+  }
+}
