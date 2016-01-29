@@ -2,14 +2,14 @@
 var util = require('./util');
 var date2osmdiffs = {
   minute: function(date) {
-    var startDateMinute = 1453907940; //01/27/2016 @ 3:19pm
-    var startNumberMinute = 1766000; //minute/001/766/000.osc.gz
+    var startDateMinute = 1347441960;
+    var startNumberMinute = 1;
     var intervalMinute = 60;
     var timestamp = date2timestamp(date);
     timestamp = timestamp - timestamp % 10;
     var diffDate = timestamp - startDateMinute;
-    var number = diffDate / intervalMinute;
-    return parseInt(startNumberMinute + number);
+    var number = parseInt(diffDate / intervalMinute) + startNumberMinute;
+    return util.minute(number);
   },
   hour: function(date) {
     var startDateHour = 1351033200;
@@ -39,5 +39,13 @@ function date2timestamp(date) {
   } else {
     return (new Date(date)) / 1000;
   }
+}
+
+
+function fixminute(num) {
+  if (num < 1347442080) {
+    return num - 1347442080;
+  }
+
 }
 module.exports = date2osmdiffs;
