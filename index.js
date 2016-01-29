@@ -20,6 +20,16 @@ var date2osmdiffs = {
     var diffDate = timestamp - startDateHour;
     var number = parseInt(diffDate / intervalHour) + startNumberHour;
     return util.hour(number);
+  },
+  day: function(date) {
+    var startDateDay = 1347494400;
+    var startNumberDay = 1;
+    var intervalDay = 86400;
+    var timestamp = date2timestamp(date);
+    timestamp = timestamp - timestamp % 100;
+    var diffDate = timestamp - startDateDay;
+    var number = parseInt(diffDate / intervalDay) + startNumberDay;
+    return util.day(number);
   }
 };
 
