@@ -8,3 +8,6 @@ Easy way to convert date to number of [Planet.osm/diffs](http://wiki.openstreetm
 ```sh
 npm install & npm test
 ```
+
+## Related
+https://github.com/MaZderMind/replicate-sequences
