@@ -1,11 +1,16 @@
 'use strict';
 var util = require('./util');
+var fixminutes = require('./util/fixMinutes');
+
 var date2osmdiffs = {
   minute: function(date) {
-    var startDateMinute = 1347441960;
-    var startNumberMinute = 1;
+    var startDateMinute = 1347442140;
+    var startNumberMinute = 2;
     var intervalMinute = 60;
     var timestamp = date2timestamp(date);
+    //console.log(timestamp);
+    console.log('==============' + fixminutes(timestamp));
+    timestamp = timestamp - fixminutes(timestamp);
     timestamp = timestamp - timestamp % 10;
     var diffDate = timestamp - startDateMinute;
     var number = parseInt(diffDate / intervalMinute) + startNumberMinute;
