@@ -1,7 +1,7 @@
 var date2osmdiffs = require('../');
 var request = require('request');
 var argv = require('optimist').argv;
-var obj = date2osmdiffs.minute(argv.date);
+var obj = date2osmdiffs.day(argv.date);
 request(obj.url_state, function(error, response, body) {
   if (!error && response.statusCode == 200) {
     var v = body.split('\n');

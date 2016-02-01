@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = {
   minute: function(sequenceNumber) {
     var sequence = sequenceNumber;
