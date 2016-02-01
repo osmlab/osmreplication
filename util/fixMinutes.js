@@ -1,4471 +1,4088 @@
+'use strict';
+
 module.exports = function(timestamp) {
-  var offsetSeconds;
-  console.log('------' + timestamp);
-  switch (true) {
-    case (timestamp <= 1347566280):
-      offsetSeconds = 120;
-      break;
-    case (timestamp <= 1347968640):
-      offsetSeconds = 180;
-      break;
-    case (timestamp <= 1347969600):
-      offsetSeconds = 1260;
-      break;
-    case (timestamp <= 1348137420):
-      offsetSeconds = 1380;
-      break;
-    case (timestamp <= 1348443120):
-      offsetSeconds = 1440;
-      break;
-    case (timestamp <= 1348493740):
-      offsetSeconds = 1400;
-      break;
-    case (timestamp <= 1348651180):
-      offsetSeconds = 3560;
-      break;
-    case (timestamp <= 1348669840):
-      offsetSeconds = 3680;
-      break;
-    case (timestamp <= 1348729000):
-      offsetSeconds = 3740;
-      break;
-    case (timestamp <= 1348816480):
-      offsetSeconds = 3800;
-      break;
-    case (timestamp <= 1348984660):
-      offsetSeconds = 3860;
-      break;
-    case (timestamp <= 1349026600):
-      offsetSeconds = 3920;
-      break;
-    case (timestamp <= 1349027080):
-      offsetSeconds = 3980;
-      break;
-    case (timestamp <= 1349027560):
-      offsetSeconds = 4040;
-      break;
-    case (timestamp <= 1349028160):
-      offsetSeconds = 4100;
-      break;
-    case (timestamp <= 1349192140):
-      offsetSeconds = 4190;
-      break;
-    case (timestamp <= 1349207200):
-      offsetSeconds = 4160;
-      break;
-    case (timestamp <= 1349211700):
-      offsetSeconds = 4280;
-      break;
-    case (timestamp <= 1349241580):
-      offsetSeconds = 4400;
-      break;
-    case (timestamp <= 1349245180):
-      offsetSeconds = 4530;
-      break;
-    case (timestamp <= 1349443120):
-      offsetSeconds = 4520;
-      break;
-    case (timestamp <= 1349619260):
-      offsetSeconds = 4540;
-      break;
-    case (timestamp <= 1349687360):
-      offsetSeconds = 4600;
-      break;
-    case (timestamp <= 1349949500):
-      offsetSeconds = 4660;
-      break;
-    case (timestamp <= 1350443120):
-      offsetSeconds = 4720;
-      break;
-    case (timestamp <= 1350579360):
-      offsetSeconds = 4740;
-      break;
-    case (timestamp <= 1350644940):
-      offsetSeconds = 5100;
-      break;
-    case (timestamp <= 1351036080):
-      offsetSeconds = 5220;
-      break;
-    case (timestamp <= 1351037160):
-      offsetSeconds = 5280;
-      break;
-    case (timestamp <= 1351038240):
-      offsetSeconds = 5400;
-      break;
-    case (timestamp <= 1351084320):
-      offsetSeconds = 5520;
-      break;
-    case (timestamp <= 1351180260):
-      offsetSeconds = 5580;
-      break;
-    case (timestamp <= 1351419660):
-      offsetSeconds = 5700;
-      break;
-    case (timestamp <= 1351443120):
-      offsetSeconds = 5820;
-      break;
-    case (timestamp <= 1351511440):
-      offsetSeconds = 5780;
-      break;
-    case (timestamp <= 1351515160):
-      offsetSeconds = 5900;
-      break;
-    case (timestamp <= 1351518580):
-      offsetSeconds = 6020;
-      break;
-    case (timestamp <= 1351574440):
-      offsetSeconds = 6080;
-      break;
-    case (timestamp <= 1351576420):
-      offsetSeconds = 6140;
-      break;
-    case (timestamp <= 1351584340):
-      offsetSeconds = 6200;
-      break;
-    case (timestamp <= 1351689400):
-      offsetSeconds = 6260;
-      break;
-    case (timestamp <= 1351689460):
-      offsetSeconds = 6320;
-      break;
-    case (timestamp <= 1351732780):
-      offsetSeconds = 6430;
-      break;
-    case (timestamp <= 1351732840):
-      offsetSeconds = 6420;
-      break;
-    case (timestamp <= 1351790680):
-      offsetSeconds = 6380;
-      break;
-    case (timestamp <= 1351874020):
-      offsetSeconds = 6440;
-      break;
-    case (timestamp <= 1351874080):
-      offsetSeconds = 6490;
-      break;
-    case (timestamp <= 1351900000):
-      offsetSeconds = 6550;
-      break;
-    case (timestamp <= 1351902580):
-      offsetSeconds = 6520;
-      break;
-    case (timestamp <= 1351905280):
-      offsetSeconds = 6510;
-      break;
-    case (timestamp <= 1351907320):
-      offsetSeconds = 6500;
-      break;
-    case (timestamp <= 1351907380):
-      offsetSeconds = 6670;
-      break;
-    case (timestamp <= 1351909240):
-      offsetSeconds = 6720;
-      break;
-    case (timestamp <= 1351909300):
-      offsetSeconds = 6680;
-      break;
-    case (timestamp <= 1351909360):
-      offsetSeconds = 6700;
-      break;
-    case (timestamp <= 1351909420):
-      offsetSeconds = 6750;
-      break;
-    case (timestamp <= 1351909540):
-      offsetSeconds = 6740;
-      break;
-    case (timestamp <= 1351909600):
-      offsetSeconds = 6910;
-      break;
-    case (timestamp <= 1351909660):
-      offsetSeconds = 6860;
-      break;
-    case (timestamp <= 1351909720):
-      offsetSeconds = 7040;
-      break;
-    case (timestamp <= 1351909780):
-      offsetSeconds = 7380;
-      break;
-    case (timestamp <= 1351909840):
-      offsetSeconds = 7950;
-      break;
-    case (timestamp <= 1351909900):
-      offsetSeconds = 8440;
-      break;
-    case (timestamp <= 1351909960):
-      offsetSeconds = 8420;
-      break;
-    case (timestamp <= 1351910020):
-      offsetSeconds = 8660;
-      break;
-    case (timestamp <= 1351910080):
-      offsetSeconds = 8720;
-      break;
-    case (timestamp <= 1351910140):
-      offsetSeconds = 8730;
-      break;
-    case (timestamp <= 1351910200):
-      offsetSeconds = 9250;
-      break;
-    case (timestamp <= 1351910260):
-      offsetSeconds = 9200;
-      break;
-    case (timestamp <= 1351911880):
-      offsetSeconds = 9350;
-      break;
-    case (timestamp <= 1351911940):
-      offsetSeconds = 9320;
-      break;
-    case (timestamp <= 1351912000):
-      offsetSeconds = 9410;
-      break;
-    case (timestamp <= 1351912180):
-      offsetSeconds = 9380;
-      break;
-    case (timestamp <= 1351912240):
-      offsetSeconds = 9900;
-      break;
-    case (timestamp <= 1351934080):
-      offsetSeconds = 10240;
-      break;
-    case (timestamp <= 1351937020):
-      offsetSeconds = 10220;
-      break;
-    case (timestamp <= 1351937140):
-      offsetSeconds = 10410;
-      break;
-    case (timestamp <= 1351938940):
-      offsetSeconds = 10400;
-      break;
-    case (timestamp <= 1351939000):
-      offsetSeconds = 10710;
-      break;
-    case (timestamp <= 1351939060):
-      offsetSeconds = 10720;
-      break;
-    case (timestamp <= 1351939540):
-      offsetSeconds = 10700;
-      break;
-    case (timestamp <= 1351943260):
-      offsetSeconds = 10950;
-      break;
-    case (timestamp <= 1351944460):
-      offsetSeconds = 10940;
-      break;
-    case (timestamp <= 1351944520):
-      offsetSeconds = 11050;
-      break;
-    case (timestamp <= 1351944760):
-      offsetSeconds = 11000;
-      break;
-    case (timestamp <= 1351954840):
-      offsetSeconds = 11270;
-      break;
-    case (timestamp <= 1351958620):
-      offsetSeconds = 11240;
-      break;
-    case (timestamp <= 1351958680):
-      offsetSeconds = 11300;
-      break;
-    case (timestamp <= 1351958740):
-      offsetSeconds = 12350;
-      break;
-    case (timestamp <= 1351958800):
-      offsetSeconds = 12320;
-      break;
-    case (timestamp <= 1351958860):
-      offsetSeconds = 12760;
-      break;
-    case (timestamp <= 1351959760):
-      offsetSeconds = 13100;
-      break;
-    case (timestamp <= 1351959820):
-      offsetSeconds = 13530;
-      break;
-    case (timestamp <= 1351959880):
-      offsetSeconds = 13520;
-      break;
-    case (timestamp <= 1351959940):
-      offsetSeconds = 13590;
-      break;
-    case (timestamp <= 1351960000):
-      offsetSeconds = 13790;
-      break;
-    case (timestamp <= 1351962220):
-      offsetSeconds = 13770;
-      break;
-    case (timestamp <= 1351962700):
-      offsetSeconds = 13760;
-      break;
-    case (timestamp <= 1351963420):
-      offsetSeconds = 13860;
-      break;
-    case (timestamp <= 1351976920):
-      offsetSeconds = 13830;
-      break;
-    case (timestamp <= 1351977160):
-      offsetSeconds = 13820;
-      break;
-    case (timestamp <= 1351977220):
-      offsetSeconds = 13910;
-      break;
-    case (timestamp <= 1351977520):
-      offsetSeconds = 13880;
-      break;
-    case (timestamp <= 1351977580):
-      offsetSeconds = 13890;
-      break;
-    case (timestamp <= 1351977640):
-      offsetSeconds = 14190;
-      break;
-    case (timestamp <= 1351980160):
-      offsetSeconds = 14240;
-      break;
-    case (timestamp <= 1351980220):
-      offsetSeconds = 14480;
-      break;
-    case (timestamp <= 1351980280):
-      offsetSeconds = 14420;
-      break;
-    case (timestamp <= 1351980340):
-      offsetSeconds = 14770;
-      break;
-    case (timestamp <= 1351980400):
-      offsetSeconds = 14720;
-      break;
-    case (timestamp <= 1351980460):
-      offsetSeconds = 14730;
-      break;
-    case (timestamp <= 1351980520):
-      offsetSeconds = 15340;
-      break;
-    case (timestamp <= 1351980580):
-      offsetSeconds = 15980;
-      break;
-    case (timestamp <= 1351980640):
-      offsetSeconds = 16290;
-      break;
-    case (timestamp <= 1351980760):
-      offsetSeconds = 16320;
-      break;
-    case (timestamp <= 1351981060):
-      offsetSeconds = 16280;
-      break;
-    case (timestamp <= 1351981120):
-      offsetSeconds = 16600;
-      break;
-    case (timestamp <= 1351981420):
-      offsetSeconds = 16580;
-      break;
-    case (timestamp <= 1351981480):
-      offsetSeconds = 16590;
-      break;
-    case (timestamp <= 1351981540):
-      offsetSeconds = 16780;
-      break;
-    case (timestamp <= 1351981660):
-      offsetSeconds = 16760;
-      break;
-    case (timestamp <= 1351982260):
-      offsetSeconds = 17000;
-      break;
-    case (timestamp <= 1351982320):
-      offsetSeconds = 17370;
-      break;
-    case (timestamp <= 1351992100):
-      offsetSeconds = 17360;
-      break;
-    case (timestamp <= 1351992160):
-      offsetSeconds = 17390;
-      break;
-    case (timestamp <= 1352004100):
-      offsetSeconds = 17560;
-      break;
-    case (timestamp <= 1352005000):
-      offsetSeconds = 17580;
-      break;
-    case (timestamp <= 1352005840):
-      offsetSeconds = 17550;
-      break;
-    case (timestamp <= 1352017900):
-      offsetSeconds = 17570;
-      break;
-    case (timestamp <= 1352024200):
-      offsetSeconds = 17540;
-      break;
-    case (timestamp <= 1352024320):
-      offsetSeconds = 17600;
-      break;
-    case (timestamp <= 1352026780):
-      offsetSeconds = 17750;
-      break;
-    case (timestamp <= 1352027980):
-      offsetSeconds = 17720;
-      break;
-    case (timestamp <= 1352028040):
-      offsetSeconds = 17910;
-      break;
-    case (timestamp <= 1352028520):
-      offsetSeconds = 18170;
-      break;
-    case (timestamp <= 1352368540):
-      offsetSeconds = 18140;
-      break;
-    case (timestamp <= 1352443120):
-      offsetSeconds = 18440;
-      break;
-    case (timestamp <= 1352728040):
-      offsetSeconds = 18460;
-      break;
-    case (timestamp <= 1353090500):
-      offsetSeconds = 18580;
-      break;
-    case (timestamp <= 1353090560):
-      offsetSeconds = 18720;
-      break;
-    case (timestamp <= 1353176000):
-      offsetSeconds = 18700;
-      break;
-    case (timestamp <= 1353443120):
-      offsetSeconds = 18760;
-      break;
-    case (timestamp <= 1354443120):
-      offsetSeconds = 18780;
-      break;
-    case (timestamp <= 1354585660):
-      offsetSeconds = 18740;
-      break;
-    case (timestamp <= 1355443120):
-      offsetSeconds = 18920;
-      break;
-    case (timestamp <= 1355518940):
-      offsetSeconds = 18940;
-      break;
-    case (timestamp <= 1355519000):
-      offsetSeconds = 19080;
-      break;
-    case (timestamp <= 1355541560):
-      offsetSeconds = 19060;
-      break;
-    case (timestamp <= 1355542520):
-      offsetSeconds = 25240;
-      break;
-    case (timestamp <= 1355543720):
-      offsetSeconds = 28770;
-      break;
-    case (timestamp <= 1356390020):
-      offsetSeconds = 28790;
-      break;
-    case (timestamp <= 1356562800):
-      offsetSeconds = 28810;
-      break;
-    case (timestamp <= 1358443120):
-      offsetSeconds = 28760;
-      break;
-    case (timestamp <= 1359443120):
-      offsetSeconds = 28780;
-      break;
-    case (timestamp <= 1360231500):
-      offsetSeconds = 28800;
-      break;
-    case (timestamp <= 1360232280):
-      offsetSeconds = 28860;
-      break;
-    case (timestamp <= 1360232880):
-      offsetSeconds = 28920;
-      break;
-    case (timestamp <= 1360232940):
-      offsetSeconds = 29900;
-      break;
-    case (timestamp <= 1360233000):
-      offsetSeconds = 30240;
-      break;
-    case (timestamp <= 1360443120):
-      offsetSeconds = 30300;
-      break;
-    case (timestamp <= 1360655680):
-      offsetSeconds = 30260;
-      break;
-    case (timestamp <= 1360801420):
-      offsetSeconds = 30320;
-      break;
-    case (timestamp <= 1360817740):
-      offsetSeconds = 30560;
-      break;
-    case (timestamp <= 1361062900):
-      offsetSeconds = 30620;
-      break;
-    case (timestamp <= 1361281900):
-      offsetSeconds = 30680;
-      break;
-    case (timestamp <= 1361285860):
-      offsetSeconds = 36500;
-      break;
-    case (timestamp <= 1361287180):
-      offsetSeconds = 58160;
-      break;
-    case (timestamp <= 1361443120):
-      offsetSeconds = 58340;
-      break;
-    case (timestamp <= 1361927000):
-      offsetSeconds = 58360;
-      break;
-    case (timestamp <= 1361929820):
-      offsetSeconds = 58420;
-      break;
-    case (timestamp <= 1362070040):
-      offsetSeconds = 58480;
-      break;
-    case (timestamp <= 1362443120):
-      offsetSeconds = 59140;
-      break;
-    case (timestamp <= 1362681180):
-      offsetSeconds = 59160;
-      break;
-    case (timestamp <= 1362681300):
-      offsetSeconds = 63480;
-      break;
-    case (timestamp <= 1362681360):
-      offsetSeconds = 66340;
-      break;
-    case (timestamp <= 1362683880):
-      offsetSeconds = 66300;
-      break;
-    case (timestamp <= 1362928320):
-      offsetSeconds = 74940;
-      break;
-    case (timestamp <= 1363443120):
-      offsetSeconds = 75000;
-      break;
-    case (timestamp <= 1363735240):
-      offsetSeconds = 74960;
-      break;
-    case (timestamp <= 1363750360):
-      offsetSeconds = 75020;
-      break;
-    case (timestamp <= 1363750420):
-      offsetSeconds = 75100;
-      break;
-    case (timestamp <= 1363751320):
-      offsetSeconds = 75080;
-      break;
-    case (timestamp <= 1363753840):
-      offsetSeconds = 75180;
-      break;
-    case (timestamp <= 1363754440):
-      offsetSeconds = 75140;
-      break;
-    case (timestamp <= 1363754500):
-      offsetSeconds = 75490;
-      break;
-    case (timestamp <= 1363756300):
-      offsetSeconds = 75440;
-      break;
-    case (timestamp <= 1363757920):
-      offsetSeconds = 75560;
-      break;
-    case (timestamp <= 1363757980):
-      offsetSeconds = 75820;
-      break;
-    case (timestamp <= 1363762720):
-      offsetSeconds = 75800;
-      break;
-    case (timestamp <= 1363763500):
-      offsetSeconds = 75860;
-      break;
-    case (timestamp <= 1363764220):
-      offsetSeconds = 75980;
-      break;
-    case (timestamp <= 1363764280):
-      offsetSeconds = 75990;
-      break;
-    case (timestamp <= 1363764340):
-      offsetSeconds = 76410;
-      break;
-    case (timestamp <= 1363765960):
-      offsetSeconds = 76460;
-      break;
-    case (timestamp <= 1363766020):
-      offsetSeconds = 76980;
-      break;
-    case (timestamp <= 1363777900):
-      offsetSeconds = 76990;
-      break;
-    case (timestamp <= 1363778620):
-      offsetSeconds = 76940;
-      break;
-    case (timestamp <= 1363778800):
-      offsetSeconds = 77000;
-      break;
-    case (timestamp <= 1363778860):
-      offsetSeconds = 77330;
-      break;
-    case (timestamp <= 1363780240):
-      offsetSeconds = 77300;
-      break;
-    case (timestamp <= 1363780300):
-      offsetSeconds = 77380;
-      break;
-    case (timestamp <= 1363780720):
-      offsetSeconds = 77360;
-      break;
-    case (timestamp <= 1363780780):
-      offsetSeconds = 77500;
-      break;
-    case (timestamp <= 1363781560):
-      offsetSeconds = 77480;
-      break;
-    case (timestamp <= 1363782220):
-      offsetSeconds = 77540;
-      break;
-    case (timestamp <= 1363782940):
-      offsetSeconds = 77660;
-      break;
-    case (timestamp <= 1363783660):
-      offsetSeconds = 77720;
-      break;
-    case (timestamp <= 1363783720):
-      offsetSeconds = 77810;
-      break;
-    case (timestamp <= 1363783840):
-      offsetSeconds = 77900;
-      break;
-    case (timestamp <= 1363808500):
-      offsetSeconds = 78100;
-      break;
-    case (timestamp <= 1363818580):
-      offsetSeconds = 78080;
-      break;
-    case (timestamp <= 1363818640):
-      offsetSeconds = 78110;
-      break;
-    case (timestamp <= 1363818700):
-      offsetSeconds = 78210;
-      break;
-    case (timestamp <= 1363819000):
-      offsetSeconds = 78360;
-      break;
-    case (timestamp <= 1363819660):
-      offsetSeconds = 78320;
-      break;
-    case (timestamp <= 1363819720):
-      offsetSeconds = 78600;
-      break;
-    case (timestamp <= 1363822180):
-      offsetSeconds = 78620;
-      break;
-    case (timestamp <= 1363825480):
-      offsetSeconds = 78690;
-      break;
-    case (timestamp <= 1363825780):
-      offsetSeconds = 78680;
-      break;
-    case (timestamp <= 1363827460):
-      offsetSeconds = 78830;
-      break;
-    case (timestamp <= 1363828000):
-      offsetSeconds = 78810;
-      break;
-    case (timestamp <= 1363828300):
-      offsetSeconds = 78800;
-      break;
-    case (timestamp <= 1363828480):
-      offsetSeconds = 78980;
-      break;
-    case (timestamp <= 1363828540):
-      offsetSeconds = 79310;
-      break;
-    case (timestamp <= 1363833880):
-      offsetSeconds = 79280;
-      break;
-    case (timestamp <= 1363838200):
-      offsetSeconds = 79700;
-      break;
-    case (timestamp <= 1363840240):
-      offsetSeconds = 83900;
-      break;
-    case (timestamp <= 1363851640):
-      offsetSeconds = 84500;
-      break;
-    case (timestamp <= 1363851700):
-      offsetSeconds = 84850;
-      break;
-    case (timestamp <= 1363853260):
-      offsetSeconds = 84800;
-      break;
-    case (timestamp <= 1363853320):
-      offsetSeconds = 85140;
-      break;
-    case (timestamp <= 1363856320):
-      offsetSeconds = 85100;
-      break;
-    case (timestamp <= 1363856500):
-      offsetSeconds = 85510;
-      break;
-    case (timestamp <= 1363880860):
-      offsetSeconds = 85500;
-      break;
-    case (timestamp <= 1363880920):
-      offsetSeconds = 85460;
-      break;
-    case (timestamp <= 1363880980):
-      offsetSeconds = 85480;
-      break;
-    case (timestamp <= 1363881580):
-      offsetSeconds = 85540;
-      break;
-    case (timestamp <= 1363881640):
-      offsetSeconds = 85570;
-      break;
-    case (timestamp <= 1363882480):
-      offsetSeconds = 85520;
-      break;
-    case (timestamp <= 1363882540):
-      offsetSeconds = 85670;
-      break;
-    case (timestamp <= 1363882600):
-      offsetSeconds = 85640;
-      break;
-    case (timestamp <= 1363882660):
-      offsetSeconds = 86050;
-      break;
-    case (timestamp <= 1363882840):
-      offsetSeconds = 86030;
-      break;
-    case (timestamp <= 1363883200):
-      offsetSeconds = 86010;
-      break;
-    case (timestamp <= 1363883320):
-      offsetSeconds = 86000;
-      break;
-    case (timestamp <= 1363883380):
-      offsetSeconds = 86320;
-      break;
-    case (timestamp <= 1363883440):
-      offsetSeconds = 86600;
-      break;
-    case (timestamp <= 1363883500):
-      offsetSeconds = 86920;
-      break;
-    case (timestamp <= 1363883980):
-      offsetSeconds = 86900;
-      break;
-    case (timestamp <= 1363884040):
-      offsetSeconds = 87120;
-      break;
-    case (timestamp <= 1363884100):
-      offsetSeconds = 87080;
-      break;
-    case (timestamp <= 1363884160):
-      offsetSeconds = 87470;
-      break;
-    case (timestamp <= 1363884220):
-      offsetSeconds = 87440;
-      break;
-    case (timestamp <= 1363884280):
-      offsetSeconds = 88030;
-      break;
-    case (timestamp <= 1364102920):
-      offsetSeconds = 88040;
-      break;
-    case (timestamp <= 1364443120):
-      offsetSeconds = 88100;
-      break;
-    case (timestamp <= 1364600060):
-      offsetSeconds = 88120;
-      break;
-    case (timestamp <= 1364670980):
-      offsetSeconds = 155860;
-      break;
-    case (timestamp <= 1364676320):
-      offsetSeconds = 155920;
-      break;
-    case (timestamp <= 1364812340):
-      offsetSeconds = 156580;
-      break;
-    case (timestamp <= 1364839940):
-      offsetSeconds = 156640;
-      break;
-    case (timestamp <= 1364894720):
-      offsetSeconds = 156700;
-      break;
-    case (timestamp <= 1364903420):
-      offsetSeconds = 160780;
-      break;
-    case (timestamp <= 1364931320):
-      offsetSeconds = 160840;
-      break;
-    case (timestamp <= 1364943860):
-      offsetSeconds = 160900;
-      break;
-    case (timestamp <= 1364984000):
-      offsetSeconds = 160960;
-      break;
-    case (timestamp <= 1364987480):
-      offsetSeconds = 161200;
-      break;
-    case (timestamp <= 1364991500):
-      offsetSeconds = 161500;
-      break;
-    case (timestamp <= 1365004820):
-      offsetSeconds = 161560;
-      break;
-    case (timestamp <= 1365008240):
-      offsetSeconds = 161620;
-      break;
-    case (timestamp <= 1365077660):
-      offsetSeconds = 161680;
-      break;
-    case (timestamp <= 1365079400):
-      offsetSeconds = 161860;
-      break;
-    case (timestamp <= 1365079880):
-      offsetSeconds = 161940;
-      break;
-    case (timestamp <= 1365080660):
-      offsetSeconds = 161920;
-      break;
-    case (timestamp <= 1365082040):
-      offsetSeconds = 162000;
-      break;
-    case (timestamp <= 1365082520):
-      offsetSeconds = 161980;
-      break;
-    case (timestamp <= 1365083300):
-      offsetSeconds = 162050;
-      break;
-    case (timestamp <= 1365083360):
-      offsetSeconds = 162040;
-      break;
-    case (timestamp <= 1365083600):
-      offsetSeconds = 190240;
-      break;
-    case (timestamp <= 1365083660):
-      offsetSeconds = 190360;
-      break;
-    case (timestamp <= 1365083780):
-      offsetSeconds = 190420;
-      break;
-    case (timestamp <= 1365129560):
-      offsetSeconds = 190540;
-      break;
-    case (timestamp <= 1365195020):
-      offsetSeconds = 190720;
-      break;
-    case (timestamp <= 1365443120):
-      offsetSeconds = 190780;
-      break;
-    case (timestamp <= 1365558300):
-      offsetSeconds = 190810;
-      break;
-    case (timestamp <= 1365565140):
-      offsetSeconds = 190800;
-      break;
-    case (timestamp <= 1365583560):
-      offsetSeconds = 192240;
-      break;
-    case (timestamp <= 1365667920):
-      offsetSeconds = 192420;
-      break;
-    case (timestamp <= 1365668280):
-      offsetSeconds = 194760;
-      break;
-    case (timestamp <= 1365936960):
-      offsetSeconds = 194900;
-      break;
-    case (timestamp <= 1365937620):
-      offsetSeconds = 194890;
-      break;
-    case (timestamp <= 1365938160):
-      offsetSeconds = 194880;
-      break;
-    case (timestamp <= 1365938220):
-      offsetSeconds = 194910;
-      break;
-    case (timestamp <= 1365938280):
-      offsetSeconds = 195090;
-      break;
-    case (timestamp <= 1365939720):
-      offsetSeconds = 195100;
-      break;
-    case (timestamp <= 1365940080):
-      offsetSeconds = 195060;
-      break;
-    case (timestamp <= 1365940140):
-      offsetSeconds = 195200;
-      break;
-    case (timestamp <= 1366068180):
-      offsetSeconds = 195180;
-      break;
-    case (timestamp <= 1366068240):
-      offsetSeconds = 195280;
-      break;
-    case (timestamp <= 1366085220):
-      offsetSeconds = 195240;
-      break;
-    case (timestamp <= 1366104480):
-      offsetSeconds = 195360;
-      break;
-    case (timestamp <= 1366104540):
-      offsetSeconds = 195470;
-      break;
-    case (timestamp <= 1366110960):
-      offsetSeconds = 195510;
-      break;
-    case (timestamp <= 1366151160):
-      offsetSeconds = 195500;
-      break;
-    case (timestamp <= 1366151220):
-      offsetSeconds = 195520;
-      break;
-    case (timestamp <= 1366152540):
-      offsetSeconds = 195490;
-      break;
-    case (timestamp <= 1366152720):
-      offsetSeconds = 195480;
-      break;
-    case (timestamp <= 1366153260):
-      offsetSeconds = 195630;
-      break;
-    case (timestamp <= 1366155840):
-      offsetSeconds = 195610;
-      break;
-    case (timestamp <= 1366265340):
-      offsetSeconds = 195600;
-      break;
-    case (timestamp <= 1366265460):
-      offsetSeconds = 195840;
-      break;
-    case (timestamp <= 1366265520):
-      offsetSeconds = 195960;
-      break;
-    case (timestamp <= 1366265580):
-      offsetSeconds = 196090;
-      break;
-    case (timestamp <= 1366265640):
-      offsetSeconds = 196080;
-      break;
-    case (timestamp <= 1366265700):
-      offsetSeconds = 196420;
-      break;
-    case (timestamp <= 1366265820):
-      offsetSeconds = 196380;
-      break;
-    case (timestamp <= 1366265880):
-      offsetSeconds = 196690;
-      break;
-    case (timestamp <= 1366266000):
-      offsetSeconds = 196680;
-      break;
-    case (timestamp <= 1366271100):
-      offsetSeconds = 196740;
-      break;
-    case (timestamp <= 1366271160):
-      offsetSeconds = 196870;
-      break;
-    case (timestamp <= 1366277820):
-      offsetSeconds = 196860;
-      break;
-    case (timestamp <= 1366277880):
-      offsetSeconds = 196950;
-      break;
-    case (timestamp <= 1366443120):
-      offsetSeconds = 196920;
-      break;
-    case (timestamp <= 1366452520):
-      offsetSeconds = 196880;
-      break;
-    case (timestamp <= 1366454020):
-      offsetSeconds = 196940;
-      break;
-    case (timestamp <= 1366545280):
-      offsetSeconds = 197000;
-      break;
-    case (timestamp <= 1366592800):
-      offsetSeconds = 197060;
-      break;
-    case (timestamp <= 1367020180):
-      offsetSeconds = 197120;
-      break;
-    case (timestamp <= 1367030500):
-      offsetSeconds = 197180;
-      break;
-    case (timestamp <= 1367228020):
-      offsetSeconds = 197240;
-      break;
-    case (timestamp <= 1367436400):
-      offsetSeconds = 197420;
-      break;
-    case (timestamp <= 1367443120):
-      offsetSeconds = 215060;
-      break;
-    case (timestamp <= 1367888180):
-      offsetSeconds = 215080;
-      break;
-    case (timestamp <= 1368047780):
-      offsetSeconds = 215680;
-      break;
-    case (timestamp <= 1368174860):
-      offsetSeconds = 216100;
-      break;
-    case (timestamp <= 1368214220):
-      offsetSeconds = 216280;
-      break;
-    case (timestamp <= 1368227420):
-      offsetSeconds = 217060;
-      break;
-    case (timestamp <= 1368290120):
-      offsetSeconds = 218320;
-      break;
-    case (timestamp <= 1368292040):
-      offsetSeconds = 218500;
-      break;
-    case (timestamp <= 1368307040):
-      offsetSeconds = 218680;
-      break;
-    case (timestamp <= 1368326240):
-      offsetSeconds = 218740;
-      break;
-    case (timestamp <= 1368328220):
-      offsetSeconds = 218920;
-      break;
-    case (timestamp <= 1368360860):
-      offsetSeconds = 219040;
-      break;
-    case (timestamp <= 1368360920):
-      offsetSeconds = 220600;
-      break;
-    case (timestamp <= 1368443120):
-      offsetSeconds = 220720;
-      break;
-    case (timestamp <= 1368475380):
-      offsetSeconds = 220740;
-      break;
-    case (timestamp <= 1369391460):
-      offsetSeconds = 220800;
-      break;
-    case (timestamp <= 1369443120):
-      offsetSeconds = 220860;
-      break;
-    case (timestamp <= 1369655380):
-      offsetSeconds = 220820;
-      break;
-    case (timestamp <= 1369712740):
-      offsetSeconds = 221000;
-      break;
-    case (timestamp <= 1369723120):
-      offsetSeconds = 221960;
-      break;
-    case (timestamp <= 1370443120):
-      offsetSeconds = 222080;
-      break;
-    case (timestamp <= 1370833820):
-      offsetSeconds = 222100;
-      break;
-    case (timestamp <= 1371017960):
-      offsetSeconds = 222160;
-      break;
-    case (timestamp <= 1371443120):
-      offsetSeconds = 222220;
-      break;
-    case (timestamp <= 1372353660):
-      offsetSeconds = 222250;
-      break;
-    case (timestamp <= 1372443120):
-      offsetSeconds = 222240;
-      break;
-    case (timestamp <= 1372464280):
-      offsetSeconds = 222200;
-      break;
-    case (timestamp <= 1372466380):
-      offsetSeconds = 222440;
-      break;
-    case (timestamp <= 1372627600):
-      offsetSeconds = 222570;
-      break;
-    case (timestamp <= 1372663600):
-      offsetSeconds = 222560;
-      break;
-    case (timestamp <= 1372871200):
-      offsetSeconds = 222990;
-      break;
-    case (timestamp <= 1373336380):
-      offsetSeconds = 222980;
-      break;
-    case (timestamp <= 1373443120):
-      offsetSeconds = 223100;
-      break;
-    case (timestamp <= 1373455040):
-      offsetSeconds = 223130;
-      break;
-    case (timestamp <= 1373570480):
-      offsetSeconds = 223120;
-      break;
-    case (timestamp <= 1374443120):
-      offsetSeconds = 224020;
-      break;
-    case (timestamp <= 1375443120):
-      offsetSeconds = 224040;
-      break;
-    case (timestamp <= 1375639060):
-      offsetSeconds = 224000;
-      break;
-    case (timestamp <= 1375650940):
-      offsetSeconds = 224060;
-      break;
-    case (timestamp <= 1375764280):
-      offsetSeconds = 224780;
-      break;
-    case (timestamp <= 1376124160):
-      offsetSeconds = 224960;
-      break;
-    case (timestamp <= 1376411620):
-      offsetSeconds = 225620;
-      break;
-    case (timestamp <= 1376412220):
-      offsetSeconds = 226340;
-      break;
-    case (timestamp <= 1376443120):
-      offsetSeconds = 229940;
-      break;
-    case (timestamp <= 1377437000):
-      offsetSeconds = 229960;
-      break;
-    case (timestamp <= 1377439340):
-      offsetSeconds = 230020;
-      break;
-    case (timestamp <= 1377443120):
-      offsetSeconds = 230080;
-      break;
-    case (timestamp <= 1377446520):
-      offsetSeconds = 230100;
-      break;
-    case (timestamp <= 1377481800):
-      offsetSeconds = 230160;
-      break;
-    case (timestamp <= 1378095660):
-      offsetSeconds = 230220;
-      break;
-    case (timestamp <= 1378443120):
-      offsetSeconds = 230340;
-      break;
-    case (timestamp <= 1378967140):
-      offsetSeconds = 230300;
-      break;
-    case (timestamp <= 1379443120):
-      offsetSeconds = 230360;
-      break;
-    case (timestamp <= 1379450420):
-      offsetSeconds = 230380;
-      break;
-    case (timestamp <= 1380443120):
-      offsetSeconds = 230440;
-      break;
-    case (timestamp <= 1380684960):
-      offsetSeconds = 230460;
-      break;
-    case (timestamp <= 1380685620):
-      offsetSeconds = 230520;
-      break;
-    case (timestamp <= 1380686460):
-      offsetSeconds = 230580;
-      break;
-    case (timestamp <= 1380687360):
-      offsetSeconds = 230700;
-      break;
-    case (timestamp <= 1380687720):
-      offsetSeconds = 230760;
-      break;
-    case (timestamp <= 1380688320):
-      offsetSeconds = 230820;
-      break;
-    case (timestamp <= 1381443120):
-      offsetSeconds = 230880;
-      break;
-    case (timestamp <= 1381499080):
-      offsetSeconds = 230840;
-      break;
-    case (timestamp <= 1381615960):
-      offsetSeconds = 230900;
-      break;
-    case (timestamp <= 1381681600):
-      offsetSeconds = 230960;
-      break;
-    case (timestamp <= 1381682740):
-      offsetSeconds = 231020;
-      break;
-    case (timestamp <= 1381796080):
-      offsetSeconds = 231080;
-      break;
-    case (timestamp <= 1381984300):
-      offsetSeconds = 231510;
-      break;
-    case (timestamp <= 1382125780):
-      offsetSeconds = 231500;
-      break;
-    case (timestamp <= 1382341120):
-      offsetSeconds = 231560;
-      break;
-    case (timestamp <= 1382443120):
-      offsetSeconds = 231680;
-      break;
-    case (timestamp <= 1382658500):
-      offsetSeconds = 231700;
-      break;
-    case (timestamp <= 1382683700):
-      offsetSeconds = 231760;
-      break;
-    case (timestamp <= 1382838680):
-      offsetSeconds = 232000;
-      break;
-    case (timestamp <= 1383011660):
-      offsetSeconds = 232060;
-      break;
-    case (timestamp <= 1383015080):
-      offsetSeconds = 232480;
-      break;
-    case (timestamp <= 1383092900):
-      offsetSeconds = 232840;
-      break;
-    case (timestamp <= 1383161300):
-      offsetSeconds = 232900;
-      break;
-    case (timestamp <= 1383424220):
-      offsetSeconds = 232960;
-      break;
-    case (timestamp <= 1383443120):
-      offsetSeconds = 233020;
-      break;
-    case (timestamp <= 1384126920):
-      offsetSeconds = 233040;
-      break;
-    case (timestamp <= 1384443120):
-      offsetSeconds = 233220;
-      break;
-    case (timestamp <= 1384578460):
-      offsetSeconds = 233180;
-      break;
-    case (timestamp <= 1384587340):
-      offsetSeconds = 233600;
-      break;
-    case (timestamp <= 1384588960):
-      offsetSeconds = 233660;
-      break;
-    case (timestamp <= 1384669660):
-      offsetSeconds = 233720;
-      break;
-    case (timestamp <= 1384672000):
-      offsetSeconds = 233840;
-      break;
-    case (timestamp <= 1384709620):
-      offsetSeconds = 233900;
-      break;
-    case (timestamp <= 1384713760):
-      offsetSeconds = 233960;
-      break;
-    case (timestamp <= 1384734760):
-      offsetSeconds = 234020;
-      break;
-    case (timestamp <= 1384813900):
-      offsetSeconds = 234440;
-      break;
-    case (timestamp <= 1384824280):
-      offsetSeconds = 234500;
-      break;
-    case (timestamp <= 1384824580):
-      offsetSeconds = 234680;
-      break;
-    case (timestamp <= 1384824640):
-      offsetSeconds = 234740;
-      break;
-    case (timestamp <= 1384824700):
-      offsetSeconds = 234920;
-      break;
-    case (timestamp <= 1384824760):
-      offsetSeconds = 234980;
-      break;
-    case (timestamp <= 1384827640):
-      offsetSeconds = 235160;
-      break;
-    case (timestamp <= 1384838920):
-      offsetSeconds = 235280;
-      break;
-    case (timestamp <= 1384843420):
-      offsetSeconds = 235340;
-      break;
-    case (timestamp <= 1384848940):
-      offsetSeconds = 235400;
-      break;
-    case (timestamp <= 1384869520):
-      offsetSeconds = 248840;
-      break;
-    case (timestamp <= 1384886860):
-      offsetSeconds = 248900;
-      break;
-    case (timestamp <= 1384899700):
-      offsetSeconds = 248960;
-      break;
-    case (timestamp <= 1384903240):
-      offsetSeconds = 249080;
-      break;
-    case (timestamp <= 1384978840):
-      offsetSeconds = 249860;
-      break;
-    case (timestamp <= 1385158420):
-      offsetSeconds = 249920;
-      break;
-    case (timestamp <= 1385162740):
-      offsetSeconds = 250040;
-      break;
-    case (timestamp <= 1385164240):
-      offsetSeconds = 250100;
-      break;
-    case (timestamp <= 1385172880):
-      offsetSeconds = 250160;
-      break;
-    case (timestamp <= 1385172940):
-      offsetSeconds = 250760;
-      break;
-    case (timestamp <= 1385178640):
-      offsetSeconds = 250820;
-      break;
-    case (timestamp <= 1385273620):
-      offsetSeconds = 250880;
-      break;
-    case (timestamp <= 1385297980):
-      offsetSeconds = 250940;
-      break;
-    case (timestamp <= 1385322700):
-      offsetSeconds = 251000;
-      break;
-    case (timestamp <= 1385343880):
-      offsetSeconds = 255560;
-      break;
-    case (timestamp <= 1385443120):
-      offsetSeconds = 255620;
-      break;
-    case (timestamp <= 1385642960):
-      offsetSeconds = 255640;
-      break;
-    case (timestamp <= 1385723300):
-      offsetSeconds = 255700;
-      break;
-    case (timestamp <= 1385823800):
-      offsetSeconds = 255880;
-      break;
-    case (timestamp <= 1385908460):
-      offsetSeconds = 256000;
-      break;
-    case (timestamp <= 1385921420):
-      offsetSeconds = 256060;
-      break;
-    case (timestamp <= 1385924360):
-      offsetSeconds = 256120;
-      break;
-    case (timestamp <= 1386005240):
-      offsetSeconds = 256360;
-      break;
-    case (timestamp <= 1386036200):
-      offsetSeconds = 256420;
-      break;
-    case (timestamp <= 1386419120):
-      offsetSeconds = 256480;
-      break;
-    case (timestamp <= 1386443120):
-      offsetSeconds = 256540;
-      break;
-    case (timestamp <= 1386500340):
-      offsetSeconds = 256560;
-      break;
-    case (timestamp <= 1386501420):
-      offsetSeconds = 256620;
-      break;
-    case (timestamp <= 1386974040):
-      offsetSeconds = 256680;
-      break;
-    case (timestamp <= 1387115700):
-      offsetSeconds = 256740;
-      break;
-    case (timestamp <= 1387123560):
-      offsetSeconds = 256800;
-      break;
-    case (timestamp <= 1387131360):
-      offsetSeconds = 256860;
-      break;
-    case (timestamp <= 1387133700):
-      offsetSeconds = 257040;
-      break;
-    case (timestamp <= 1387399620):
-      offsetSeconds = 257100;
-      break;
-    case (timestamp <= 1387399680):
-      offsetSeconds = 257120;
-      break;
-    case (timestamp <= 1387443120):
-      offsetSeconds = 257220;
-      break;
-    case (timestamp <= 1387482340):
-      offsetSeconds = 257190;
-      break;
-    case (timestamp <= 1387541500):
-      offsetSeconds = 257180;
-      break;
-    case (timestamp <= 1387541620):
-      offsetSeconds = 257280;
-      break;
-    case (timestamp <= 1387541680):
-      offsetSeconds = 257390;
-      break;
-    case (timestamp <= 1387541860):
-      offsetSeconds = 257360;
-      break;
-    case (timestamp <= 1387542040):
-      offsetSeconds = 257540;
-      break;
-    case (timestamp <= 1387542100):
-      offsetSeconds = 257560;
-      break;
-    case (timestamp <= 1387542160):
-      offsetSeconds = 257650;
-      break;
-    case (timestamp <= 1387542220):
-      offsetSeconds = 257600;
-      break;
-    case (timestamp <= 1387542340):
-      offsetSeconds = 257840;
-      break;
-    case (timestamp <= 1387542400):
-      offsetSeconds = 258280;
-      break;
-    case (timestamp <= 1387542460):
-      offsetSeconds = 258260;
-      break;
-    case (timestamp <= 1387542520):
-      offsetSeconds = 258430;
-      break;
-    case (timestamp <= 1387542700):
-      offsetSeconds = 258380;
-      break;
-    case (timestamp <= 1387542760):
-      offsetSeconds = 258640;
-      break;
-    case (timestamp <= 1387543060):
-      offsetSeconds = 258620;
-      break;
-    case (timestamp <= 1387543120):
-      offsetSeconds = 258630;
-      break;
-    case (timestamp <= 1387549720):
-      offsetSeconds = 258980;
-      break;
-    case (timestamp <= 1387566940):
-      offsetSeconds = 259070;
-      break;
-    case (timestamp <= 1387640500):
-      offsetSeconds = 259050;
-      break;
-    case (timestamp <= 1387681900):
-      offsetSeconds = 259040;
-      break;
-    case (timestamp <= 1387683040):
-      offsetSeconds = 259700;
-      break;
-    case (timestamp <= 1387683100):
-      offsetSeconds = 259960;
-      break;
-    case (timestamp <= 1387683700):
-      offsetSeconds = 259980;
-      break;
-    case (timestamp <= 1387685860):
-      offsetSeconds = 259990;
-      break;
-    case (timestamp <= 1387694800):
-      offsetSeconds = 259950;
-      break;
-    case (timestamp <= 1387694860):
-      offsetSeconds = 259940;
-      break;
-    case (timestamp <= 1387765540):
-      offsetSeconds = 260000;
-      break;
-    case (timestamp <= 1387765600):
-      offsetSeconds = 260080;
-      break;
-    case (timestamp <= 1387796440):
-      offsetSeconds = 260060;
-      break;
-    case (timestamp <= 1387840540):
-      offsetSeconds = 260210;
-      break;
-    case (timestamp <= 1387878580):
-      offsetSeconds = 260180;
-      break;
-    case (timestamp <= 1387878640):
-      offsetSeconds = 260270;
-      break;
-    case (timestamp <= 1387878940):
-      offsetSeconds = 260290;
-      break;
-    case (timestamp <= 1387879000):
-      offsetSeconds = 260240;
-      break;
-    case (timestamp <= 1387879060):
-      offsetSeconds = 260250;
-      break;
-    case (timestamp <= 1387880560):
-      offsetSeconds = 260360;
-      break;
-    case (timestamp <= 1387880620):
-      offsetSeconds = 260490;
-      break;
-    case (timestamp <= 1387884940):
-      offsetSeconds = 260480;
-      break;
-    case (timestamp <= 1387885000):
-      offsetSeconds = 260520;
-      break;
-    case (timestamp <= 1387886140):
-      offsetSeconds = 260600;
-      break;
-    case (timestamp <= 1387893580):
-      offsetSeconds = 260670;
-      break;
-    case (timestamp <= 1388166940):
-      offsetSeconds = 260660;
-      break;
-    case (timestamp <= 1388191000):
-      offsetSeconds = 260720;
-      break;
-    case (timestamp <= 1388212240):
-      offsetSeconds = 261080;
-      break;
-    case (timestamp <= 1388212300):
-      offsetSeconds = 261490;
-      break;
-    case (timestamp <= 1388212360):
-      offsetSeconds = 261980;
-      break;
-    case (timestamp <= 1388212420):
-      offsetSeconds = 262840;
-      break;
-    case (timestamp <= 1388212480):
-      offsetSeconds = 262820;
-      break;
-    case (timestamp <= 1388212540):
-      offsetSeconds = 263300;
-      break;
-    case (timestamp <= 1388212600):
-      offsetSeconds = 263780;
-      break;
-    case (timestamp <= 1388212660):
-      offsetSeconds = 264330;
-      break;
-    case (timestamp <= 1388212720):
-      offsetSeconds = 264880;
-      break;
-    case (timestamp <= 1388345680):
-      offsetSeconds = 265070;
-      break;
-    case (timestamp <= 1388345740):
-      offsetSeconds = 265040;
-      break;
-    case (timestamp <= 1388345800):
-      offsetSeconds = 265150;
-      break;
-    case (timestamp <= 1388398960):
-      offsetSeconds = 265100;
-      break;
-    case (timestamp <= 1388443120):
-      offsetSeconds = 265220;
-      break;
-    case (timestamp <= 1388745140):
-      offsetSeconds = 265240;
-      break;
-    case (timestamp <= 1388929400):
-      offsetSeconds = 265420;
-      break;
-    case (timestamp <= 1388930000):
-      offsetSeconds = 265480;
-      break;
-    case (timestamp <= 1388930780):
-      offsetSeconds = 265540;
-      break;
-    case (timestamp <= 1388936240):
-      offsetSeconds = 265600;
-      break;
-    case (timestamp <= 1388936840):
-      offsetSeconds = 265660;
-      break;
-    case (timestamp <= 1388937560):
-      offsetSeconds = 265720;
-      break;
-    case (timestamp <= 1388948480):
-      offsetSeconds = 265780;
-      break;
-    case (timestamp <= 1388949140):
-      offsetSeconds = 265840;
-      break;
-    case (timestamp <= 1388949920):
-      offsetSeconds = 265900;
-      break;
-    case (timestamp <= 1388962760):
-      offsetSeconds = 265960;
-      break;
-    case (timestamp <= 1388963300):
-      offsetSeconds = 266020;
-      break;
-    case (timestamp <= 1388963960):
-      offsetSeconds = 266080;
-      break;
-    case (timestamp <= 1389443120):
-      offsetSeconds = 266140;
-      break;
-    case (timestamp <= 1390443120):
-      offsetSeconds = 266160;
-      break;
-    case (timestamp <= 1390766980):
-      offsetSeconds = 266120;
-      break;
-    case (timestamp <= 1390767760):
-      offsetSeconds = 266180;
-      break;
-    case (timestamp <= 1390769380):
-      offsetSeconds = 266240;
-      break;
-    case (timestamp <= 1390777000):
-      offsetSeconds = 266360;
-      break;
-    case (timestamp <= 1390795960):
-      offsetSeconds = 266540;
-      break;
-    case (timestamp <= 1390802380):
-      offsetSeconds = 266780;
-      break;
-    case (timestamp <= 1390808320):
-      offsetSeconds = 266900;
-      break;
-    case (timestamp <= 1390818940):
-      offsetSeconds = 267320;
-      break;
-    case (timestamp <= 1390820440):
-      offsetSeconds = 267440;
-      break;
-    case (timestamp <= 1390821760):
-      offsetSeconds = 267500;
-      break;
-    case (timestamp <= 1390824460):
-      offsetSeconds = 267560;
-      break;
-    case (timestamp <= 1390836460):
-      offsetSeconds = 267620;
-      break;
-    case (timestamp <= 1390843060):
-      offsetSeconds = 268160;
-      break;
-    case (timestamp <= 1390844680):
-      offsetSeconds = 268220;
-      break;
-    case (timestamp <= 1390844740):
-      offsetSeconds = 269180;
-      break;
-    case (timestamp <= 1390846480):
-      offsetSeconds = 269240;
-      break;
-    case (timestamp <= 1390849600):
-      offsetSeconds = 269300;
-      break;
-    case (timestamp <= 1390850980):
-      offsetSeconds = 269360;
-      break;
-    case (timestamp <= 1390851280):
-      offsetSeconds = 269420;
-      break;
-    case (timestamp <= 1390856380):
-      offsetSeconds = 269480;
-      break;
-    case (timestamp <= 1390858660):
-      offsetSeconds = 269840;
-      break;
-    case (timestamp <= 1390860880):
-      offsetSeconds = 270020;
-      break;
-    case (timestamp <= 1390863160):
-      offsetSeconds = 270200;
-      break;
-    case (timestamp <= 1390882780):
-      offsetSeconds = 270380;
-      break;
-    case (timestamp <= 1390883200):
-      offsetSeconds = 270440;
-      break;
-    case (timestamp <= 1390927240):
-      offsetSeconds = 270500;
-      break;
-    case (timestamp <= 1390928440):
-      offsetSeconds = 270740;
-      break;
-    case (timestamp <= 1390931200):
-      offsetSeconds = 270800;
-      break;
-    case (timestamp <= 1390932400):
-      offsetSeconds = 270860;
-      break;
-    case (timestamp <= 1390937260):
-      offsetSeconds = 270920;
-      break;
-    case (timestamp <= 1390939120):
-      offsetSeconds = 270980;
-      break;
-    case (timestamp <= 1390941280):
-      offsetSeconds = 271100;
-      break;
-    case (timestamp <= 1390943020):
-      offsetSeconds = 271160;
-      break;
-    case (timestamp <= 1390943740):
-      offsetSeconds = 271340;
-      break;
-    case (timestamp <= 1390944640):
-      offsetSeconds = 271400;
-      break;
-    case (timestamp <= 1390946560):
-      offsetSeconds = 271460;
-      break;
-    case (timestamp <= 1390948180):
-      offsetSeconds = 271520;
-      break;
-    case (timestamp <= 1390951060):
-      offsetSeconds = 271580;
-      break;
-    case (timestamp <= 1390952980):
-      offsetSeconds = 271700;
-      break;
-    case (timestamp <= 1390956220):
-      offsetSeconds = 271760;
-      break;
-    case (timestamp <= 1390957960):
-      offsetSeconds = 271880;
-      break;
-    case (timestamp <= 1390958380):
-      offsetSeconds = 271940;
-      break;
-    case (timestamp <= 1390958620):
-      offsetSeconds = 272000;
-      break;
-    case (timestamp <= 1390959580):
-      offsetSeconds = 272060;
-      break;
-    case (timestamp <= 1390961440):
-      offsetSeconds = 272120;
-      break;
-    case (timestamp <= 1390962580):
-      offsetSeconds = 272180;
-      break;
-    case (timestamp <= 1390968580):
-      offsetSeconds = 272240;
-      break;
-    case (timestamp <= 1390988680):
-      offsetSeconds = 272300;
-      break;
-    case (timestamp <= 1390993060):
-      offsetSeconds = 272420;
-      break;
-    case (timestamp <= 1391002180):
-      offsetSeconds = 272540;
-      break;
-    case (timestamp <= 1391003500):
-      offsetSeconds = 272600;
-      break;
-    case (timestamp <= 1391011300):
-      offsetSeconds = 272660;
-      break;
-    case (timestamp <= 1391012800):
-      offsetSeconds = 272720;
-      break;
-    case (timestamp <= 1391017420):
-      offsetSeconds = 272780;
-      break;
-    case (timestamp <= 1391025700):
-      offsetSeconds = 273020;
-      break;
-    case (timestamp <= 1391027680):
-      offsetSeconds = 273080;
-      break;
-    case (timestamp <= 1391033440):
-      offsetSeconds = 273140;
-      break;
-    case (timestamp <= 1391088460):
-      offsetSeconds = 273380;
-      break;
-    case (timestamp <= 1391091700):
-      offsetSeconds = 273620;
-      break;
-    case (timestamp <= 1391093140):
-      offsetSeconds = 273860;
-      break;
-    case (timestamp <= 1391099860):
-      offsetSeconds = 273920;
-      break;
-    case (timestamp <= 1391107900):
-      offsetSeconds = 274040;
-      break;
-    case (timestamp <= 1391109400):
-      offsetSeconds = 274100;
-      break;
-    case (timestamp <= 1391114620):
-      offsetSeconds = 274160;
-      break;
-    case (timestamp <= 1391115640):
-      offsetSeconds = 274220;
-      break;
-    case (timestamp <= 1391116900):
-      offsetSeconds = 274280;
-      break;
-    case (timestamp <= 1391122600):
-      offsetSeconds = 274340;
-      break;
-    case (timestamp <= 1391123860):
-      offsetSeconds = 274400;
-      break;
-    case (timestamp <= 1391130340):
-      offsetSeconds = 274460;
-      break;
-    case (timestamp <= 1391139340):
-      offsetSeconds = 274520;
-      break;
-    case (timestamp <= 1391141140):
-      offsetSeconds = 274580;
-      break;
-    case (timestamp <= 1391163040):
-      offsetSeconds = 274640;
-      break;
-    case (timestamp <= 1391172880):
-      offsetSeconds = 275000;
-      break;
-    case (timestamp <= 1391174020):
-      offsetSeconds = 275060;
-      break;
-    case (timestamp <= 1391179120):
-      offsetSeconds = 275120;
-      break;
-    case (timestamp <= 1391180080):
-      offsetSeconds = 275420;
-      break;
-    case (timestamp <= 1391183200):
-      offsetSeconds = 275540;
-      break;
-    case (timestamp <= 1391186440):
-      offsetSeconds = 275660;
-      break;
-    case (timestamp <= 1391189740):
-      offsetSeconds = 275720;
-      break;
-    case (timestamp <= 1391192440):
-      offsetSeconds = 275900;
-      break;
-    case (timestamp <= 1391194960):
-      offsetSeconds = 276020;
-      break;
-    case (timestamp <= 1391197960):
-      offsetSeconds = 276080;
-      break;
-    case (timestamp <= 1391204020):
-      offsetSeconds = 276200;
-      break;
-    case (timestamp <= 1391205040):
-      offsetSeconds = 276380;
-      break;
-    case (timestamp <= 1391207920):
-      offsetSeconds = 276440;
-      break;
-    case (timestamp <= 1391284780):
-      offsetSeconds = 276500;
-      break;
-    case (timestamp <= 1391285680):
-      offsetSeconds = 276560;
-      break;
-    case (timestamp <= 1391287120):
-      offsetSeconds = 276620;
-      break;
-    case (timestamp <= 1391294500):
-      offsetSeconds = 276680;
-      break;
-    case (timestamp <= 1391296060):
-      offsetSeconds = 276740;
-      break;
-    case (timestamp <= 1391305780):
-      offsetSeconds = 276800;
-      break;
-    case (timestamp <= 1391307700):
-      offsetSeconds = 276860;
-      break;
-    case (timestamp <= 1391311300):
-      offsetSeconds = 276980;
-      break;
-    case (timestamp <= 1391313040):
-      offsetSeconds = 277040;
-      break;
-    case (timestamp <= 1391340520):
-      offsetSeconds = 277100;
-      break;
-    case (timestamp <= 1391346040):
-      offsetSeconds = 277400;
-      break;
-    case (timestamp <= 1391347540):
-      offsetSeconds = 277460;
-      break;
-    case (timestamp <= 1391355340):
-      offsetSeconds = 277520;
-      break;
-    case (timestamp <= 1391357140):
-      offsetSeconds = 277580;
-      break;
-    case (timestamp <= 1391360860):
-      offsetSeconds = 277640;
-      break;
-    case (timestamp <= 1391360920):
-      offsetSeconds = 277820;
-      break;
-    case (timestamp <= 1391362840):
-      offsetSeconds = 277880;
-      break;
-    case (timestamp <= 1391365780):
-      offsetSeconds = 277940;
-      break;
-    case (timestamp <= 1391366800):
-      offsetSeconds = 278000;
-      break;
-    case (timestamp <= 1391439760):
-      offsetSeconds = 278060;
-      break;
-    case (timestamp <= 1391443120):
-      offsetSeconds = 278240;
-      break;
-    case (timestamp <= 1391445140):
-      offsetSeconds = 278260;
-      break;
-    case (timestamp <= 1391448560):
-      offsetSeconds = 278440;
-      break;
-    case (timestamp <= 1391450540):
-      offsetSeconds = 278560;
-      break;
-    case (timestamp <= 1391453240):
-      offsetSeconds = 278680;
-      break;
-    case (timestamp <= 1391455160):
-      offsetSeconds = 278920;
-      break;
-    case (timestamp <= 1391456900):
-      offsetSeconds = 278980;
-      break;
-    case (timestamp <= 1391458940):
-      offsetSeconds = 279160;
-      break;
-    case (timestamp <= 1391461220):
-      offsetSeconds = 279400;
-      break;
-    case (timestamp <= 1391464880):
-      offsetSeconds = 279460;
-      break;
-    case (timestamp <= 1391466320):
-      offsetSeconds = 279580;
-      break;
-    case (timestamp <= 1391467880):
-      offsetSeconds = 279700;
-      break;
-    case (timestamp <= 1391469920):
-      offsetSeconds = 279820;
-      break;
-    case (timestamp <= 1391472620):
-      offsetSeconds = 280000;
-      break;
-    case (timestamp <= 1391473580):
-      offsetSeconds = 280060;
-      break;
-    case (timestamp <= 1391689700):
-      offsetSeconds = 280120;
-      break;
-    case (timestamp <= 1391707760):
-      offsetSeconds = 280180;
-      break;
-    case (timestamp <= 1391740760):
-      offsetSeconds = 280240;
-      break;
-    case (timestamp <= 1391747900):
-      offsetSeconds = 280360;
-      break;
-    case (timestamp <= 1391752760):
-      offsetSeconds = 280840;
-      break;
-    case (timestamp <= 1391755100):
-      offsetSeconds = 281200;
-      break;
-    case (timestamp <= 1391762360):
-      offsetSeconds = 282040;
-      break;
-    case (timestamp <= 1391773700):
-      offsetSeconds = 282880;
-      break;
-    case (timestamp <= 1391774120):
-      offsetSeconds = 282940;
-      break;
-    case (timestamp <= 1391774600):
-      offsetSeconds = 283000;
-      break;
-    case (timestamp <= 1391784800):
-      offsetSeconds = 283060;
-      break;
-    case (timestamp <= 1391785220):
-      offsetSeconds = 283120;
-      break;
-    case (timestamp <= 1391787560):
-      offsetSeconds = 283180;
-      break;
-    case (timestamp <= 1391787980):
-      offsetSeconds = 283240;
-      break;
-    case (timestamp <= 1391846720):
-      offsetSeconds = 283300;
-      break;
-    case (timestamp <= 1391847140):
-      offsetSeconds = 283480;
-      break;
-    case (timestamp <= 1391913500):
-      offsetSeconds = 283720;
-      break;
-    case (timestamp <= 1391933420):
-      offsetSeconds = 283780;
-      break;
-    case (timestamp <= 1391937500):
-      offsetSeconds = 283840;
-      break;
-    case (timestamp <= 1392038660):
-      offsetSeconds = 283900;
-      break;
-    case (timestamp <= 1392443120):
-      offsetSeconds = 283960;
-      break;
-    case (timestamp <= 1392505920):
-      offsetSeconds = 283980;
-      break;
-    case (timestamp <= 1392526320):
-      offsetSeconds = 284220;
-      break;
-    case (timestamp <= 1392527820):
-      offsetSeconds = 284280;
-      break;
-    case (timestamp <= 1392527880):
-      offsetSeconds = 284340;
-      break;
-    case (timestamp <= 1392529620):
-      offsetSeconds = 284400;
-      break;
-    case (timestamp <= 1392535080):
-      offsetSeconds = 284520;
-      break;
-    case (timestamp <= 1392535980):
-      offsetSeconds = 284580;
-      break;
-    case (timestamp <= 1392536400):
-      offsetSeconds = 284700;
-      break;
-    case (timestamp <= 1392721020):
-      offsetSeconds = 284760;
-      break;
-    case (timestamp <= 1392950280):
-      offsetSeconds = 284820;
-      break;
-    case (timestamp <= 1392952200):
-      offsetSeconds = 284880;
-      break;
-    case (timestamp <= 1393025880):
-      offsetSeconds = 284940;
-      break;
-    case (timestamp <= 1393205700):
-      offsetSeconds = 285000;
-      break;
-    case (timestamp <= 1393275480):
-      offsetSeconds = 285060;
-      break;
-    case (timestamp <= 1393275840):
-      offsetSeconds = 285120;
-      break;
-    case (timestamp <= 1393276260):
-      offsetSeconds = 285180;
-      break;
-    case (timestamp <= 1393278300):
-      offsetSeconds = 285240;
-      break;
-    case (timestamp <= 1393278720):
-      offsetSeconds = 285300;
-      break;
-    case (timestamp <= 1393278960):
-      offsetSeconds = 285360;
-      break;
-    case (timestamp <= 1393279020):
-      offsetSeconds = 285720;
-      break;
-    case (timestamp <= 1393280700):
-      offsetSeconds = 285840;
-      break;
-    case (timestamp <= 1393281000):
-      offsetSeconds = 285900;
-      break;
-    case (timestamp <= 1393281420):
-      offsetSeconds = 285960;
-      break;
-    case (timestamp <= 1393443120):
-      offsetSeconds = 286020;
-      break;
-    case (timestamp <= 1393540900):
-      offsetSeconds = 285980;
-      break;
-    case (timestamp <= 1393541260):
-      offsetSeconds = 286040;
-      break;
-    case (timestamp <= 1393541680):
-      offsetSeconds = 286100;
-      break;
-    case (timestamp <= 1393543960):
-      offsetSeconds = 286160;
-      break;
-    case (timestamp <= 1393544380):
-      offsetSeconds = 286220;
-      break;
-    case (timestamp <= 1393579480):
-      offsetSeconds = 286280;
-      break;
-    case (timestamp <= 1393744900):
-      offsetSeconds = 286460;
-      break;
-    case (timestamp <= 1393745260):
-      offsetSeconds = 286520;
-      break;
-    case (timestamp <= 1393853260):
-      offsetSeconds = 286580;
-      break;
-    case (timestamp <= 1393867420):
-      offsetSeconds = 286940;
-      break;
-    case (timestamp <= 1393956580):
-      offsetSeconds = 287360;
-      break;
-    case (timestamp <= 1393959040):
-      offsetSeconds = 287720;
-      break;
-    case (timestamp <= 1394186560):
-      offsetSeconds = 287900;
-      break;
-    case (timestamp <= 1394186620):
-      offsetSeconds = 288200;
-      break;
-    case (timestamp <= 1394186680):
-      offsetSeconds = 288320;
-      break;
-    case (timestamp <= 1394187100):
-      offsetSeconds = 288500;
-      break;
-    case (timestamp <= 1394187520):
-      offsetSeconds = 288560;
-      break;
-    case (timestamp <= 1394188300):
-      offsetSeconds = 288620;
-      break;
-    case (timestamp <= 1394194120):
-      offsetSeconds = 288680;
-      break;
-    case (timestamp <= 1394343280):
-      offsetSeconds = 288740;
-      break;
-    case (timestamp <= 1394343640):
-      offsetSeconds = 288800;
-      break;
-    case (timestamp <= 1394345980):
-      offsetSeconds = 288860;
-      break;
-    case (timestamp <= 1394348800):
-      offsetSeconds = 288920;
-      break;
-    case (timestamp <= 1394349160):
-      offsetSeconds = 288980;
-      break;
-    case (timestamp <= 1394351440):
-      offsetSeconds = 289040;
-      break;
-    case (timestamp <= 1394443120):
-      offsetSeconds = 289100;
-      break;
-    case (timestamp <= 1394496560):
-      offsetSeconds = 289120;
-      break;
-    case (timestamp <= 1394496920):
-      offsetSeconds = 289180;
-      break;
-    case (timestamp <= 1394497340):
-      offsetSeconds = 289240;
-      break;
-    case (timestamp <= 1394497820):
-      offsetSeconds = 289300;
-      break;
-    case (timestamp <= 1394498360):
-      offsetSeconds = 289360;
-      break;
-    case (timestamp <= 1394501780):
-      offsetSeconds = 289420;
-      break;
-    case (timestamp <= 1394798960):
-      offsetSeconds = 289480;
-      break;
-    case (timestamp <= 1394804720):
-      offsetSeconds = 289540;
-      break;
-    case (timestamp <= 1394929580):
-      offsetSeconds = 289660;
-      break;
-    case (timestamp <= 1394947400):
-      offsetSeconds = 290140;
-      break;
-    case (timestamp <= 1394970500):
-      offsetSeconds = 290200;
-      break;
-    case (timestamp <= 1395098780):
-      offsetSeconds = 290260;
-      break;
-    case (timestamp <= 1395138920):
-      offsetSeconds = 290560;
-      break;
-    case (timestamp <= 1395164720):
-      offsetSeconds = 290680;
-      break;
-    case (timestamp <= 1395165020):
-      offsetSeconds = 290740;
-      break;
-    case (timestamp <= 1395165500):
-      offsetSeconds = 290800;
-      break;
-    case (timestamp <= 1395222740):
-      offsetSeconds = 290860;
-      break;
-    case (timestamp <= 1395225560):
-      offsetSeconds = 290920;
-      break;
-    case (timestamp <= 1395231740):
-      offsetSeconds = 290980;
-      break;
-    case (timestamp <= 1395238340):
-      offsetSeconds = 291040;
-      break;
-    case (timestamp <= 1395240680):
-      offsetSeconds = 291100;
-      break;
-    case (timestamp <= 1395443120):
-      offsetSeconds = 291160;
-      break;
-    case (timestamp <= 1395494880):
-      offsetSeconds = 291180;
-      break;
-    case (timestamp <= 1395573300):
-      offsetSeconds = 291240;
-      break;
-    case (timestamp <= 1395580860):
-      offsetSeconds = 291300;
-      break;
-    case (timestamp <= 1395580980):
-      offsetSeconds = 291420;
-      break;
-    case (timestamp <= 1395614820):
-      offsetSeconds = 291540;
-      break;
-    case (timestamp <= 1395637500):
-      offsetSeconds = 291600;
-      break;
-    case (timestamp <= 1395647760):
-      offsetSeconds = 291660;
-      break;
-    case (timestamp <= 1395673860):
-      offsetSeconds = 291780;
-      break;
-    case (timestamp <= 1395696960):
-      offsetSeconds = 291900;
-      break;
-    case (timestamp <= 1395697320):
-      offsetSeconds = 291960;
-      break;
-    case (timestamp <= 1395699540):
-      offsetSeconds = 292020;
-      break;
-    case (timestamp <= 1395702180):
-      offsetSeconds = 292080;
-      break;
-    case (timestamp <= 1395712860):
-      offsetSeconds = 292140;
-      break;
-    case (timestamp <= 1395737460):
-      offsetSeconds = 292200;
-      break;
-    case (timestamp <= 1395792180):
-      offsetSeconds = 292260;
-      break;
-    case (timestamp <= 1395801840):
-      offsetSeconds = 292320;
-      break;
-    case (timestamp <= 1395846060):
-      offsetSeconds = 292440;
-      break;
-    case (timestamp <= 1395889140):
-      offsetSeconds = 292500;
-      break;
-    case (timestamp <= 1395891480):
-      offsetSeconds = 292620;
-      break;
-    case (timestamp <= 1395909120):
-      offsetSeconds = 292680;
-      break;
-    case (timestamp <= 1395932760):
-      offsetSeconds = 292740;
-      break;
-    case (timestamp <= 1395962220):
-      offsetSeconds = 292860;
-      break;
-    case (timestamp <= 1395992340):
-      offsetSeconds = 292980;
-      break;
-    case (timestamp <= 1396054020):
-      offsetSeconds = 293100;
-      break;
-    case (timestamp <= 1396055280):
-      offsetSeconds = 293220;
-      break;
-    case (timestamp <= 1396055580):
-      offsetSeconds = 293520;
-      break;
-    case (timestamp <= 1396057980):
-      offsetSeconds = 293820;
-      break;
-    case (timestamp <= 1396065180):
-      offsetSeconds = 294120;
-      break;
-    case (timestamp <= 1396093680):
-      offsetSeconds = 294300;
-      break;
-    case (timestamp <= 1396100040):
-      offsetSeconds = 294420;
-      break;
-    case (timestamp <= 1396104960):
-      offsetSeconds = 294540;
-      break;
-    case (timestamp <= 1396122600):
-      offsetSeconds = 294600;
-      break;
-    case (timestamp <= 1396186620):
-      offsetSeconds = 294780;
-      break;
-    case (timestamp <= 1396190580):
-      offsetSeconds = 294840;
-      break;
-    case (timestamp <= 1396190640):
-      offsetSeconds = 295260;
-      break;
-    case (timestamp <= 1396190700):
-      offsetSeconds = 295380;
-      break;
-    case (timestamp <= 1396198080):
-      offsetSeconds = 295440;
-      break;
-    case (timestamp <= 1396199100):
-      offsetSeconds = 295520;
-      break;
-    case (timestamp <= 1396272600):
-      offsetSeconds = 295500;
-      break;
-    case (timestamp <= 1396443120):
-      offsetSeconds = 295740;
-      break;
-    case (timestamp <= 1396540540):
-      offsetSeconds = 295700;
-      break;
-    case (timestamp <= 1396560400):
-      offsetSeconds = 295820;
-      break;
-    case (timestamp <= 1396583380):
-      offsetSeconds = 295880;
-      break;
-    case (timestamp <= 1396641280):
-      offsetSeconds = 296180;
-      break;
-    case (timestamp <= 1396708360):
-      offsetSeconds = 296240;
-      break;
-    case (timestamp <= 1396712440):
-      offsetSeconds = 296360;
-      break;
-    case (timestamp <= 1397211040):
-      offsetSeconds = 296420;
-      break;
-    case (timestamp <= 1397371000):
-      offsetSeconds = 296480;
-      break;
-    case (timestamp <= 1397443120):
-      offsetSeconds = 296540;
-      break;
-    case (timestamp <= 1397461580):
-      offsetSeconds = 296560;
-      break;
-    case (timestamp <= 1397484140):
-      offsetSeconds = 296620;
-      break;
-    case (timestamp <= 1397484200):
-      offsetSeconds = 328380;
-      break;
-    case (timestamp <= 1397484260):
-      offsetSeconds = 337840;
-      break;
-    case (timestamp <= 1397484320):
-      offsetSeconds = 344680;
-      break;
-    case (timestamp <= 1397913860):
-      offsetSeconds = 344740;
-      break;
-    case (timestamp <= 1397922080):
-      offsetSeconds = 345220;
-      break;
-    case (timestamp <= 1397929520):
-      offsetSeconds = 345700;
-      break;
-    case (timestamp <= 1397935040):
-      offsetSeconds = 345760;
-      break;
-    case (timestamp <= 1397935100):
-      offsetSeconds = 346120;
-      break;
-    case (timestamp <= 1397956820):
-      offsetSeconds = 346240;
-      break;
-    case (timestamp <= 1397991800):
-      offsetSeconds = 346300;
-      break;
-    case (timestamp <= 1397997080):
-      offsetSeconds = 346420;
-      break;
-    case (timestamp <= 1398022340):
-      offsetSeconds = 346660;
-      break;
-    case (timestamp <= 1398108620):
-      offsetSeconds = 346720;
-      break;
-    case (timestamp <= 1398443120):
-      offsetSeconds = 346780;
-      break;
-    case (timestamp <= 1398589560):
-      offsetSeconds = 346800;
-      break;
-    case (timestamp <= 1398642600):
-      offsetSeconds = 346860;
-      break;
-    case (timestamp <= 1398646140):
-      offsetSeconds = 346980;
-      break;
-    case (timestamp <= 1398647880):
-      offsetSeconds = 347160;
-      break;
-    case (timestamp <= 1399142580):
-      offsetSeconds = 347340;
-      break;
-    case (timestamp <= 1399224180):
-      offsetSeconds = 347400;
-      break;
-    case (timestamp <= 1399303320):
-      offsetSeconds = 347460;
-      break;
-    case (timestamp <= 1399319640):
-      offsetSeconds = 347640;
-      break;
-    case (timestamp <= 1399331700):
-      offsetSeconds = 347700;
-      break;
-    case (timestamp <= 1399443120):
-      offsetSeconds = 347820;
-      break;
-    case (timestamp <= 1399538260):
-      offsetSeconds = 347780;
-      break;
-    case (timestamp <= 1399577320):
-      offsetSeconds = 347840;
-      break;
-    case (timestamp <= 1399739080):
-      offsetSeconds = 347900;
-      break;
-    case (timestamp <= 1399866580):
-      offsetSeconds = 348140;
-      break;
-    case (timestamp <= 1400004160):
-      offsetSeconds = 348260;
-      break;
-    case (timestamp <= 1400024200):
-      offsetSeconds = 348440;
-      break;
-    case (timestamp <= 1400091760):
-      offsetSeconds = 348920;
-      break;
-    case (timestamp <= 1400168860):
-      offsetSeconds = 348980;
-      break;
-    case (timestamp <= 1400194360):
-      offsetSeconds = 349040;
-      break;
-    case (timestamp <= 1400235520):
-      offsetSeconds = 349400;
-      break;
-    case (timestamp <= 1400240800):
-      offsetSeconds = 349520;
-      break;
-    case (timestamp <= 1400443120):
-      offsetSeconds = 349700;
-      break;
-    case (timestamp <= 1400488340):
-      offsetSeconds = 349720;
-      break;
-    case (timestamp <= 1400556740):
-      offsetSeconds = 349840;
-      break;
-    case (timestamp <= 1400586620):
-      offsetSeconds = 349960;
-      break;
-    case (timestamp <= 1400733140):
-      offsetSeconds = 350020;
-      break;
-    case (timestamp <= 1400765600):
-      offsetSeconds = 350080;
-      break;
-    case (timestamp <= 1400914400):
-      offsetSeconds = 350140;
-      break;
-    case (timestamp <= 1400957180):
-      offsetSeconds = 350200;
-      break;
-    case (timestamp <= 1400993000):
-      offsetSeconds = 350740;
-      break;
-    case (timestamp <= 1401065480):
-      offsetSeconds = 350860;
-      break;
-    case (timestamp <= 1401097040):
-      offsetSeconds = 350980;
-      break;
-    case (timestamp <= 1401098360):
-      offsetSeconds = 351040;
-      break;
-    case (timestamp <= 1401130280):
-      offsetSeconds = 351460;
-      break;
-    case (timestamp <= 1401149600):
-      offsetSeconds = 351580;
-      break;
-    case (timestamp <= 1401293180):
-      offsetSeconds = 351760;
-      break;
-    case (timestamp <= 1401299780):
-      offsetSeconds = 351940;
-      break;
-    case (timestamp <= 1401336620):
-      offsetSeconds = 352060;
-      break;
-    case (timestamp <= 1401443120):
-      offsetSeconds = 352240;
-      break;
-    case (timestamp <= 1401536760):
-      offsetSeconds = 352260;
-      break;
-    case (timestamp <= 1401547260):
-      offsetSeconds = 352380;
-      break;
-    case (timestamp <= 1401556200):
-      offsetSeconds = 352440;
-      break;
-    case (timestamp <= 1401568320):
-      offsetSeconds = 352560;
-      break;
-    case (timestamp <= 1401575400):
-      offsetSeconds = 352620;
-      break;
-    case (timestamp <= 1401602280):
-      offsetSeconds = 352680;
-      break;
-    case (timestamp <= 1401607080):
-      offsetSeconds = 352740;
-      break;
-    case (timestamp <= 1402163520):
-      offsetSeconds = 352800;
-      break;
-    case (timestamp <= 1402252680):
-      offsetSeconds = 353520;
-      break;
-    case (timestamp <= 1402252740):
-      offsetSeconds = 353580;
-      break;
-    case (timestamp <= 1402364100):
-      offsetSeconds = 353880;
-      break;
-    case (timestamp <= 1402443120):
-      offsetSeconds = 354120;
-      break;
-    case (timestamp <= 1402539520):
-      offsetSeconds = 354080;
-      break;
-    case (timestamp <= 1402582780):
-      offsetSeconds = 354200;
-      break;
-    case (timestamp <= 1402655140):
-      offsetSeconds = 354680;
-      break;
-    case (timestamp <= 1403201980):
-      offsetSeconds = 354860;
-      break;
-    case (timestamp <= 1403410660):
-      offsetSeconds = 354920;
-      break;
-    case (timestamp <= 1403443120):
-      offsetSeconds = 355160;
-      break;
-    case (timestamp <= 1403584280):
-      offsetSeconds = 355180;
-      break;
-    case (timestamp <= 1403619920):
-      offsetSeconds = 355300;
-      break;
-    case (timestamp <= 1403765660):
-      offsetSeconds = 355360;
-      break;
-    case (timestamp <= 1403805560):
-      offsetSeconds = 355600;
-      break;
-    case (timestamp <= 1403925980):
-      offsetSeconds = 355660;
-      break;
-    case (timestamp <= 1403932460):
-      offsetSeconds = 355720;
-      break;
-    case (timestamp <= 1403932520):
-      offsetSeconds = 368890;
-      break;
-    case (timestamp <= 1404075680):
-      offsetSeconds = 372820;
-      break;
-    case (timestamp <= 1404075980):
-      offsetSeconds = 372880;
-      break;
-    case (timestamp <= 1404076400):
-      offsetSeconds = 372940;
-      break;
-    case (timestamp <= 1404076820):
-      offsetSeconds = 373000;
-      break;
-    case (timestamp <= 1404078920):
-      offsetSeconds = 373060;
-      break;
-    case (timestamp <= 1404079340):
-      offsetSeconds = 373120;
-      break;
-    case (timestamp <= 1404079820):
-      offsetSeconds = 373180;
-      break;
-    case (timestamp <= 1404081920):
-      offsetSeconds = 373240;
-      break;
-    case (timestamp <= 1404123740):
-      offsetSeconds = 373300;
-      break;
-    case (timestamp <= 1404125000):
-      offsetSeconds = 373360;
-      break;
-    case (timestamp <= 1404335780):
-      offsetSeconds = 373420;
-      break;
-    case (timestamp <= 1404381200):
-      offsetSeconds = 373480;
-      break;
-    case (timestamp <= 1404384200):
-      offsetSeconds = 373540;
-      break;
-    case (timestamp <= 1404387680):
-      offsetSeconds = 373600;
-      break;
-    case (timestamp <= 1404392300):
-      offsetSeconds = 373660;
-      break;
-    case (timestamp <= 1404443120):
-      offsetSeconds = 373840;
-      break;
-    case (timestamp <= 1404501900):
-      offsetSeconds = 373860;
-      break;
-    case (timestamp <= 1404554340):
-      offsetSeconds = 374040;
-      break;
-    case (timestamp <= 1404652980):
-      offsetSeconds = 374100;
-      break;
-    case (timestamp <= 1404718980):
-      offsetSeconds = 374160;
-      break;
-    case (timestamp <= 1404861540):
-      offsetSeconds = 374280;
-      break;
-    case (timestamp <= 1404967800):
-      offsetSeconds = 374340;
-      break;
-    case (timestamp <= 1404990720):
-      offsetSeconds = 374400;
-      break;
-    case (timestamp <= 1404998520):
-      offsetSeconds = 374640;
-      break;
-    case (timestamp <= 1405072560):
-      offsetSeconds = 374700;
-      break;
-    case (timestamp <= 1405176960):
-      offsetSeconds = 374820;
-      break;
-    case (timestamp <= 1405443120):
-      offsetSeconds = 375000;
-      break;
-    case (timestamp <= 1405548760):
-      offsetSeconds = 374960;
-      break;
-    case (timestamp <= 1405562260):
-      offsetSeconds = 375080;
-      break;
-    case (timestamp <= 1405590280):
-      offsetSeconds = 375500;
-      break;
-    case (timestamp <= 1405779400):
-      offsetSeconds = 375620;
-      break;
-    case (timestamp <= 1405926700):
-      offsetSeconds = 375980;
-      break;
-    case (timestamp <= 1405930540):
-      offsetSeconds = 376100;
-      break;
-    case (timestamp <= 1405976860):
-      offsetSeconds = 376340;
-      break;
-    case (timestamp <= 1406003020):
-      offsetSeconds = 376400;
-      break;
-    case (timestamp <= 1406211460):
-      offsetSeconds = 376460;
-      break;
-    case (timestamp <= 1406367880):
-      offsetSeconds = 376700;
-      break;
-    case (timestamp <= 1406367940):
-      offsetSeconds = 377060;
-      break;
-    case (timestamp <= 1406372140):
-      offsetSeconds = 377120;
-      break;
-    case (timestamp <= 1406372200):
-      offsetSeconds = 378020;
-      break;
-    case (timestamp <= 1406443120):
-      offsetSeconds = 378200;
-      break;
-    case (timestamp <= 1406528840):
-      offsetSeconds = 378220;
-      break;
-    case (timestamp <= 1406783360):
-      offsetSeconds = 378280;
-      break;
-    case (timestamp <= 1406870840):
-      offsetSeconds = 378340;
-      break;
-    case (timestamp <= 1406875940):
-      offsetSeconds = 378400;
-      break;
-    case (timestamp <= 1406879300):
-      offsetSeconds = 378460;
-      break;
-    case (timestamp <= 1406932100):
-      offsetSeconds = 378520;
-      break;
-    case (timestamp <= 1406946080):
-      offsetSeconds = 378640;
-      break;
-    case (timestamp <= 1406951360):
-      offsetSeconds = 378880;
-      break;
-    case (timestamp <= 1406999120):
-      offsetSeconds = 378940;
-      break;
-    case (timestamp <= 1407018020):
-      offsetSeconds = 379000;
-      break;
-    case (timestamp <= 1407021860):
-      offsetSeconds = 379120;
-      break;
-    case (timestamp <= 1407026840):
-      offsetSeconds = 379240;
-      break;
-    case (timestamp <= 1407030020):
-      offsetSeconds = 379540;
-      break;
-    case (timestamp <= 1407054800):
-      offsetSeconds = 379780;
-      break;
-    case (timestamp <= 1407056180):
-      offsetSeconds = 379840;
-      break;
-    case (timestamp <= 1407058760):
-      offsetSeconds = 379900;
-      break;
-    case (timestamp <= 1407059780):
-      offsetSeconds = 380080;
-      break;
-    case (timestamp <= 1407104780):
-      offsetSeconds = 380140;
-      break;
-    case (timestamp <= 1407106460):
-      offsetSeconds = 380200;
-      break;
-    case (timestamp <= 1407108740):
-      offsetSeconds = 380260;
-      break;
-    case (timestamp <= 1407110660):
-      offsetSeconds = 380500;
-      break;
-    case (timestamp <= 1407113000):
-      offsetSeconds = 380680;
-      break;
-    case (timestamp <= 1407114260):
-      offsetSeconds = 380740;
-      break;
-    case (timestamp <= 1407114980):
-      offsetSeconds = 380800;
-      break;
-    case (timestamp <= 1407121340):
-      offsetSeconds = 381040;
-      break;
-    case (timestamp <= 1407122660):
-      offsetSeconds = 381160;
-      break;
-    case (timestamp <= 1407125120):
-      offsetSeconds = 381220;
-      break;
-    case (timestamp <= 1407227480):
-      offsetSeconds = 381280;
-      break;
-    case (timestamp <= 1407362840):
-      offsetSeconds = 381340;
-      break;
-    case (timestamp <= 1407443120):
-      offsetSeconds = 381400;
-      break;
-    case (timestamp <= 1407617880):
-      offsetSeconds = 381420;
-      break;
-    case (timestamp <= 1407621060):
-      offsetSeconds = 381480;
-      break;
-    case (timestamp <= 1407621480):
-      offsetSeconds = 381540;
-      break;
-    case (timestamp <= 1407621960):
-      offsetSeconds = 381600;
-      break;
-    case (timestamp <= 1407622500):
-      offsetSeconds = 381660;
-      break;
-    case (timestamp <= 1407752340):
-      offsetSeconds = 381720;
-      break;
-    case (timestamp <= 1408007760):
-      offsetSeconds = 381840;
-      break;
-    case (timestamp <= 1408019280):
-      offsetSeconds = 381900;
-      break;
-    case (timestamp <= 1408019340):
-      offsetSeconds = 381960;
-      break;
-    case (timestamp <= 1408021200):
-      offsetSeconds = 382140;
-      break;
-    case (timestamp <= 1408022340):
-      offsetSeconds = 382200;
-      break;
-    case (timestamp <= 1408170240):
-      offsetSeconds = 382260;
-      break;
-    case (timestamp <= 1408174260):
-      offsetSeconds = 382560;
-      break;
-    case (timestamp <= 1408174800):
-      offsetSeconds = 382620;
-      break;
-    case (timestamp <= 1408217280):
-      offsetSeconds = 382680;
-      break;
-    case (timestamp <= 1408229400):
-      offsetSeconds = 382740;
-      break;
-    case (timestamp <= 1408232700):
-      offsetSeconds = 382980;
-      break;
-    case (timestamp <= 1408391580):
-      offsetSeconds = 383040;
-      break;
-    case (timestamp <= 1408443120):
-      offsetSeconds = 383340;
-      break;
-    case (timestamp <= 1408552480):
-      offsetSeconds = 383300;
-      break;
-    case (timestamp <= 1408565020):
-      offsetSeconds = 383360;
-      break;
-    case (timestamp <= 1408565080):
-      offsetSeconds = 383720;
-      break;
-    case (timestamp <= 1408569580):
-      offsetSeconds = 383780;
-      break;
-    case (timestamp <= 1408569640):
-      offsetSeconds = 384380;
-      break;
-    case (timestamp <= 1408607080):
-      offsetSeconds = 384500;
-      break;
-    case (timestamp <= 1408624240):
-      offsetSeconds = 384560;
-      break;
-    case (timestamp <= 1408847320):
-      offsetSeconds = 384620;
-      break;
-    case (timestamp <= 1408889440):
-      offsetSeconds = 384680;
-      break;
-    case (timestamp <= 1409193700):
-      offsetSeconds = 384740;
-      break;
-    case (timestamp <= 1409319100):
-      offsetSeconds = 384860;
-      break;
-    case (timestamp <= 1409438980):
-      offsetSeconds = 384920;
-      break;
-    case (timestamp <= 1409443120):
-      offsetSeconds = 385040;
-      break;
-    case (timestamp <= 1409741840):
-      offsetSeconds = 385060;
-      break;
-    case (timestamp <= 1409797580):
-      offsetSeconds = 385120;
-      break;
-    case (timestamp <= 1409815520):
-      offsetSeconds = 385180;
-      break;
-    case (timestamp <= 1409816180):
-      offsetSeconds = 385240;
-      break;
-    case (timestamp <= 1409819300):
-      offsetSeconds = 385300;
-      break;
-    case (timestamp <= 1409819780):
-      offsetSeconds = 385360;
-      break;
-    case (timestamp <= 1410143240):
-      offsetSeconds = 385420;
-      break;
-    case (timestamp <= 1410147320):
-      offsetSeconds = 385720;
-      break;
-    case (timestamp <= 1410197540):
-      offsetSeconds = 385780;
-      break;
-    case (timestamp <= 1410228260):
-      offsetSeconds = 385840;
-      break;
-    case (timestamp <= 1410380060):
-      offsetSeconds = 385900;
-      break;
-    case (timestamp <= 1410432500):
-      offsetSeconds = 386380;
-      break;
-    case (timestamp <= 1410443120):
-      offsetSeconds = 386440;
-      break;
-    case (timestamp <= 1410567120):
-      offsetSeconds = 386460;
-      break;
-    case (timestamp <= 1410569940):
-      offsetSeconds = 386520;
-      break;
-    case (timestamp <= 1410571860):
-      offsetSeconds = 386580;
-      break;
-    case (timestamp <= 1410693060):
-      offsetSeconds = 386700;
-      break;
-    case (timestamp <= 1410856920):
-      offsetSeconds = 386760;
-      break;
-    case (timestamp <= 1411020780):
-      offsetSeconds = 388500;
-      break;
-    case (timestamp <= 1411024020):
-      offsetSeconds = 388560;
-      break;
-    case (timestamp <= 1411075620):
-      offsetSeconds = 388620;
-      break;
-    case (timestamp <= 1411154880):
-      offsetSeconds = 389340;
-      break;
-    case (timestamp <= 1411203420):
-      offsetSeconds = 389400;
-      break;
-    case (timestamp <= 1411239480):
-      offsetSeconds = 389460;
-      break;
-    case (timestamp <= 1411265460):
-      offsetSeconds = 389520;
-      break;
-    case (timestamp <= 1411282620):
-      offsetSeconds = 389640;
-      break;
-    case (timestamp <= 1411283160):
-      offsetSeconds = 389700;
-      break;
-    case (timestamp <= 1411283880):
-      offsetSeconds = 389820;
-      break;
-    case (timestamp <= 1411316040):
-      offsetSeconds = 389940;
-      break;
-    case (timestamp <= 1411324740):
-      offsetSeconds = 390060;
-      break;
-    case (timestamp <= 1411373760):
-      offsetSeconds = 390120;
-      break;
-    case (timestamp <= 1411442100):
-      offsetSeconds = 390300;
-      break;
-    case (timestamp <= 1411443120):
-      offsetSeconds = 390360;
-      break;
-    case (timestamp <= 1411586740):
-      offsetSeconds = 390320;
-      break;
-    case (timestamp <= 1411611160):
-      offsetSeconds = 390500;
-      break;
-    case (timestamp <= 1411625740):
-      offsetSeconds = 390800;
-      break;
-    case (timestamp <= 1411632100):
-      offsetSeconds = 391760;
-      break;
-    case (timestamp <= 1411669060):
-      offsetSeconds = 391820;
-      break;
-    case (timestamp <= 1411784740):
-      offsetSeconds = 392000;
-      break;
-    case (timestamp <= 1411842040):
-      offsetSeconds = 392180;
-      break;
-    case (timestamp <= 1411866580):
-      offsetSeconds = 392300;
-      break;
-    case (timestamp <= 1411910740):
-      offsetSeconds = 392360;
-      break;
-    case (timestamp <= 1411926760):
-      offsetSeconds = 392670;
-      break;
-    case (timestamp <= 1411926880):
-      offsetSeconds = 392660;
-      break;
-    case (timestamp <= 1412185600):
-      offsetSeconds = 392840;
-      break;
-    case (timestamp <= 1412186860):
-      offsetSeconds = 392900;
-      break;
-    case (timestamp <= 1412192200):
-      offsetSeconds = 393080;
-      break;
-    case (timestamp <= 1412192560):
-      offsetSeconds = 393140;
-      break;
-    case (timestamp <= 1412193400):
-      offsetSeconds = 393380;
-      break;
-    case (timestamp <= 1412194780):
-      offsetSeconds = 393440;
-      break;
-    case (timestamp <= 1412196460):
-      offsetSeconds = 393500;
-      break;
-    case (timestamp <= 1412198380):
-      offsetSeconds = 393560;
-      break;
-    case (timestamp <= 1412230960):
-      offsetSeconds = 393620;
-      break;
-    case (timestamp <= 1412279260):
-      offsetSeconds = 393680;
-      break;
-    case (timestamp <= 1412341900):
-      offsetSeconds = 393740;
-      break;
-    case (timestamp <= 1412342440):
-      offsetSeconds = 393800;
-      break;
-    case (timestamp <= 1412343100):
-      offsetSeconds = 393860;
-      break;
-    case (timestamp <= 1412344180):
-      offsetSeconds = 393920;
-      break;
-    case (timestamp <= 1412344720):
-      offsetSeconds = 393980;
-      break;
-    case (timestamp <= 1412345380):
-      offsetSeconds = 394040;
-      break;
-    case (timestamp <= 1412382640):
-      offsetSeconds = 394100;
-      break;
-    case (timestamp <= 1412443120):
-      offsetSeconds = 394160;
-      break;
-    case (timestamp <= 1412445380):
-      offsetSeconds = 394180;
-      break;
-    case (timestamp <= 1412448680):
-      offsetSeconds = 394240;
-      break;
-    case (timestamp <= 1412449940):
-      offsetSeconds = 394360;
-      break;
-    case (timestamp <= 1412479100):
-      offsetSeconds = 394420;
-      break;
-    case (timestamp <= 1412481380):
-      offsetSeconds = 394660;
-      break;
-    case (timestamp <= 1412818280):
-      offsetSeconds = 394960;
-      break;
-    case (timestamp <= 1412979680):
-      offsetSeconds = 395020;
-      break;
-    case (timestamp <= 1412995520):
-      offsetSeconds = 395080;
-      break;
-    case (timestamp <= 1413052760):
-      offsetSeconds = 395200;
-      break;
-    case (timestamp <= 1413052820):
-      offsetSeconds = 395210;
-      break;
-    case (timestamp <= 1413057500):
-      offsetSeconds = 395260;
-      break;
-    case (timestamp <= 1413174200):
-      offsetSeconds = 395500;
-      break;
-    case (timestamp <= 1413222860):
-      offsetSeconds = 395560;
-      break;
-    case (timestamp <= 1413223700):
-      offsetSeconds = 395640;
-      break;
-    case (timestamp <= 1413392240):
-      offsetSeconds = 395630;
-      break;
-    case (timestamp <= 1413397160):
-      offsetSeconds = 395620;
-      break;
-    case (timestamp <= 1413397220):
-      offsetSeconds = 395690;
-      break;
-    case (timestamp <= 1413397820):
-      offsetSeconds = 395710;
-      break;
-    case (timestamp <= 1413401120):
-      offsetSeconds = 395720;
-      break;
-    case (timestamp <= 1413443120):
-      offsetSeconds = 395680;
-      break;
-    case (timestamp <= 1413607380):
-      offsetSeconds = 395700;
-      break;
-    case (timestamp <= 1413697620):
-      offsetSeconds = 395820;
-      break;
-    case (timestamp <= 1413703680):
-      offsetSeconds = 395880;
-      break;
-    case (timestamp <= 1413706080):
-      offsetSeconds = 395940;
-      break;
-    case (timestamp <= 1413708060):
-      offsetSeconds = 396000;
-      break;
-    case (timestamp <= 1413708540):
-      offsetSeconds = 396060;
-      break;
-    case (timestamp <= 1413712500):
-      offsetSeconds = 396180;
-      break;
-    case (timestamp <= 1413715200):
-      offsetSeconds = 396360;
-      break;
-    case (timestamp <= 1413761580):
-      offsetSeconds = 396420;
-      break;
-    case (timestamp <= 1413764040):
-      offsetSeconds = 396480;
-      break;
-    case (timestamp <= 1413765780):
-      offsetSeconds = 396660;
-      break;
-    case (timestamp <= 1413767940):
-      offsetSeconds = 396720;
-      break;
-    case (timestamp <= 1413926760):
-      offsetSeconds = 397020;
-      break;
-    case (timestamp <= 1414441380):
-      offsetSeconds = 401220;
-      break;
-    case (timestamp <= 1414443120):
-      offsetSeconds = 401340;
-      break;
-    case (timestamp <= 1414999660):
-      offsetSeconds = 401300;
-      break;
-    case (timestamp <= 1415026540):
-      offsetSeconds = 401480;
-      break;
-    case (timestamp <= 1415310700):
-      offsetSeconds = 401540;
-      break;
-    case (timestamp <= 1415355040):
-      offsetSeconds = 401600;
-      break;
-    case (timestamp <= 1415361400):
-      offsetSeconds = 401840;
-      break;
-    case (timestamp <= 1415362480):
-      offsetSeconds = 401900;
-      break;
-    case (timestamp <= 1415371720):
-      offsetSeconds = 401990;
-      break;
-    case (timestamp <= 1415393140):
-      offsetSeconds = 401970;
-      break;
-    case (timestamp <= 1415397280):
-      offsetSeconds = 401960;
-      break;
-    case (timestamp <= 1415398900):
-      offsetSeconds = 402020;
-      break;
-    case (timestamp <= 1415401300):
-      offsetSeconds = 402080;
-      break;
-    case (timestamp <= 1415402200):
-      offsetSeconds = 402140;
-      break;
-    case (timestamp <= 1415403880):
-      offsetSeconds = 402260;
-      break;
-    case (timestamp <= 1415413720):
-      offsetSeconds = 402320;
-      break;
-    case (timestamp <= 1415416480):
-      offsetSeconds = 402380;
-      break;
-    case (timestamp <= 1415419120):
-      offsetSeconds = 402560;
-      break;
-    case (timestamp <= 1415422180):
-      offsetSeconds = 402740;
-      break;
-    case (timestamp <= 1415422240):
-      offsetSeconds = 402750;
-      break;
-    case (timestamp <= 1415443120):
-      offsetSeconds = 402800;
-      break;
-    case (timestamp <= 1415482220):
-      offsetSeconds = 402820;
-      break;
-    case (timestamp <= 1415482640):
-      offsetSeconds = 402940;
-      break;
-    case (timestamp <= 1415487080):
-      offsetSeconds = 403060;
-      break;
-    case (timestamp <= 1415495120):
-      offsetSeconds = 403180;
-      break;
-    case (timestamp <= 1415495720):
-      offsetSeconds = 403240;
-      break;
-    case (timestamp <= 1415504120):
-      offsetSeconds = 403300;
-      break;
-    case (timestamp <= 1415505020):
-      offsetSeconds = 403360;
-      break;
-    case (timestamp <= 1415529620):
-      offsetSeconds = 403420;
-      break;
-    case (timestamp <= 1415530220):
-      offsetSeconds = 403480;
-      break;
-    case (timestamp <= 1415534720):
-      offsetSeconds = 403540;
-      break;
-    case (timestamp <= 1415543300):
-      offsetSeconds = 403610;
-      break;
-    case (timestamp <= 1415568140):
-      offsetSeconds = 403600;
-      break;
-    case (timestamp <= 1415630600):
-      offsetSeconds = 403670;
-      break;
-    case (timestamp <= 1415694200):
-      offsetSeconds = 403660;
-      break;
-    case (timestamp <= 1415715380):
-      offsetSeconds = 403850;
-      break;
-    case (timestamp <= 1415715440):
-      offsetSeconds = 403870;
-      break;
-    case (timestamp <= 1415794460):
-      offsetSeconds = 403840;
-      break;
-    case (timestamp <= 1415998700):
-      offsetSeconds = 403970;
-      break;
-    case (timestamp <= 1416173060):
-      offsetSeconds = 403960;
-      break;
-    case (timestamp <= 1416257300):
-      offsetSeconds = 404040;
-      break;
-    case (timestamp <= 1416271460):
-      offsetSeconds = 404020;
-      break;
-    case (timestamp <= 1416443120):
-      offsetSeconds = 404080;
-      break;
-    case (timestamp <= 1416690540):
-      offsetSeconds = 404100;
-      break;
-    case (timestamp <= 1417063800):
-      offsetSeconds = 404160;
-      break;
-    case (timestamp <= 1417443120):
-      offsetSeconds = 404220;
-      break;
-    case (timestamp <= 1417656220):
-      offsetSeconds = 404180;
-      break;
-    case (timestamp <= 1417840900):
-      offsetSeconds = 404240;
-      break;
-    case (timestamp <= 1418017540):
-      offsetSeconds = 404420;
-      break;
-    case (timestamp <= 1418048440):
-      offsetSeconds = 404480;
-      break;
-    case (timestamp <= 1418089360):
-      offsetSeconds = 404720;
-      break;
-    case (timestamp <= 1418092780):
-      offsetSeconds = 404780;
-      break;
-    case (timestamp <= 1418096680):
-      offsetSeconds = 428240;
-      break;
-    case (timestamp <= 1418209480):
-      offsetSeconds = 428420;
-      break;
-    case (timestamp <= 1418237560):
-      offsetSeconds = 428600;
-      break;
-    case (timestamp <= 1418426200):
-      offsetSeconds = 428660;
-      break;
-    case (timestamp <= 1418443120):
-      offsetSeconds = 428900;
-      break;
-    case (timestamp <= 1418459300):
-      offsetSeconds = 428920;
-      break;
-    case (timestamp <= 1418552360):
-      offsetSeconds = 428980;
-      break;
-    case (timestamp <= 1418595320):
-      offsetSeconds = 429040;
-      break;
-    case (timestamp <= 1418700800):
-      offsetSeconds = 429100;
-      break;
-    case (timestamp <= 1419443120):
-      offsetSeconds = 429160;
-      break;
-    case (timestamp <= 1419603840):
-      offsetSeconds = 429180;
-      break;
-    case (timestamp <= 1420074480):
-      offsetSeconds = 429240;
-      break;
-    case (timestamp <= 1420075920):
-      offsetSeconds = 429480;
-      break;
-    case (timestamp <= 1420077420):
-      offsetSeconds = 429720;
-      break;
-    case (timestamp <= 1420078860):
-      offsetSeconds = 429960;
-      break;
-    case (timestamp <= 1420080360):
-      offsetSeconds = 430200;
-      break;
-    case (timestamp <= 1420242780):
-      offsetSeconds = 430440;
-      break;
-    case (timestamp <= 1420248360):
-      offsetSeconds = 430680;
-      break;
-    case (timestamp <= 1420643920):
-      offsetSeconds = 430880;
-      break;
-    case (timestamp <= 1420643980):
-      offsetSeconds = 430920;
-      break;
-    case (timestamp <= 1420655440):
-      offsetSeconds = 430940;
-      break;
-    case (timestamp <= 1420655500):
-      offsetSeconds = 430980;
-      break;
-    case (timestamp <= 1420655560):
-      offsetSeconds = 431030;
-      break;
-    case (timestamp <= 1420657060):
-      offsetSeconds = 431060;
-      break;
-    case (timestamp <= 1420657120):
-      offsetSeconds = 431110;
-      break;
-    case (timestamp <= 1420659820):
-      offsetSeconds = 431120;
-      break;
-    case (timestamp <= 1420659880):
-      offsetSeconds = 431170;
-      break;
-    case (timestamp <= 1420659940):
-      offsetSeconds = 431210;
-      break;
-    case (timestamp <= 1420660000):
-      offsetSeconds = 431440;
-      break;
-    case (timestamp <= 1420660060):
-      offsetSeconds = 431380;
-      break;
-    case (timestamp <= 1420660120):
-      offsetSeconds = 431360;
-      break;
-    case (timestamp <= 1420660240):
-      offsetSeconds = 431500;
-      break;
-    case (timestamp <= 1420660300):
-      offsetSeconds = 431470;
-      break;
-    case (timestamp <= 1420660360):
-      offsetSeconds = 431520;
-      break;
-    case (timestamp <= 1420660420):
-      offsetSeconds = 431560;
-      break;
-    case (timestamp <= 1420660480):
-      offsetSeconds = 431630;
-      break;
-    case (timestamp <= 1420660540):
-      offsetSeconds = 431640;
-      break;
-    case (timestamp <= 1420660600):
-      offsetSeconds = 431680;
-      break;
-    case (timestamp <= 1420660660):
-      offsetSeconds = 431720;
-      break;
-    case (timestamp <= 1420660720):
-      offsetSeconds = 431780;
-      break;
-    case (timestamp <= 1420660780):
-      offsetSeconds = 431810;
-      break;
-    case (timestamp <= 1420745020):
-      offsetSeconds = 431840;
-      break;
-    case (timestamp <= 1421112820):
-      offsetSeconds = 431900;
-      break;
-    case (timestamp <= 1421200840):
-      offsetSeconds = 431960;
-      break;
-    case (timestamp <= 1421257600):
-      offsetSeconds = 432020;
-      break;
-    case (timestamp <= 1421259280):
-      offsetSeconds = 432080;
-      break;
-    case (timestamp <= 1421263060):
-      offsetSeconds = 432140;
-      break;
-    case (timestamp <= 1421443120):
-      offsetSeconds = 432260;
-      break;
-    case (timestamp <= 1421628020):
-      offsetSeconds = 432280;
-      break;
-    case (timestamp <= 1421838440):
-      offsetSeconds = 432340;
-      break;
-    case (timestamp <= 1421854640):
-      offsetSeconds = 432400;
-      break;
-    case (timestamp <= 1421855240):
-      offsetSeconds = 432460;
-      break;
-    case (timestamp <= 1421922680):
-      offsetSeconds = 432520;
-      break;
-    case (timestamp <= 1421934920):
-      offsetSeconds = 432590;
-      break;
-    case (timestamp <= 1421934980):
-      offsetSeconds = 432580;
-      break;
-    case (timestamp <= 1422058640):
-      offsetSeconds = 432940;
-      break;
-    case (timestamp <= 1422059120):
-      offsetSeconds = 433000;
-      break;
-    case (timestamp <= 1422235400):
-      offsetSeconds = 433060;
-      break;
-    case (timestamp <= 1422342740):
-      offsetSeconds = 433120;
-      break;
-    case (timestamp <= 1422406520):
-      offsetSeconds = 433180;
-      break;
-    case (timestamp <= 1422406580):
-      offsetSeconds = 461800;
-      break;
-    case (timestamp <= 1422443120):
-      offsetSeconds = 461860;
-      break;
-    case (timestamp <= 1422574020):
-      offsetSeconds = 461880;
-      break;
-    case (timestamp <= 1422574740):
-      offsetSeconds = 462120;
-      break;
-    case (timestamp <= 1422973980):
-      offsetSeconds = 466680;
-      break;
-    case (timestamp <= 1422983400):
-      offsetSeconds = 466740;
-      break;
-    case (timestamp <= 1422990600):
-      offsetSeconds = 466800;
-      break;
-    case (timestamp <= 1423000680):
-      offsetSeconds = 466920;
-      break;
-    case (timestamp <= 1423020180):
-      offsetSeconds = 467160;
-      break;
-    case (timestamp <= 1423024440):
-      offsetSeconds = 467460;
-      break;
-    case (timestamp <= 1423041300):
-      offsetSeconds = 467640;
-      break;
-    case (timestamp <= 1423103100):
-      offsetSeconds = 467760;
-      break;
-    case (timestamp <= 1423254540):
-      offsetSeconds = 467820;
-      break;
-    case (timestamp <= 1423255560):
-      offsetSeconds = 467880;
-      break;
-    case (timestamp <= 1423407000):
-      offsetSeconds = 468000;
-      break;
-    case (timestamp <= 1423443120):
-      offsetSeconds = 468180;
-      break;
-    case (timestamp <= 1423584040):
-      offsetSeconds = 468140;
-      break;
-    case (timestamp <= 1423618720):
-      offsetSeconds = 468320;
-      break;
-    case (timestamp <= 1423623700):
-      offsetSeconds = 468380;
-      break;
-    case (timestamp <= 1423626940):
-      offsetSeconds = 468440;
-      break;
-    case (timestamp <= 1423635400):
-      offsetSeconds = 468680;
-      break;
-    case (timestamp <= 1424138560):
-      offsetSeconds = 468740;
-      break;
-    case (timestamp <= 1424188960):
-      offsetSeconds = 468800;
-      break;
-    case (timestamp <= 1424195380):
-      offsetSeconds = 468920;
-      break;
-    case (timestamp <= 1424209720):
-      offsetSeconds = 469160;
-      break;
-    case (timestamp <= 1424217880):
-      offsetSeconds = 469400;
-      break;
-    case (timestamp <= 1424225800):
-      offsetSeconds = 469520;
-      break;
-    case (timestamp <= 1424261560):
-      offsetSeconds = 469580;
-      break;
-    case (timestamp <= 1424267200):
-      offsetSeconds = 469640;
-      break;
-    case (timestamp <= 1424384380):
-      offsetSeconds = 469700;
-      break;
-    case (timestamp <= 1424443120):
-      offsetSeconds = 470000;
-      break;
-    case (timestamp <= 1424837600):
-      offsetSeconds = 470020;
-      break;
-    case (timestamp <= 1425349640):
-      offsetSeconds = 470080;
-      break;
-    case (timestamp <= 1425443120):
-      offsetSeconds = 470140;
-      break;
-    case (timestamp <= 1425633720):
-      offsetSeconds = 470160;
-      break;
-    case (timestamp <= 1426020000):
-      offsetSeconds = 470220;
-      break;
-    case (timestamp <= 1426059120):
-      offsetSeconds = 470280;
-      break;
-    case (timestamp <= 1426157760):
-      offsetSeconds = 470400;
-      break;
-    case (timestamp <= 1426443120):
-      offsetSeconds = 470460;
-      break;
-    case (timestamp <= 1426947400):
-      offsetSeconds = 470420;
-      break;
-    case (timestamp <= 1426951360):
-      offsetSeconds = 470480;
-      break;
-    case (timestamp <= 1427031880):
-      offsetSeconds = 470540;
-      break;
-    case (timestamp <= 1427271400):
-      offsetSeconds = 470600;
-      break;
-    case (timestamp <= 1427281540):
-      offsetSeconds = 470660;
-      break;
-    case (timestamp <= 1427443120):
-      offsetSeconds = 470720;
-      break;
-    case (timestamp <= 1428059720):
-      offsetSeconds = 470740;
-      break;
-    case (timestamp <= 1428125360):
-      offsetSeconds = 470800;
-      break;
-    case (timestamp <= 1428158960):
-      offsetSeconds = 471040;
-      break;
-    case (timestamp <= 1428399440):
-      offsetSeconds = 471100;
-      break;
-    case (timestamp <= 1428420200):
-      offsetSeconds = 471160;
-      break;
-    case (timestamp <= 1428443120):
-      offsetSeconds = 471280;
-      break;
-    case (timestamp <= 1428444420):
-      offsetSeconds = 471300;
-      break;
-    case (timestamp <= 1428463080):
-      offsetSeconds = 471660;
-      break;
-    case (timestamp <= 1428642000):
-      offsetSeconds = 471720;
-      break;
-    case (timestamp <= 1428674700):
-      offsetSeconds = 471780;
-      break;
-    case (timestamp <= 1428752880):
-      offsetSeconds = 472200;
-      break;
-    case (timestamp <= 1428858960):
-      offsetSeconds = 472260;
-      break;
-    case (timestamp <= 1429027860):
-      offsetSeconds = 472740;
-      break;
-    case (timestamp <= 1429029540):
-      offsetSeconds = 472920;
-      break;
-    case (timestamp <= 1429033500):
-      offsetSeconds = 473100;
-      break;
-    case (timestamp <= 1429042500):
-      offsetSeconds = 473280;
-      break;
-    case (timestamp <= 1429042800):
-      offsetSeconds = 473340;
-      break;
-    case (timestamp <= 1429043220):
-      offsetSeconds = 473400;
-      break;
-    case (timestamp <= 1429043700):
-      offsetSeconds = 473460;
-      break;
-    case (timestamp <= 1429044180):
-      offsetSeconds = 473520;
-      break;
-    case (timestamp <= 1429044780):
-      offsetSeconds = 473580;
-      break;
-    case (timestamp <= 1429059360):
-      offsetSeconds = 473640;
-      break;
-    case (timestamp <= 1429142880):
-      offsetSeconds = 473940;
-      break;
-    case (timestamp <= 1429443120):
-      offsetSeconds = 474000;
-      break;
-    case (timestamp <= 1429448860):
-      offsetSeconds = 473960;
-      break;
-    case (timestamp <= 1429526800):
-      offsetSeconds = 474020;
-      break;
-    case (timestamp <= 1429528060):
-      offsetSeconds = 474080;
-      break;
-    case (timestamp <= 1429641220):
-      offsetSeconds = 474140;
-      break;
-    case (timestamp <= 1429647640):
-      offsetSeconds = 474200;
-      break;
-    case (timestamp <= 1429648060):
-      offsetSeconds = 474320;
-      break;
-    case (timestamp <= 1429649440):
-      offsetSeconds = 474380;
-      break;
-    case (timestamp <= 1429689040):
-      offsetSeconds = 474440;
-      break;
-    case (timestamp <= 1429689400):
-      offsetSeconds = 474500;
-      break;
-    case (timestamp <= 1429693780):
-      offsetSeconds = 474560;
-      break;
-    case (timestamp <= 1429923100):
-      offsetSeconds = 474680;
-      break;
-    case (timestamp <= 1430047360):
-      offsetSeconds = 477800;
-      break;
-    case (timestamp <= 1430180080):
-      offsetSeconds = 478160;
-      break;
-    case (timestamp <= 1430239120):
-      offsetSeconds = 478220;
-      break;
-    case (timestamp <= 1430239960):
-      offsetSeconds = 478280;
-      break;
-    case (timestamp <= 1430269540):
-      offsetSeconds = 478340;
-      break;
-    case (timestamp <= 1430283700):
-      offsetSeconds = 478400;
-      break;
-    case (timestamp <= 1430287480):
-      offsetSeconds = 478520;
-      break;
-    case (timestamp <= 1430309200):
-      offsetSeconds = 478580;
-      break;
-    case (timestamp <= 1430353000):
-      offsetSeconds = 478700;
-      break;
-    case (timestamp <= 1430443120):
-      offsetSeconds = 478760;
-      break;
-    case (timestamp <= 1430866700):
-      offsetSeconds = 478780;
-      break;
-    case (timestamp <= 1430885420):
-      offsetSeconds = 478900;
-      break;
-    case (timestamp <= 1430885780):
-      offsetSeconds = 478960;
-      break;
-    case (timestamp <= 1430886260):
-      offsetSeconds = 479020;
-      break;
-    case (timestamp <= 1430889380):
-      offsetSeconds = 479080;
-      break;
-    case (timestamp <= 1430889980):
-      offsetSeconds = 479140;
-      break;
-    case (timestamp <= 1430890820):
-      offsetSeconds = 479260;
-      break;
-    case (timestamp <= 1431443120):
-      offsetSeconds = 479380;
-      break;
-    case (timestamp <= 1431462120):
-      offsetSeconds = 479400;
-      break;
-    case (timestamp <= 1431482400):
-      offsetSeconds = 479640;
-      break;
-    case (timestamp <= 1431493260):
-      offsetSeconds = 479700;
-      break;
-    case (timestamp <= 1431512820):
-      offsetSeconds = 479820;
-      break;
-    case (timestamp <= 1431658380):
-      offsetSeconds = 479880;
-      break;
-    case (timestamp <= 1431943140):
-      offsetSeconds = 479940;
-      break;
-    case (timestamp <= 1432033920):
-      offsetSeconds = 480000;
-      break;
-    case (timestamp <= 1432041420):
-      offsetSeconds = 480060;
-      break;
-    case (timestamp <= 1432044120):
-      offsetSeconds = 480120;
-      break;
-    case (timestamp <= 1432075500):
-      offsetSeconds = 480180;
-      break;
-    case (timestamp <= 1432114020):
-      offsetSeconds = 480240;
-      break;
-    case (timestamp <= 1432141860):
-      offsetSeconds = 480480;
-      break;
-    case (timestamp <= 1432443120):
-      offsetSeconds = 480540;
-      break;
-    case (timestamp <= 1432642000):
-      offsetSeconds = 480500;
-      break;
-    case (timestamp <= 1432642540):
-      offsetSeconds = 480620;
-      break;
-    case (timestamp <= 1432713820):
-      offsetSeconds = 480680;
-      break;
-    case (timestamp <= 1432899220):
-      offsetSeconds = 480740;
-      break;
-    case (timestamp <= 1433210140):
-      offsetSeconds = 480800;
-      break;
-    case (timestamp <= 1433219920):
-      offsetSeconds = 480980;
-      break;
-    case (timestamp <= 1433222020):
-      offsetSeconds = 481040;
-      break;
-    case (timestamp <= 1433427820):
-      offsetSeconds = 481160;
-      break;
-    case (timestamp <= 1433428720):
-      offsetSeconds = 481220;
-      break;
-    case (timestamp <= 1433443120):
-      offsetSeconds = 481280;
-      break;
-    case (timestamp <= 1433530040):
-      offsetSeconds = 481300;
-      break;
-    case (timestamp <= 1433530220):
-      offsetSeconds = 481480;
-      break;
-    case (timestamp <= 1433687840):
-      offsetSeconds = 481540;
-      break;
-    case (timestamp <= 1433735720):
-      offsetSeconds = 481600;
-      break;
-    case (timestamp <= 1433853860):
-      offsetSeconds = 481660;
-      break;
-    case (timestamp <= 1433900420):
-      offsetSeconds = 481780;
-      break;
-    case (timestamp <= 1433903780):
-      offsetSeconds = 482200;
-      break;
-    case (timestamp <= 1433928560):
-      offsetSeconds = 483100;
-      break;
-    case (timestamp <= 1433969480):
-      offsetSeconds = 483220;
-      break;
-    case (timestamp <= 1434119900):
-      offsetSeconds = 483280;
-      break;
-    case (timestamp <= 1434184280):
-      offsetSeconds = 483340;
-      break;
-    case (timestamp <= 1434198380):
-      offsetSeconds = 483400;
-      break;
-    case (timestamp <= 1434385340):
-      offsetSeconds = 483640;
-      break;
-    case (timestamp <= 1434443120):
-      offsetSeconds = 483700;
-      break;
-    case (timestamp <= 1434447540):
-      offsetSeconds = 483720;
-      break;
-    case (timestamp <= 1434461820):
-      offsetSeconds = 483780;
-      break;
-    case (timestamp <= 1434538740):
-      offsetSeconds = 484020;
-      break;
-    case (timestamp <= 1434625560):
-      offsetSeconds = 484200;
-      break;
-    case (timestamp <= 1435083300):
-      offsetSeconds = 484320;
-      break;
-    case (timestamp <= 1435115460):
-      offsetSeconds = 484520;
-      break;
-    case (timestamp <= 1435123740):
-      offsetSeconds = 484500;
-      break;
-    case (timestamp <= 1435140120):
-      offsetSeconds = 484560;
-      break;
-    case (timestamp <= 1435186200):
-      offsetSeconds = 484620;
-      break;
-    case (timestamp <= 1435224720):
-      offsetSeconds = 484680;
-      break;
-    case (timestamp <= 1435443120):
-      offsetSeconds = 484740;
-      break;
-    case (timestamp <= 1435529200):
-      offsetSeconds = 484700;
-      break;
-    case (timestamp <= 1435715560):
-      offsetSeconds = 484770;
-      break;
-    case (timestamp <= 1435773580):
-      offsetSeconds = 484760;
-      break;
-    case (timestamp <= 1435773640):
-      offsetSeconds = 484800;
-      break;
-    case (timestamp <= 1436056960):
-      offsetSeconds = 484890;
-      break;
-    case (timestamp <= 1436064220):
-      offsetSeconds = 484880;
-      break;
-    case (timestamp <= 1436112640):
-      offsetSeconds = 484950;
-      break;
-    case (timestamp <= 1436123740):
-      offsetSeconds = 484940;
-      break;
-    case (timestamp <= 1436151820):
-      offsetSeconds = 485010;
-      break;
-    case (timestamp <= 1436187040):
-      offsetSeconds = 485000;
-      break;
-    case (timestamp <= 1436202940):
-      offsetSeconds = 485060;
-      break;
-    case (timestamp <= 1436241760):
-      offsetSeconds = 485300;
-      break;
-    case (timestamp <= 1436241820):
-      offsetSeconds = 491240;
-      break;
-    case (timestamp <= 1436384020):
-      offsetSeconds = 491840;
-      break;
-    case (timestamp <= 1436443120):
-      offsetSeconds = 491900;
-      break;
-    case (timestamp <= 1436604560):
-      offsetSeconds = 491920;
-      break;
-    case (timestamp <= 1437190880):
-      offsetSeconds = 492040;
-      break;
-    case (timestamp <= 1437192740):
-      offsetSeconds = 492160;
-      break;
-    case (timestamp <= 1437258200):
-      offsetSeconds = 492220;
-      break;
-    case (timestamp <= 1437279380):
-      offsetSeconds = 492520;
-      break;
-    case (timestamp <= 1437443120):
-      offsetSeconds = 492580;
-      break;
-    case (timestamp <= 1437508440):
-      offsetSeconds = 492600;
-      break;
-    case (timestamp <= 1437549780):
-      offsetSeconds = 494100;
-      break;
-    case (timestamp <= 1437550080):
-      offsetSeconds = 494160;
-      break;
-    case (timestamp <= 1437550440):
-      offsetSeconds = 494220;
-      break;
-    case (timestamp <= 1437550860):
-      offsetSeconds = 494280;
-      break;
-    case (timestamp <= 1437551340):
-      offsetSeconds = 494340;
-      break;
-    case (timestamp <= 1438443120):
-      offsetSeconds = 494400;
-      break;
-    case (timestamp <= 1439081440):
-      offsetSeconds = 494360;
-      break;
-    case (timestamp <= 1439082400):
-      offsetSeconds = 494420;
-      break;
-    case (timestamp <= 1439083480):
-      offsetSeconds = 494490;
-      break;
-    case (timestamp <= 1439085940):
-      offsetSeconds = 494480;
-      break;
-    case (timestamp <= 1439086000):
-      offsetSeconds = 494540;
-      break;
-    case (timestamp <= 1439086060):
-      offsetSeconds = 495750;
-      break;
-    case (timestamp <= 1439322520):
-      offsetSeconds = 495740;
-      break;
-    case (timestamp <= 1439328760):
-      offsetSeconds = 495860;
-      break;
-    case (timestamp <= 1439338840):
-      offsetSeconds = 495920;
-      break;
-    case (timestamp <= 1439443120):
-      offsetSeconds = 496100;
-      break;
-    case (timestamp <= 1439448560):
-      offsetSeconds = 496120;
-      break;
-    case (timestamp <= 1439535020):
-      offsetSeconds = 496240;
-      break;
-    case (timestamp <= 1439536700):
-      offsetSeconds = 496360;
-      break;
-    case (timestamp <= 1439902040):
-      offsetSeconds = 496420;
-      break;
-    case (timestamp <= 1440141080):
-      offsetSeconds = 496480;
-      break;
-    case (timestamp <= 1440143360):
-      offsetSeconds = 496540;
-      break;
-    case (timestamp <= 1440443120):
-      offsetSeconds = 496600;
-      break;
-    case (timestamp <= 1440563400):
-      offsetSeconds = 496620;
-      break;
-    case (timestamp <= 1441443120):
-      offsetSeconds = 496740;
-      break;
-    case (timestamp <= 1441611100):
-      offsetSeconds = 496700;
-      break;
-    case (timestamp <= 1441750240):
-      offsetSeconds = 496880;
-      break;
-    case (timestamp <= 1441750660):
-      offsetSeconds = 496940;
-      break;
-    case (timestamp <= 1442397880):
-      offsetSeconds = 497000;
-      break;
-    case (timestamp <= 1442443120):
-      offsetSeconds = 497060;
-      break;
-    case (timestamp <= 1442679680):
-      offsetSeconds = 497080;
-      break;
-    case (timestamp <= 1443050480):
-      offsetSeconds = 498460;
-      break;
-    case (timestamp <= 1443050540):
-      offsetSeconds = 498680;
-      break;
-    case (timestamp <= 1443107480):
-      offsetSeconds = 498640;
-      break;
-    case (timestamp <= 1443107540):
-      offsetSeconds = 498830;
-      break;
-    case (timestamp <= 1443443120):
-      offsetSeconds = 498820;
-      break;
-    case (timestamp <= 1444110060):
-      offsetSeconds = 498840;
-      break;
-    case (timestamp <= 1444110660):
-      offsetSeconds = 498900;
-      break;
-    case (timestamp <= 1444180500):
-      offsetSeconds = 498960;
-      break;
-    case (timestamp <= 1444181280):
-      offsetSeconds = 499020;
-      break;
-    case (timestamp <= 1444196100):
-      offsetSeconds = 499080;
-      break;
-    case (timestamp <= 1444443120):
-      offsetSeconds = 499140;
-      break;
-    case (timestamp <= 1444443160):
-      offsetSeconds = 499100;
-      break;
-    case (timestamp <= 1444477720):
-      offsetSeconds = 499160;
-      break;
-    case (timestamp <= 1444801120):
-      offsetSeconds = 499220;
-      break;
-    case (timestamp <= 1445443120):
-      offsetSeconds = 499280;
-      break;
-    case (timestamp <= 1446187520):
-      offsetSeconds = 499300;
-      break;
-    case (timestamp <= 1446297200):
-      offsetSeconds = 499360;
-      break;
-    case (timestamp <= 1446443120):
-      offsetSeconds = 499420;
-      break;
-    case (timestamp <= 1446536580):
-      offsetSeconds = 499440;
-      break;
-    case (timestamp <= 1446537000):
-      offsetSeconds = 499500;
-      break;
-    case (timestamp <= 1446538260):
-      offsetSeconds = 499560;
-      break;
-    case (timestamp <= 1446538680):
-      offsetSeconds = 499620;
-      break;
-    case (timestamp <= 1446539880):
-      offsetSeconds = 499680;
-      break;
-    case (timestamp <= 1446540660):
-      offsetSeconds = 499740;
-      break;
-    case (timestamp <= 1446544620):
-      offsetSeconds = 499800;
-      break;
-    case (timestamp <= 1447025640):
-      offsetSeconds = 499860;
-      break;
-    case (timestamp <= 1447412640):
-      offsetSeconds = 499920;
-      break;
-    case (timestamp <= 1447412700):
-      offsetSeconds = 500220;
-      break;
-    case (timestamp <= 1447412760):
-      offsetSeconds = 500280;
-      break;
-    case (timestamp <= 1447412940):
-      offsetSeconds = 500340;
-      break;
-    case (timestamp <= 1447414980):
-      offsetSeconds = 500400;
-      break;
-    case (timestamp <= 1447415040):
-      offsetSeconds = 500520;
-      break;
-    case (timestamp <= 1447415400):
-      offsetSeconds = 500620;
-      break;
-    case (timestamp <= 1447415760):
-      offsetSeconds = 500580;
-      break;
-    case (timestamp <= 1447415880):
-      offsetSeconds = 500640;
-      break;
-    case (timestamp <= 1447416000):
-      offsetSeconds = 500760;
-      break;
-    case (timestamp <= 1447416060):
-      offsetSeconds = 500820;
-      break;
-    case (timestamp <= 1447416300):
-      offsetSeconds = 501000;
-      break;
-    case (timestamp <= 1447418520):
-      offsetSeconds = 501690;
-      break;
-    case (timestamp <= 1447426020):
-      offsetSeconds = 501710;
-      break;
-    case (timestamp <= 1447427580):
-      offsetSeconds = 501670;
-      break;
-    case (timestamp <= 1447443120):
-      offsetSeconds = 501660;
-      break;
-    case (timestamp <= 1447651120):
-      offsetSeconds = 501620;
-      break;
-    case (timestamp <= 1447813780):
-      offsetSeconds = 501680;
-      break;
-    case (timestamp <= 1447817440):
-      offsetSeconds = 501860;
-      break;
-    case (timestamp <= 1447820380):
-      offsetSeconds = 501920;
-      break;
-    case (timestamp <= 1447828360):
-      offsetSeconds = 502100;
-      break;
-    case (timestamp <= 1447830880):
-      offsetSeconds = 502160;
-      break;
-    case (timestamp <= 1447836100):
-      offsetSeconds = 502280;
-      break;
-    case (timestamp <= 1447951300):
-      offsetSeconds = 502340;
-      break;
-    case (timestamp <= 1448109940):
-      offsetSeconds = 502400;
-      break;
-    case (timestamp <= 1448356180):
-      offsetSeconds = 502460;
-      break;
-    case (timestamp <= 1448371780):
-      offsetSeconds = 502520;
-      break;
-    case (timestamp <= 1448443120):
-      offsetSeconds = 502580;
-      break;
-    case (timestamp <= 1448651420):
-      offsetSeconds = 502600;
-      break;
-    case (timestamp <= 1448687240):
-      offsetSeconds = 502720;
-      break;
-    case (timestamp <= 1448745800):
-      offsetSeconds = 502780;
-      break;
-    case (timestamp <= 1448772740):
-      offsetSeconds = 502840;
-      break;
-    case (timestamp <= 1449019400):
-      offsetSeconds = 502900;
-      break;
-    case (timestamp <= 1449205820):
-      offsetSeconds = 502960;
-      break;
-    case (timestamp <= 1449427220):
-      offsetSeconds = 503020;
-      break;
-    case (timestamp <= 1449443120):
-      offsetSeconds = 503080;
-      break;
-    case (timestamp <= 1450326120):
-      offsetSeconds = 503100;
-      break;
-    case (timestamp <= 1450443120):
-      offsetSeconds = 503220;
-      break;
-    case (timestamp <= 1450789660):
-      offsetSeconds = 503180;
-      break;
-    case (timestamp <= 1450790680):
-      offsetSeconds = 503240;
-      break;
-    case (timestamp <= 1450791820):
-      offsetSeconds = 503300;
-      break;
-    case (timestamp <= 1450793560):
-      offsetSeconds = 503360;
-      break;
-    case (timestamp <= 1450811500):
-      offsetSeconds = 503420;
-      break;
-    case (timestamp <= 1450842640):
-      offsetSeconds = 503540;
-      break;
-    case (timestamp <= 1451075080):
-      offsetSeconds = 503720;
-      break;
-    case (timestamp <= 1451303020):
-      offsetSeconds = 503790;
-      break;
-    case (timestamp <= 1451340160):
-      offsetSeconds = 503780;
-      break;
-    case (timestamp <= 1451340280):
-      offsetSeconds = 503840;
-      break;
-    case (timestamp <= 1451340700):
-      offsetSeconds = 503900;
-      break;
-    case (timestamp <= 1451341180):
-      offsetSeconds = 503960;
-      break;
-    case (timestamp <= 1451341780):
-      offsetSeconds = 504020;
-      break;
-    case (timestamp <= 1451342380):
-      offsetSeconds = 504140;
-      break;
-    case (timestamp <= 1451342980):
-      offsetSeconds = 504260;
-      break;
-    case (timestamp <= 1451343280):
-      offsetSeconds = 504380;
-      break;
-    case (timestamp <= 1451369620):
-      offsetSeconds = 504440;
-      break;
-    case (timestamp <= 1451443120):
-      offsetSeconds = 504800;
-      break;
-    case (timestamp <= 1452035180):
-      offsetSeconds = 504820;
-      break;
-    case (timestamp <= 1452046280):
-      offsetSeconds = 504880;
-      break;
-    case (timestamp <= 1452107180):
-      offsetSeconds = 504940;
-      break;
-    case (timestamp <= 1452397280):
-      offsetSeconds = 505180;
-      break;
-    case (timestamp <= 1452399140):
-      offsetSeconds = 505240;
-      break;
-    case (timestamp <= 1452399560):
-      offsetSeconds = 505300;
-      break;
-    case (timestamp <= 1452443120):
-      offsetSeconds = 505360;
-      break;
-    case (timestamp <= 1453185600):
-      offsetSeconds = 505380;
-      break;
-    case (timestamp <= 1453195740):
-      offsetSeconds = 505500;
-      break;
-    case (timestamp <= 1453222080):
-      offsetSeconds = 505560;
-      break;
-    case (timestamp <= 1453232160):
-      offsetSeconds = 505620;
-      break;
-    case (timestamp <= 1453272360):
-      offsetSeconds = 505680;
-      break;
-    case (timestamp <= 1453290180):
-      offsetSeconds = 505920;
-      break;
-    case (timestamp <= 1453443120):
-      offsetSeconds = 506040;
-      break;
-    case (timestamp <= 1453609600):
-      offsetSeconds = 506000;
-      break;
+  var result = {};
+  var num = 0;
+  for (var i = 0; i < intervals.length; i++) {
+    if (timestamp >= intervals[i].end) {
+      result.startDateMinute = intervals[i].end;
+      result.startNumberMinute = intervals[i].num;
+    }
   }
-  return offsetSeconds;
+  return result;
 };
+var intervals = [{
+  end: 1347441960,
+  num: 1
+}, {
+  end: 1347442200,
+  num: 3
+}, {
+  end: 1347566520,
+  num: 2074
+}, {
+  end: 1347969960,
+  num: 8780
+}, {
+  end: 1347971040,
+  num: 8796
+}, {
+  end: 1348138920,
+  num: 11593
+}, {
+  end: 1348497360,
+  num: 17531
+}, {
+  end: 1348654920,
+  num: 20155
+}, {
+  end: 1348673640,
+  num: 20466
+}, {
+  end: 1348732860,
+  num: 21452
+}, {
+  end: 1348820400,
+  num: 22910
+}, {
+  end: 1348988640,
+  num: 25713
+}, {
+  end: 1349030640,
+  num: 26412
+}, {
+  end: 1349031180,
+  num: 26420
+}, {
+  end: 1349031720,
+  num: 26428
+}, {
+  end: 1349032380,
+  num: 26438
+}, {
+  end: 1349196330,
+  num: 29170
+}, {
+  end: 1349211540,
+  num: 29422
+}, {
+  end: 1349216160,
+  num: 29497
+}, {
+  end: 1349246160,
+  num: 29995
+}, {
+  end: 1349249710,
+  num: 30054
+}, {
+  end: 1349623920,
+  num: 36290
+}, {
+  end: 1349692080,
+  num: 37425
+}, {
+  end: 1349954280,
+  num: 41794
+}, {
+  end: 1350584520,
+  num: 52292
+}, {
+  end: 1350650220,
+  num: 53385
+}, {
+  end: 1351041420,
+  num: 59904
+}, {
+  end: 1351042620,
+  num: 59922
+}, {
+  end: 1351043820,
+  num: 59940
+}, {
+  end: 1351089960,
+  num: 60708
+}, {
+  end: 1351186020,
+  num: 62307
+}, {
+  end: 1351425540,
+  num: 66297
+}, {
+  end: 1351517400,
+  num: 67826
+}, {
+  end: 1351521240,
+  num: 67888
+}, {
+  end: 1351524720,
+  num: 67945
+}, {
+  end: 1351580640,
+  num: 68876
+}, {
+  end: 1351582680,
+  num: 68909
+}, {
+  end: 1351590660,
+  num: 69041
+}, {
+  end: 1351695780,
+  num: 70792
+}, {
+  end: 1351695900,
+  num: 70793
+}, {
+  end: 1351739210,
+  num: 71514
+}, {
+  end: 1351797180,
+  num: 72480
+}, {
+  end: 1351880570,
+  num: 73869
+}, {
+  end: 1351880640,
+  num: 73870
+}, {
+  end: 1351906550,
+  num: 74301
+}, {
+  end: 1351907830,
+  num: 74323
+}, {
+  end: 1351909100,
+  num: 74344
+}, {
+  end: 1351911790,
+  num: 74389
+}, {
+  end: 1351914050,
+  num: 74424
+}, {
+  end: 1351914120,
+  num: 74425
+}, {
+  end: 1351915960,
+  num: 74455
+}, {
+  end: 1351916060,
+  num: 74457
+}, {
+  end: 1351916170,
+  num: 74458
+}, {
+  end: 1351916510,
+  num: 74461
+}, {
+  end: 1351916760,
+  num: 74463
+}, {
+  end: 1351917160,
+  num: 74464
+}, {
+  end: 1351917790,
+  num: 74465
+}, {
+  end: 1351918340,
+  num: 74466
+}, {
+  end: 1351918680,
+  num: 74468
+}, {
+  end: 1351918800,
+  num: 74469
+}, {
+  end: 1351918870,
+  num: 74470
+}, {
+  end: 1351919450,
+  num: 74471
+}, {
+  end: 1351919670,
+  num: 74473
+}, {
+  end: 1351921230,
+  num: 74499
+}, {
+  end: 1351921410,
+  num: 74501
+}, {
+  end: 1351922140,
+  num: 74505
+}, {
+  end: 1351922520,
+  num: 74506
+}, {
+  end: 1351944320,
+  num: 74869
+}, {
+  end: 1351947480,
+  num: 74919
+}, {
+  end: 1351947550,
+  num: 74920
+}, {
+  end: 1351949710,
+  num: 74951
+}, {
+  end: 1351949780,
+  num: 74952
+}, {
+  end: 1351950540,
+  num: 74961
+}, {
+  end: 1351952470,
+  num: 74993
+}, {
+  end: 1351954210,
+  num: 75022
+}, {
+  end: 1351955570,
+  num: 75043
+}, {
+  end: 1351956060,
+  num: 75048
+}, {
+  end: 1351966110,
+  num: 75215
+}, {
+  end: 1351969980,
+  num: 75279
+}, {
+  end: 1351971090,
+  num: 75280
+}, {
+  end: 1351971620,
+  num: 75282
+}, {
+  end: 1351972020,
+  num: 75283
+}, {
+  end: 1351973350,
+  num: 75298
+}, {
+  end: 1351973530,
+  num: 75300
+}, {
+  end: 1351973790,
+  num: 75301
+}, {
+  end: 1351975990,
+  num: 75338
+}, {
+  end: 1351976590,
+  num: 75347
+}, {
+  end: 1351977280,
+  num: 75358
+}, {
+  end: 1351990750,
+  num: 75583
+}, {
+  end: 1351991130,
+  num: 75588
+}, {
+  end: 1351991470,
+  num: 75594
+}, {
+  end: 1351991830,
+  num: 75595
+}, {
+  end: 1351991940,
+  num: 75596
+}, {
+  end: 1351994700,
+  num: 75639
+}, {
+  end: 1351995110,
+  num: 75640
+}, {
+  end: 1351995190,
+  num: 75642
+}, {
+  end: 1351995860,
+  num: 75643
+}, {
+  end: 1351996560,
+  num: 75644
+}, {
+  end: 1351996930,
+  num: 75645
+}, {
+  end: 1351997080,
+  num: 75647
+}, {
+  end: 1351997720,
+  num: 75653
+}, {
+  end: 1351998070,
+  num: 75659
+}, {
+  end: 1351998320,
+  num: 75660
+}, {
+  end: 1351998720,
+  num: 75663
+}, {
+  end: 1351999690,
+  num: 75673
+}, {
+  end: 1352009550,
+  num: 75837
+}, {
+  end: 1352009760,
+  num: 75838
+}, {
+  end: 1352021660,
+  num: 76036
+}, {
+  end: 1352022580,
+  num: 76051
+}, {
+  end: 1352023390,
+  num: 76065
+}, {
+  end: 1352035470,
+  num: 76266
+}, {
+  end: 1352041860,
+  num: 76372
+}, {
+  end: 1352042100,
+  num: 76374
+}, {
+  end: 1352044530,
+  num: 76414
+}, {
+  end: 1352045950,
+  num: 76435
+}, {
+  end: 1352046270,
+  num: 76436
+}, {
+  end: 1352046690,
+  num: 76443
+}, {
+  end: 1352387040,
+  num: 82111
+}, {
+  end: 1352746680,
+  num: 88103
+}, {
+  end: 1353109280,
+  num: 94144
+}, {
+  end: 1353194820,
+  num: 95569
+}, {
+  end: 1354604640,
+  num: 119063
+}, {
+  end: 1355538080,
+  num: 134618
+}, {
+  end: 1355566860,
+  num: 134995
+}, {
+  end: 1355571360,
+  num: 135011
+}, {
+  end: 1355572560,
+  num: 135031
+}, {
+  end: 1356131590,
+  num: 144348
+}, {
+  end: 1356418810,
+  num: 149135
+}, {
+  end: 1356591610,
+  num: 152015
+}, {
+  end: 1360260420,
+  num: 213161
+}, {
+  end: 1360261260,
+  num: 213174
+}, {
+  end: 1360262840,
+  num: 213184
+}, {
+  end: 1360263240,
+  num: 213185
+}, {
+  end: 1360263360,
+  num: 213186
+}, {
+  end: 1360686060,
+  num: 220230
+}, {
+  end: 1360832040,
+  num: 222659
+}, {
+  end: 1360848420,
+  num: 222931
+}, {
+  end: 1361093640,
+  num: 227017
+}, {
+  end: 1361318460,
+  num: 230667
+}, {
+  end: 1361344080,
+  num: 230733
+}, {
+  end: 1361345580,
+  num: 230755
+}, {
+  end: 1361985480,
+  num: 241419
+}, {
+  end: 1361988360,
+  num: 241466
+}, {
+  end: 1362129240,
+  num: 243803
+}, {
+  end: 1362744720,
+  num: 253989
+}, {
+  end: 1362747700,
+  num: 253991
+}, {
+  end: 1362758880,
+  num: 254034
+}, {
+  end: 1363003380,
+  num: 258108
+}, {
+  end: 1363810320,
+  num: 271556
+}, {
+  end: 1363825520,
+  num: 271808
+}, {
+  end: 1363826520,
+  num: 271824
+}, {
+  end: 1363829020,
+  num: 271865
+}, {
+  end: 1363829990,
+  num: 271876
+}, {
+  end: 1363831920,
+  num: 271907
+}, {
+  end: 1363833800,
+  num: 271934
+}, {
+  end: 1363838640,
+  num: 272014
+}, {
+  end: 1363839540,
+  num: 272027
+}, {
+  end: 1363840270,
+  num: 272039
+}, {
+  end: 1363840750,
+  num: 272040
+}, {
+  end: 1363840860,
+  num: 272041
+}, {
+  end: 1363843000,
+  num: 272068
+}, {
+  end: 1363854890,
+  num: 272266
+}, {
+  end: 1363855680,
+  num: 272279
+}, {
+  end: 1363856190,
+  num: 272282
+}, {
+  end: 1363857680,
+  num: 272306
+}, {
+  end: 1363858280,
+  num: 272314
+}, {
+  end: 1363859160,
+  num: 272328
+}, {
+  end: 1363859940,
+  num: 272339
+}, {
+  end: 1363860720,
+  num: 272351
+}, {
+  end: 1363861530,
+  num: 272363
+}, {
+  end: 1363861680,
+  num: 272364
+}, {
+  end: 1363861980,
+  num: 272366
+}, {
+  end: 1363886600,
+  num: 272776
+}, {
+  end: 1363896750,
+  num: 272945
+}, {
+  end: 1363896910,
+  num: 272946
+}, {
+  end: 1363897080,
+  num: 272947
+}, {
+  end: 1363897360,
+  num: 272951
+}, {
+  end: 1363898320,
+  num: 272963
+}, {
+  end: 1363898400,
+  num: 272964
+}, {
+  end: 1363900920,
+  num: 273005
+}, {
+  end: 1363904170,
+  num: 273059
+}, {
+  end: 1363904650,
+  num: 273065
+}, {
+  end: 1363905910,
+  num: 273086
+}, {
+  end: 1363906290,
+  num: 273092
+}, {
+  end: 1363906810,
+  num: 273101
+}, {
+  end: 1363907340,
+  num: 273107
+}, {
+  end: 1363907850,
+  num: 273110
+}, {
+  end: 1363913640,
+  num: 273200
+}, {
+  end: 1363922160,
+  num: 273272
+}, {
+  end: 1363924800,
+  num: 273306
+}, {
+  end: 1363936550,
+  num: 273496
+}, {
+  end: 1363938460,
+  num: 273523
+}, {
+  end: 1363941880,
+  num: 273574
+}, {
+  end: 1363942010,
+  num: 273576
+}, {
+  end: 1363966360,
+  num: 273982
+}, {
+  end: 1363966460,
+  num: 273984
+}, {
+  end: 1363966560,
+  num: 273985
+}, {
+  end: 1363967120,
+  num: 273994
+}, {
+  end: 1363967210,
+  num: 273995
+}, {
+  end: 1363968210,
+  num: 274010
+}, {
+  end: 1363968710,
+  num: 274012
+}, {
+  end: 1363968870,
+  num: 274015
+}, {
+  end: 1363969090,
+  num: 274019
+}, {
+  end: 1363969210,
+  num: 274021
+}, {
+  end: 1363969700,
+  num: 274024
+}, {
+  end: 1363970040,
+  num: 274025
+}, {
+  end: 1363970420,
+  num: 274026
+}, {
+  end: 1363971160,
+  num: 274035
+}, {
+  end: 1363971630,
+  num: 274037
+}, {
+  end: 1363972310,
+  num: 274039
+}, {
+  end: 1363972380,
+  num: 274040
+}, {
+  end: 1364191080,
+  num: 277684
+}, {
+  end: 1364755980,
+  num: 285970
+}, {
+  end: 1364826960,
+  num: 287152
+}, {
+  end: 1364832960,
+  num: 287241
+}, {
+  end: 1364969040,
+  num: 289508
+}, {
+  end: 1364996700,
+  num: 289968
+}, {
+  end: 1365055560,
+  num: 290881
+}, {
+  end: 1365064320,
+  num: 291026
+}, {
+  end: 1365092280,
+  num: 291491
+}, {
+  end: 1365104880,
+  num: 291700
+}, {
+  end: 1365145260,
+  num: 292369
+}, {
+  end: 1365149040,
+  num: 292427
+}, {
+  end: 1365153120,
+  num: 292494
+}, {
+  end: 1365166500,
+  num: 292716
+}, {
+  end: 1365169980,
+  num: 292773
+}, {
+  end: 1365239580,
+  num: 293930
+}, {
+  end: 1365241380,
+  num: 293959
+}, {
+  end: 1365241820,
+  num: 293966
+}, {
+  end: 1365242700,
+  num: 293980
+}, {
+  end: 1365244040,
+  num: 294002
+}, {
+  end: 1365244620,
+  num: 294011
+}, {
+  end: 1365244870,
+  num: 294015
+}, {
+  end: 1365245350,
+  num: 294023
+}, {
+  end: 1365273660,
+  num: 294025
+}, {
+  end: 1365274020,
+  num: 294029
+}, {
+  end: 1365274140,
+  num: 294030
+}, {
+  end: 1365274380,
+  num: 294032
+}, {
+  end: 1365320340,
+  num: 294795
+}, {
+  end: 1365385860,
+  num: 295886
+}, {
+  end: 1365749110,
+  num: 301940
+}, {
+  end: 1365757440,
+  num: 302055
+}, {
+  end: 1365776040,
+  num: 302362
+}, {
+  end: 1365862740,
+  num: 303768
+}, {
+  end: 1365863220,
+  num: 303774
+}, {
+  end: 1366131860,
+  num: 308251
+}, {
+  end: 1366132510,
+  num: 308262
+}, {
+  end: 1366133130,
+  num: 308272
+}, {
+  end: 1366133370,
+  num: 308273
+}, {
+  end: 1366134820,
+  num: 308297
+}, {
+  end: 1366135340,
+  num: 308304
+}, {
+  end: 1366263520,
+  num: 310439
+}, {
+  end: 1366280640,
+  num: 310723
+}, {
+  end: 1366300010,
+  num: 311044
+}, {
+  end: 1366300080,
+  num: 311045
+}, {
+  end: 1366306470,
+  num: 311151
+}, {
+  end: 1366346660,
+  num: 311821
+}, {
+  end: 1366346740,
+  num: 311822
+}, {
+  end: 1366348030,
+  num: 311844
+}, {
+  end: 1366348390,
+  num: 311848
+}, {
+  end: 1366348890,
+  num: 311856
+}, {
+  end: 1366351450,
+  num: 311899
+}, {
+  end: 1366461240,
+  num: 313725
+}, {
+  end: 1366461480,
+  num: 313727
+}, {
+  end: 1366461670,
+  num: 313728
+}, {
+  end: 1366462120,
+  num: 313730
+}, {
+  end: 1366462570,
+  num: 313733
+}, {
+  end: 1366462800,
+  num: 313736
+}, {
+  end: 1366468030,
+  num: 313821
+}, {
+  end: 1366474830,
+  num: 313933
+}, {
+  end: 1366649520,
+  num: 316844
+}, {
+  end: 1366651080,
+  num: 316869
+}, {
+  end: 1366742400,
+  num: 318390
+}, {
+  end: 1366789980,
+  num: 319182
+}, {
+  end: 1367217420,
+  num: 326305
+}, {
+  end: 1367227800,
+  num: 326477
+}, {
+  end: 1367425500,
+  num: 329769
+}, {
+  end: 1367651520,
+  num: 333242
+}, {
+  end: 1368103920,
+  num: 340772
+}, {
+  end: 1368263940,
+  num: 343432
+}, {
+  end: 1368391200,
+  num: 345550
+}, {
+  end: 1368431340,
+  num: 346206
+}, {
+  end: 1368445800,
+  num: 346426
+}, {
+  end: 1368508680,
+  num: 347471
+}, {
+  end: 1368510780,
+  num: 347503
+}, {
+  end: 1368525840,
+  num: 347753
+}, {
+  end: 1368545220,
+  num: 348073
+}, {
+  end: 1368547320,
+  num: 348106
+}, {
+  end: 1368581520,
+  num: 348650
+}, {
+  end: 1368581700,
+  num: 348651
+}, {
+  end: 1368696240,
+  num: 350559
+}, {
+  end: 1369612380,
+  num: 365827
+}, {
+  end: 1369876440,
+  num: 370225
+}, {
+  end: 1369934760,
+  num: 371181
+}, {
+  end: 1369945260,
+  num: 371354
+}, {
+  end: 1371056040,
+  num: 389866
+}, {
+  end: 1371240240,
+  num: 392935
+}, {
+  end: 1372229410,
+  num: 409421
+}, {
+  end: 1372242010,
+  num: 409631
+}, {
+  end: 1372329790,
+  num: 411094
+}, {
+  end: 1372575730,
+  num: 415193
+}, {
+  end: 1372575910,
+  num: 415196
+}, {
+  end: 1372686780,
+  num: 417040
+}, {
+  end: 1372689000,
+  num: 417075
+}, {
+  end: 1372849810,
+  num: 419755
+}, {
+  end: 1372850170,
+  num: 419761
+}, {
+  end: 1372886640,
+  num: 420362
+}, {
+  end: 1372920910,
+  num: 420933
+}, {
+  end: 1373094130,
+  num: 423820
+}, {
+  end: 1373559540,
+  num: 431575
+}, {
+  end: 1373678170,
+  num: 433552
+}, {
+  end: 1373794560,
+  num: 435477
+}, {
+  end: 1375863180,
+  num: 469953
+}, {
+  end: 1375875780,
+  num: 470151
+}, {
+  end: 1375989300,
+  num: 472040
+}, {
+  end: 1376349840,
+  num: 478038
+}, {
+  end: 1376638020,
+  num: 482829
+}, {
+  end: 1376642220,
+  num: 482839
+}, {
+  end: 1377667080,
+  num: 499919
+}, {
+  end: 1377669480,
+  num: 499958
+}, {
+  end: 1377676740,
+  num: 500078
+}, {
+  end: 1377712080,
+  num: 500666
+}, {
+  end: 1378326060,
+  num: 510897
+}, {
+  end: 1379197560,
+  num: 525421
+}, {
+  end: 1379680920,
+  num: 533476
+}, {
+  end: 1380915540,
+  num: 554052
+}, {
+  end: 1380916260,
+  num: 554063
+}, {
+  end: 1380917220,
+  num: 554077
+}, {
+  end: 1380918180,
+  num: 554092
+}, {
+  end: 1380918600,
+  num: 554098
+}, {
+  end: 1380919260,
+  num: 554108
+}, {
+  end: 1381730040,
+  num: 567620
+}, {
+  end: 1381846980,
+  num: 569568
+}, {
+  end: 1381912680,
+  num: 570662
+}, {
+  end: 1381913880,
+  num: 570681
+}, {
+  end: 1382027640,
+  num: 572570
+}, {
+  end: 1382215810,
+  num: 575706
+}, {
+  end: 1382357400,
+  num: 578065
+}, {
+  end: 1382572860,
+  num: 581654
+}, {
+  end: 1382890320,
+  num: 586944
+}, {
+  end: 1382915760,
+  num: 587364
+}, {
+  end: 1383070800,
+  num: 589947
+}, {
+  end: 1383244200,
+  num: 592830
+}, {
+  end: 1383247980,
+  num: 592887
+}, {
+  end: 1383325860,
+  num: 594184
+}, {
+  end: 1383394320,
+  num: 595324
+}, {
+  end: 1383657300,
+  num: 599706
+}, {
+  end: 1384360200,
+  num: 611418
+}, {
+  end: 1384812120,
+  num: 618943
+}, {
+  end: 1384821060,
+  num: 619091
+}, {
+  end: 1384822740,
+  num: 619118
+}, {
+  end: 1384903560,
+  num: 620463
+}, {
+  end: 1384905960,
+  num: 620502
+}, {
+  end: 1384943640,
+  num: 621129
+}, {
+  end: 1384947840,
+  num: 621198
+}, {
+  end: 1384969260,
+  num: 621548
+}, {
+  end: 1385048460,
+  num: 622867
+}, {
+  end: 1385059020,
+  num: 623040
+}, {
+  end: 1385059380,
+  num: 623045
+}, {
+  end: 1385059620,
+  num: 623046
+}, {
+  end: 1385059740,
+  num: 623047
+}, {
+  end: 1385059980,
+  num: 623048
+}, {
+  end: 1385062980,
+  num: 623096
+}, {
+  end: 1385074320,
+  num: 623284
+}, {
+  end: 1385078880,
+  num: 623359
+}, {
+  end: 1385097840,
+  num: 623451
+}, {
+  end: 1385118480,
+  num: 623794
+}, {
+  end: 1385135880,
+  num: 624083
+}, {
+  end: 1385148840,
+  num: 624297
+}, {
+  end: 1385153160,
+  num: 624356
+}, {
+  end: 1385228820,
+  num: 625616
+}, {
+  end: 1385408520,
+  num: 628609
+}, {
+  end: 1385412900,
+  num: 628681
+}, {
+  end: 1385414460,
+  num: 628706
+}, {
+  end: 1385423700,
+  num: 628850
+}, {
+  end: 1385423820,
+  num: 628851
+}, {
+  end: 1385429580,
+  num: 628946
+}, {
+  end: 1385524620,
+  num: 630529
+}, {
+  end: 1385549040,
+  num: 630935
+}, {
+  end: 1385578320,
+  num: 631347
+}, {
+  end: 1385599560,
+  num: 631700
+}, {
+  end: 1385898720,
+  num: 636685
+}, {
+  end: 1385979240,
+  num: 638024
+}, {
+  end: 1386079860,
+  num: 639699
+}, {
+  end: 1386164580,
+  num: 641110
+}, {
+  end: 1386177600,
+  num: 641326
+}, {
+  end: 1386180780,
+  num: 641375
+}, {
+  end: 1386261720,
+  num: 642723
+}, {
+  end: 1386292740,
+  num: 643239
+}, {
+  end: 1386675720,
+  num: 649621
+}, {
+  end: 1386757020,
+  num: 650975
+}, {
+  end: 1386758160,
+  num: 650993
+}, {
+  end: 1387230840,
+  num: 658870
+}, {
+  end: 1387372560,
+  num: 661231
+}, {
+  end: 1387380480,
+  num: 661362
+}, {
+  end: 1387388460,
+  num: 661492
+}, {
+  end: 1387390860,
+  num: 661531
+}, {
+  end: 1387656800,
+  num: 665963
+}, {
+  end: 1387656960,
+  num: 665964
+}, {
+  end: 1387739530,
+  num: 667340
+}, {
+  end: 1387798840,
+  num: 668327
+}, {
+  end: 1387799070,
+  num: 668329
+}, {
+  end: 1387799460,
+  num: 668333
+}, {
+  end: 1387799660,
+  num: 668336
+}, {
+  end: 1387799810,
+  num: 668337
+}, {
+  end: 1387800120,
+  num: 668339
+}, {
+  end: 1387800680,
+  num: 668341
+}, {
+  end: 1387800950,
+  num: 668343
+}, {
+  end: 1387801400,
+  num: 668347
+}, {
+  end: 1387801750,
+  num: 668353
+}, {
+  end: 1387802160,
+  num: 668354
+}, {
+  end: 1387808850,
+  num: 668464
+}, {
+  end: 1387809610,
+  num: 668477
+}, {
+  end: 1387810470,
+  num: 668491
+}, {
+  end: 1387826010,
+  num: 668750
+}, {
+  end: 1387831750,
+  num: 668846
+}, {
+  end: 1387899550,
+  num: 669976
+}, {
+  end: 1387941660,
+  num: 670667
+}, {
+  end: 1387943060,
+  num: 670686
+}, {
+  end: 1387943680,
+  num: 670696
+}, {
+  end: 1387945850,
+  num: 670732
+}, {
+  end: 1387954750,
+  num: 670881
+}, {
+  end: 1387954920,
+  num: 670883
+}, {
+  end: 1388025680,
+  num: 672061
+}, {
+  end: 1388056680,
+  num: 672576
+}, {
+  end: 1388100750,
+  num: 673310
+}, {
+  end: 1388138910,
+  num: 673945
+}, {
+  end: 1388139230,
+  num: 673950
+}, {
+  end: 1388139310,
+  num: 673952
+}, {
+  end: 1388139480,
+  num: 673953
+}, {
+  end: 1388141110,
+  num: 673978
+}, {
+  end: 1388145520,
+  num: 674051
+}, {
+  end: 1388145660,
+  num: 674052
+}, {
+  end: 1388146860,
+  num: 674071
+}, {
+  end: 1388154250,
+  num: 674194
+}, {
+  end: 1388427720,
+  num: 678751
+}, {
+  end: 1388452140,
+  num: 679152
+}, {
+  end: 1388473790,
+  num: 679506
+}, {
+  end: 1388474340,
+  num: 679507
+}, {
+  end: 1388475260,
+  num: 679508
+}, {
+  end: 1388475840,
+  num: 679510
+}, {
+  end: 1388476380,
+  num: 679511
+}, {
+  end: 1388476990,
+  num: 679512
+}, {
+  end: 1388477600,
+  num: 679513
+}, {
+  end: 1388477820,
+  num: 679514
+}, {
+  end: 1388610750,
+  num: 681729
+}, {
+  end: 1388610950,
+  num: 681731
+}, {
+  end: 1388664240,
+  num: 682618
+}, {
+  end: 1389010620,
+  num: 688388
+}, {
+  end: 1389194940,
+  num: 691459
+}, {
+  end: 1389195600,
+  num: 691469
+}, {
+  end: 1389196440,
+  num: 691482
+}, {
+  end: 1389201960,
+  num: 691573
+}, {
+  end: 1389202620,
+  num: 691583
+}, {
+  end: 1389203400,
+  num: 691595
+}, {
+  end: 1389214380,
+  num: 691777
+}, {
+  end: 1389215100,
+  num: 691788
+}, {
+  end: 1389215940,
+  num: 691801
+}, {
+  end: 1389228840,
+  num: 692015
+}, {
+  end: 1389229440,
+  num: 692024
+}, {
+  end: 1389230160,
+  num: 692035
+}, {
+  end: 1391033220,
+  num: 722085
+}, {
+  end: 1391034060,
+  num: 722098
+}, {
+  end: 1391035800,
+  num: 722125
+}, {
+  end: 1391043600,
+  num: 722252
+}, {
+  end: 1391062800,
+  num: 722568
+}, {
+  end: 1391069340,
+  num: 722675
+}, {
+  end: 1391075700,
+  num: 722774
+}, {
+  end: 1391086440,
+  num: 722951
+}, {
+  end: 1391088000,
+  num: 722976
+}, {
+  end: 1391089380,
+  num: 722998
+}, {
+  end: 1391092140,
+  num: 723043
+}, {
+  end: 1391104680,
+  num: 723243
+}, {
+  end: 1391111340,
+  num: 723353
+}, {
+  end: 1391113920,
+  num: 723380
+}, {
+  end: 1391114040,
+  num: 723381
+}, {
+  end: 1391115840,
+  num: 723410
+}, {
+  end: 1391119020,
+  num: 723462
+}, {
+  end: 1391120460,
+  num: 723485
+}, {
+  end: 1391120820,
+  num: 723490
+}, {
+  end: 1391126280,
+  num: 723575
+}, {
+  end: 1391128740,
+  num: 723613
+}, {
+  end: 1391131140,
+  num: 723650
+}, {
+  end: 1391133600,
+  num: 723688
+}, {
+  end: 1391153280,
+  num: 724015
+}, {
+  end: 1391153760,
+  num: 724022
+}, {
+  end: 1391198040,
+  num: 724756
+}, {
+  end: 1391199300,
+  num: 724776
+}, {
+  end: 1391202120,
+  num: 724822
+}, {
+  end: 1391203380,
+  num: 724842
+}, {
+  end: 1391208300,
+  num: 724923
+}, {
+  end: 1391210280,
+  num: 724954
+}, {
+  end: 1391212500,
+  num: 724990
+}, {
+  end: 1391214420,
+  num: 725019
+}, {
+  end: 1391215200,
+  num: 725031
+}, {
+  end: 1391216160,
+  num: 725046
+}, {
+  end: 1391218140,
+  num: 725078
+}, {
+  end: 1391219820,
+  num: 725105
+}, {
+  end: 1391222820,
+  num: 725153
+}, {
+  end: 1391224800,
+  num: 725185
+}, {
+  end: 1391228160,
+  num: 725239
+}, {
+  end: 1391229960,
+  num: 725268
+}, {
+  end: 1391230440,
+  num: 725275
+}, {
+  end: 1391230740,
+  num: 725279
+}, {
+  end: 1391231760,
+  num: 725295
+}, {
+  end: 1391233680,
+  num: 725326
+}, {
+  end: 1391234880,
+  num: 725345
+}, {
+  end: 1391240940,
+  num: 725445
+}, {
+  end: 1391261160,
+  num: 725780
+}, {
+  end: 1391265660,
+  num: 725853
+}, {
+  end: 1391274840,
+  num: 726005
+}, {
+  end: 1391276220,
+  num: 726027
+}, {
+  end: 1391284080,
+  num: 726157
+}, {
+  end: 1391285640,
+  num: 726182
+}, {
+  end: 1391290500,
+  num: 726259
+}, {
+  end: 1391298840,
+  num: 726397
+}, {
+  end: 1391300880,
+  num: 726430
+}, {
+  end: 1391306880,
+  num: 726526
+}, {
+  end: 1391362140,
+  num: 727443
+}, {
+  end: 1391365620,
+  num: 727497
+}, {
+  end: 1391367120,
+  num: 727521
+}, {
+  end: 1391373960,
+  num: 727633
+}, {
+  end: 1391382060,
+  num: 727767
+}, {
+  end: 1391383620,
+  num: 727792
+}, {
+  end: 1391388900,
+  num: 727879
+}, {
+  end: 1391389980,
+  num: 727896
+}, {
+  end: 1391391300,
+  num: 727917
+}, {
+  end: 1391397060,
+  num: 728012
+}, {
+  end: 1391398380,
+  num: 728033
+}, {
+  end: 1391404920,
+  num: 728141
+}, {
+  end: 1391413980,
+  num: 728291
+}, {
+  end: 1391415840,
+  num: 728321
+}, {
+  end: 1391438100,
+  num: 728686
+}, {
+  end: 1391448000,
+  num: 728850
+}, {
+  end: 1391449200,
+  num: 728869
+}, {
+  end: 1391454600,
+  num: 728954
+}, {
+  end: 1391455680,
+  num: 728970
+}, {
+  end: 1391458920,
+  num: 729022
+}, {
+  end: 1391462220,
+  num: 729076
+}, {
+  end: 1391465700,
+  num: 729131
+}, {
+  end: 1391468520,
+  num: 729176
+}, {
+  end: 1391471100,
+  num: 729218
+}, {
+  end: 1391474220,
+  num: 729268
+}, {
+  end: 1391480460,
+  num: 729369
+}, {
+  end: 1391481540,
+  num: 729386
+}, {
+  end: 1391484480,
+  num: 729434
+}, {
+  end: 1391561400,
+  num: 730715
+}, {
+  end: 1391562360,
+  num: 730730
+}, {
+  end: 1391563860,
+  num: 730754
+}, {
+  end: 1391571300,
+  num: 730877
+}, {
+  end: 1391572920,
+  num: 730903
+}, {
+  end: 1391582700,
+  num: 731065
+}, {
+  end: 1391584740,
+  num: 731097
+}, {
+  end: 1391588400,
+  num: 731157
+}, {
+  end: 1391590200,
+  num: 731186
+}, {
+  end: 1391617980,
+  num: 731644
+}, {
+  end: 1391623560,
+  num: 731736
+}, {
+  end: 1391625120,
+  num: 731761
+}, {
+  end: 1391632980,
+  num: 731891
+}, {
+  end: 1391634840,
+  num: 731921
+}, {
+  end: 1391638740,
+  num: 731983
+}, {
+  end: 1391638860,
+  num: 731984
+}, {
+  end: 1391640840,
+  num: 732016
+}, {
+  end: 1391643840,
+  num: 732065
+}, {
+  end: 1391644920,
+  num: 732082
+}, {
+  end: 1391718060,
+  num: 733298
+}, {
+  end: 1391723640,
+  num: 733388
+}, {
+  end: 1391727180,
+  num: 733445
+}, {
+  end: 1391729280,
+  num: 733478
+}, {
+  end: 1391732220,
+  num: 733523
+}, {
+  end: 1391734200,
+  num: 733555
+}, {
+  end: 1391736120,
+  num: 733584
+}, {
+  end: 1391738400,
+  num: 733618
+}, {
+  end: 1391740740,
+  num: 733656
+}, {
+  end: 1391744520,
+  num: 733717
+}, {
+  end: 1391746080,
+  num: 733741
+}, {
+  end: 1391747760,
+  num: 733767
+}, {
+  end: 1391749980,
+  num: 733801
+}, {
+  end: 1391752740,
+  num: 733846
+}, {
+  end: 1391753760,
+  num: 733862
+}, {
+  end: 1391969940,
+  num: 737464
+}, {
+  end: 1391988060,
+  num: 737765
+}, {
+  end: 1392021180,
+  num: 738315
+}, {
+  end: 1392028800,
+  num: 738434
+}, {
+  end: 1392034020,
+  num: 738515
+}, {
+  end: 1392037200,
+  num: 738554
+}, {
+  end: 1392045300,
+  num: 738675
+}, {
+  end: 1392056700,
+  num: 738864
+}, {
+  end: 1392057180,
+  num: 738871
+}, {
+  end: 1392057720,
+  num: 738879
+}, {
+  end: 1392067980,
+  num: 739049
+}, {
+  end: 1392068460,
+  num: 739056
+}, {
+  end: 1392070860,
+  num: 739095
+}, {
+  end: 1392071340,
+  num: 739102
+}, {
+  end: 1392130260,
+  num: 740081
+}, {
+  end: 1392130920,
+  num: 740088
+}, {
+  end: 1392197340,
+  num: 741194
+}, {
+  end: 1392217320,
+  num: 741526
+}, {
+  end: 1392221460,
+  num: 741594
+}, {
+  end: 1392322680,
+  num: 743280
+}, {
+  end: 1392790200,
+  num: 751068
+}, {
+  end: 1392810660,
+  num: 751408
+}, {
+  end: 1392812220,
+  num: 751433
+}, {
+  end: 1392812340,
+  num: 751434
+}, {
+  end: 1392814200,
+  num: 751463
+}, {
+  end: 1392819720,
+  num: 751554
+}, {
+  end: 1392820740,
+  num: 751569
+}, {
+  end: 1392821220,
+  num: 751576
+}, {
+  end: 1393005900,
+  num: 754653
+}, {
+  end: 1393235220,
+  num: 758474
+}, {
+  end: 1393237200,
+  num: 758506
+}, {
+  end: 1393310940,
+  num: 759734
+}, {
+  end: 1393490820,
+  num: 762731
+}, {
+  end: 1393560660,
+  num: 763894
+}, {
+  end: 1393561080,
+  num: 763900
+}, {
+  end: 1393561560,
+  num: 763907
+}, {
+  end: 1393563660,
+  num: 763941
+}, {
+  end: 1393564140,
+  num: 763948
+}, {
+  end: 1393564740,
+  num: 763952
+}, {
+  end: 1393564920,
+  num: 763953
+}, {
+  end: 1393566660,
+  num: 763981
+}, {
+  end: 1393567020,
+  num: 763986
+}, {
+  end: 1393567500,
+  num: 763993
+}, {
+  end: 1393827000,
+  num: 768317
+}, {
+  end: 1393827420,
+  num: 768323
+}, {
+  end: 1393827900,
+  num: 768330
+}, {
+  end: 1393830240,
+  num: 768368
+}, {
+  end: 1393830720,
+  num: 768375
+}, {
+  end: 1393866000,
+  num: 768960
+}, {
+  end: 1394031480,
+  num: 771717
+}, {
+  end: 1394031900,
+  num: 771723
+}, {
+  end: 1394140260,
+  num: 773523
+}, {
+  end: 1394154840,
+  num: 773759
+}, {
+  end: 1394244360,
+  num: 775245
+}, {
+  end: 1394247000,
+  num: 775286
+}, {
+  end: 1394474820,
+  num: 779078
+}, {
+  end: 1394475000,
+  num: 779079
+}, {
+  end: 1394475240,
+  num: 779080
+}, {
+  end: 1394475720,
+  num: 779087
+}, {
+  end: 1394476200,
+  num: 779094
+}, {
+  end: 1394477040,
+  num: 779107
+}, {
+  end: 1394482920,
+  num: 779204
+}, {
+  end: 1394632140,
+  num: 781690
+}, {
+  end: 1394632560,
+  num: 781696
+}, {
+  end: 1394634960,
+  num: 781735
+}, {
+  end: 1394637840,
+  num: 781782
+}, {
+  end: 1394638260,
+  num: 781788
+}, {
+  end: 1394640600,
+  num: 781826
+}, {
+  end: 1394785800,
+  num: 784245
+}, {
+  end: 1394786220,
+  num: 784251
+}, {
+  end: 1394786700,
+  num: 784258
+}, {
+  end: 1394787240,
+  num: 784266
+}, {
+  end: 1394787840,
+  num: 784275
+}, {
+  end: 1394791320,
+  num: 784332
+}, {
+  end: 1395088560,
+  num: 789285
+}, {
+  end: 1395094440,
+  num: 789381
+}, {
+  end: 1395219780,
+  num: 791462
+}, {
+  end: 1395237660,
+  num: 791759
+}, {
+  end: 1395260820,
+  num: 792144
+}, {
+  end: 1395389400,
+  num: 794282
+}, {
+  end: 1395429660,
+  num: 794951
+}, {
+  end: 1395455520,
+  num: 795381
+}, {
+  end: 1395455880,
+  num: 795386
+}, {
+  end: 1395456420,
+  num: 795394
+}, {
+  end: 1395513720,
+  num: 796348
+}, {
+  end: 1395516600,
+  num: 796395
+}, {
+  end: 1395522840,
+  num: 796498
+}, {
+  end: 1395529500,
+  num: 796608
+}, {
+  end: 1395531900,
+  num: 796647
+}, {
+  end: 1395786180,
+  num: 800884
+}, {
+  end: 1395864660,
+  num: 802191
+}, {
+  end: 1395872340,
+  num: 802317
+}, {
+  end: 1395872580,
+  num: 802319
+}, {
+  end: 1395906480,
+  num: 802883
+}, {
+  end: 1395929220,
+  num: 803261
+}, {
+  end: 1395939600,
+  num: 803432
+}, {
+  end: 1395965820,
+  num: 803867
+}, {
+  end: 1395988980,
+  num: 804252
+}, {
+  end: 1395989400,
+  num: 804258
+}, {
+  end: 1395991680,
+  num: 804295
+}, {
+  end: 1395994380,
+  num: 804339
+}, {
+  end: 1396005120,
+  num: 804517
+}, {
+  end: 1396029780,
+  num: 804927
+}, {
+  end: 1396084560,
+  num: 805839
+}, {
+  end: 1396094340,
+  num: 806000
+}, {
+  end: 1396138620,
+  num: 806737
+}, {
+  end: 1396181820,
+  num: 807455
+}, {
+  end: 1396184220,
+  num: 807494
+}, {
+  end: 1396201920,
+  num: 807788
+}, {
+  end: 1396225680,
+  num: 808182
+}, {
+  end: 1396255260,
+  num: 808673
+}, {
+  end: 1396285500,
+  num: 809175
+}, {
+  end: 1396347300,
+  num: 810203
+}, {
+  end: 1396348860,
+  num: 810224
+}, {
+  end: 1396349460,
+  num: 810229
+}, {
+  end: 1396352160,
+  num: 810269
+}, {
+  end: 1396359540,
+  num: 810389
+}, {
+  end: 1396388160,
+  num: 810864
+}, {
+  end: 1396394640,
+  num: 810970
+}, {
+  end: 1396399620,
+  num: 811052
+}, {
+  end: 1396417440,
+  num: 811346
+}, {
+  end: 1396481520,
+  num: 812413
+}, {
+  end: 1396485900,
+  num: 812479
+}, {
+  end: 1396486080,
+  num: 812480
+}, {
+  end: 1396486200,
+  num: 812481
+}, {
+  end: 1396493640,
+  num: 812604
+}, {
+  end: 1396494620,
+  num: 812620
+}, {
+  end: 1396568400,
+  num: 813846
+}, {
+  end: 1396836420,
+  num: 818311
+}, {
+  end: 1396856340,
+  num: 818642
+}, {
+  end: 1396879620,
+  num: 819025
+}, {
+  end: 1396937580,
+  num: 819990
+}, {
+  end: 1397004780,
+  num: 821108
+}, {
+  end: 1397008920,
+  num: 821176
+}, {
+  end: 1397507580,
+  num: 829486
+}, {
+  end: 1397667600,
+  num: 832152
+}, {
+  end: 1397758260,
+  num: 833662
+}, {
+  end: 1397812580,
+  num: 834038
+}, {
+  end: 1397822100,
+  num: 834039
+}, {
+  end: 1397829000,
+  num: 834040
+}, {
+  end: 1397829120,
+  num: 834041
+}, {
+  end: 1398259140,
+  num: 841200
+}, {
+  end: 1398267840,
+  num: 841337
+}, {
+  end: 1398275340,
+  num: 841461
+}, {
+  end: 1398281220,
+  num: 841553
+}, {
+  end: 1398281400,
+  num: 841554
+}, {
+  end: 1398303180,
+  num: 841916
+}, {
+  end: 1398338280,
+  num: 842499
+}, {
+  end: 1398343800,
+  num: 842587
+}, {
+  end: 1398369120,
+  num: 843008
+}, {
+  end: 1398455460,
+  num: 844446
+}, {
+  end: 1398936480,
+  num: 852462
+}, {
+  end: 1398989640,
+  num: 853346
+}, {
+  end: 1398993360,
+  num: 853405
+}, {
+  end: 1398995280,
+  num: 853434
+}, {
+  end: 1399490040,
+  num: 861679
+}, {
+  end: 1399571700,
+  num: 863039
+}, {
+  end: 1399651020,
+  num: 864358
+}, {
+  end: 1399667400,
+  num: 864630
+}, {
+  end: 1399679580,
+  num: 864831
+}, {
+  end: 1399886160,
+  num: 868273
+}, {
+  end: 1399925280,
+  num: 868924
+}, {
+  end: 1400087280,
+  num: 871620
+}, {
+  end: 1400214900,
+  num: 873745
+}, {
+  end: 1400352660,
+  num: 876038
+}, {
+  end: 1400373180,
+  num: 876372
+}, {
+  end: 1400440800,
+  num: 877498
+}, {
+  end: 1400517960,
+  num: 878783
+}, {
+  end: 1400543820,
+  num: 879208
+}, {
+  end: 1400585100,
+  num: 879894
+}, {
+  end: 1400590560,
+  num: 879982
+}, {
+  end: 1400838240,
+  num: 884108
+}, {
+  end: 1400906760,
+  num: 885248
+}, {
+  end: 1400936700,
+  num: 885746
+}, {
+  end: 1401083280,
+  num: 888188
+}, {
+  end: 1401115800,
+  num: 888729
+}, {
+  end: 1401264660,
+  num: 891209
+}, {
+  end: 1401307980,
+  num: 891922
+}, {
+  end: 1401343920,
+  num: 892519
+}, {
+  end: 1401416520,
+  num: 893727
+}, {
+  end: 1401448140,
+  num: 894253
+}, {
+  end: 1401449880,
+  num: 894275
+}, {
+  end: 1401481920,
+  num: 894807
+}, {
+  end: 1401501420,
+  num: 895129
+}, {
+  end: 1401645180,
+  num: 897522
+}, {
+  end: 1401651900,
+  num: 897632
+}, {
+  end: 1401688920,
+  num: 898246
+}, {
+  end: 1401889200,
+  num: 901582
+}, {
+  end: 1401899760,
+  num: 901757
+}, {
+  end: 1401908820,
+  num: 901906
+}, {
+  end: 1401921000,
+  num: 902108
+}, {
+  end: 1401928140,
+  num: 902226
+}, {
+  end: 1401955080,
+  num: 902674
+}, {
+  end: 1401959940,
+  num: 902754
+}, {
+  end: 1402517100,
+  num: 912028
+}, {
+  end: 1402606320,
+  num: 913514
+}, {
+  end: 1402606680,
+  num: 913515
+}, {
+  end: 1402718280,
+  num: 915371
+}, {
+  end: 1402893780,
+  num: 918294
+}, {
+  end: 1402937520,
+  num: 919015
+}, {
+  end: 1403010060,
+  num: 920221
+}, {
+  end: 1403556960,
+  num: 929335
+}, {
+  end: 1403765880,
+  num: 932813
+}, {
+  end: 1403939640,
+  num: 935707
+}, {
+  end: 1403975340,
+  num: 936301
+}, {
+  end: 1404121320,
+  num: 938730
+}, {
+  end: 1404161280,
+  num: 939395
+}, {
+  end: 1404281760,
+  num: 941402
+}, {
+  end: 1404301410,
+  num: 941510
+}, {
+  end: 1404305400,
+  num: 941511
+}, {
+  end: 1404448620,
+  num: 943897
+}, {
+  end: 1404448980,
+  num: 943902
+}, {
+  end: 1404449460,
+  num: 943909
+}, {
+  end: 1404449940,
+  num: 943916
+}, {
+  end: 1404452100,
+  num: 943951
+}, {
+  end: 1404452580,
+  num: 943958
+}, {
+  end: 1404453120,
+  num: 943966
+}, {
+  end: 1404455280,
+  num: 944001
+}, {
+  end: 1404497160,
+  num: 944698
+}, {
+  end: 1404498480,
+  num: 944719
+}, {
+  end: 1404709320,
+  num: 948232
+}, {
+  end: 1404754800,
+  num: 948989
+}, {
+  end: 1404757860,
+  num: 949039
+}, {
+  end: 1404761400,
+  num: 949097
+}, {
+  end: 1404766200,
+  num: 949174
+}, {
+  end: 1404876000,
+  num: 951001
+}, {
+  end: 1404928500,
+  num: 951875
+}, {
+  end: 1405027200,
+  num: 953519
+}, {
+  end: 1405093320,
+  num: 954619
+}, {
+  end: 1405235940,
+  num: 956995
+}, {
+  end: 1405342260,
+  num: 958766
+}, {
+  end: 1405365420,
+  num: 959148
+}, {
+  end: 1405373280,
+  num: 959278
+}, {
+  end: 1405447440,
+  num: 960512
+}, {
+  end: 1405552020,
+  num: 962252
+}, {
+  end: 1405923900,
+  num: 968448
+}, {
+  end: 1405937820,
+  num: 968673
+}, {
+  end: 1405965960,
+  num: 969140
+}, {
+  end: 1406155440,
+  num: 972292
+}, {
+  end: 1406302860,
+  num: 974747
+}, {
+  end: 1406306940,
+  num: 974811
+}, {
+  end: 1406353320,
+  num: 975583
+}, {
+  end: 1406379540,
+  num: 976019
+}, {
+  end: 1406588220,
+  num: 979493
+}, {
+  end: 1406745000,
+  num: 982100
+}, {
+  end: 1406745120,
+  num: 982101
+}, {
+  end: 1406750220,
+  num: 982171
+}, {
+  end: 1406750460,
+  num: 982172
+}, {
+  end: 1406907180,
+  num: 984783
+}, {
+  end: 1407161760,
+  num: 989025
+}, {
+  end: 1407249300,
+  num: 990483
+}, {
+  end: 1407254460,
+  num: 990568
+}, {
+  end: 1407257880,
+  num: 990624
+}, {
+  end: 1407310800,
+  num: 991504
+}, {
+  end: 1407325020,
+  num: 991737
+}, {
+  end: 1407330360,
+  num: 991825
+}, {
+  end: 1407378180,
+  num: 992621
+}, {
+  end: 1407397200,
+  num: 992936
+}, {
+  end: 1407401160,
+  num: 993000
+}, {
+  end: 1407406440,
+  num: 993083
+}, {
+  end: 1407409860,
+  num: 993136
+}, {
+  end: 1407434700,
+  num: 993549
+}, {
+  end: 1407436140,
+  num: 993572
+}, {
+  end: 1407438900,
+  num: 993615
+}, {
+  end: 1407439980,
+  num: 993632
+}, {
+  end: 1407485040,
+  num: 994382
+}, {
+  end: 1407486780,
+  num: 994410
+}, {
+  end: 1407489300,
+  num: 994448
+}, {
+  end: 1407491400,
+  num: 994480
+}, {
+  end: 1407493800,
+  num: 994519
+}, {
+  end: 1407495120,
+  num: 994540
+}, {
+  end: 1407496080,
+  num: 994552
+}, {
+  end: 1407502560,
+  num: 994658
+}, {
+  end: 1407503940,
+  num: 994680
+}, {
+  end: 1407506460,
+  num: 994721
+}, {
+  end: 1407608880,
+  num: 996427
+}, {
+  end: 1407744300,
+  num: 998683
+}, {
+  end: 1407999420,
+  num: 1002934
+}, {
+  end: 1408002660,
+  num: 1002987
+}, {
+  end: 1408003140,
+  num: 1002994
+}, {
+  end: 1408003680,
+  num: 1003002
+}, {
+  end: 1408004280,
+  num: 1003011
+}, {
+  end: 1408134240,
+  num: 1005175
+}, {
+  end: 1408389720,
+  num: 1009432
+}, {
+  end: 1408401300,
+  num: 1009624
+}, {
+  end: 1408401540,
+  num: 1009625
+}, {
+  end: 1408403460,
+  num: 1009656
+}, {
+  end: 1408404660,
+  num: 1009675
+}, {
+  end: 1408552860,
+  num: 1012140
+}, {
+  end: 1408556940,
+  num: 1012207
+}, {
+  end: 1408557540,
+  num: 1012216
+}, {
+  end: 1408600080,
+  num: 1012924
+}, {
+  end: 1408612440,
+  num: 1013126
+}, {
+  end: 1408615800,
+  num: 1013181
+}, {
+  end: 1408774980,
+  num: 1015829
+}, {
+  end: 1408935900,
+  num: 1018510
+}, {
+  end: 1408948800,
+  num: 1018719
+}, {
+  end: 1408948920,
+  num: 1018720
+}, {
+  end: 1408954020,
+  num: 1018795
+}, {
+  end: 1408954200,
+  num: 1018796
+}, {
+  end: 1408991700,
+  num: 1019420
+}, {
+  end: 1409008920,
+  num: 1019706
+}, {
+  end: 1409232060,
+  num: 1023424
+}, {
+  end: 1409274240,
+  num: 1024126
+}, {
+  end: 1409578620,
+  num: 1029197
+}, {
+  end: 1409704080,
+  num: 1031287
+}, {
+  end: 1409824080,
+  num: 1033285
+}, {
+  end: 1410127020,
+  num: 1038333
+}, {
+  end: 1410182820,
+  num: 1039262
+}, {
+  end: 1410200820,
+  num: 1039561
+}, {
+  end: 1410201540,
+  num: 1039572
+}, {
+  end: 1410204720,
+  num: 1039624
+}, {
+  end: 1410205260,
+  num: 1039632
+}, {
+  end: 1410529020,
+  num: 1045023
+}, {
+  end: 1410533160,
+  num: 1045091
+}, {
+  end: 1410583440,
+  num: 1045928
+}, {
+  end: 1410614220,
+  num: 1046440
+}, {
+  end: 1410766500,
+  num: 1048970
+}, {
+  end: 1410819000,
+  num: 1049844
+}, {
+  end: 1410953700,
+  num: 1052088
+}, {
+  end: 1410956580,
+  num: 1052135
+}, {
+  end: 1410958620,
+  num: 1052167
+}, {
+  end: 1411079880,
+  num: 1054187
+}, {
+  end: 1411245480,
+  num: 1056918
+}, {
+  end: 1411409400,
+  num: 1059649
+}, {
+  end: 1411412700,
+  num: 1059703
+}, {
+  end: 1411465020,
+  num: 1060563
+}, {
+  end: 1411544340,
+  num: 1061884
+}, {
+  end: 1411592940,
+  num: 1062693
+}, {
+  end: 1411629060,
+  num: 1063294
+}, {
+  end: 1411655160,
+  num: 1063727
+}, {
+  end: 1411672380,
+  num: 1064013
+}, {
+  end: 1411673040,
+  num: 1064022
+}, {
+  end: 1411673880,
+  num: 1064034
+}, {
+  end: 1411706160,
+  num: 1064570
+}, {
+  end: 1411714920,
+  num: 1064715
+}, {
+  end: 1411764120,
+  num: 1065532
+}, {
+  end: 1411832520,
+  num: 1066671
+}, {
+  end: 1411977300,
+  num: 1069081
+}, {
+  end: 1412002020,
+  num: 1069488
+}, {
+  end: 1412017560,
+  num: 1069731
+}, {
+  end: 1412023980,
+  num: 1069837
+}, {
+  end: 1412061120,
+  num: 1070453
+}, {
+  end: 1412176980,
+  num: 1072381
+}, {
+  end: 1412234400,
+  num: 1073336
+}, {
+  end: 1412259000,
+  num: 1073745
+}, {
+  end: 1412303460,
+  num: 1074481
+}, {
+  end: 1412319430,
+  num: 1074747
+}, {
+  end: 1412319780,
+  num: 1074750
+}, {
+  end: 1412578560,
+  num: 1079062
+}, {
+  end: 1412580000,
+  num: 1079083
+}, {
+  end: 1412585400,
+  num: 1079172
+}, {
+  end: 1412586000,
+  num: 1079178
+}, {
+  end: 1412586900,
+  num: 1079192
+}, {
+  end: 1412588340,
+  num: 1079215
+}, {
+  end: 1412590080,
+  num: 1079243
+}, {
+  end: 1412592060,
+  num: 1079275
+}, {
+  end: 1412624700,
+  num: 1079818
+}, {
+  end: 1412673060,
+  num: 1080623
+}, {
+  end: 1412735760,
+  num: 1081667
+}, {
+  end: 1412736360,
+  num: 1081676
+}, {
+  end: 1412737080,
+  num: 1081687
+}, {
+  end: 1412738220,
+  num: 1081705
+}, {
+  end: 1412738820,
+  num: 1081714
+}, {
+  end: 1412739540,
+  num: 1081725
+}, {
+  end: 1412776860,
+  num: 1082346
+}, {
+  end: 1412839680,
+  num: 1083392
+}, {
+  end: 1412843100,
+  num: 1083447
+}, {
+  end: 1412844420,
+  num: 1083468
+}, {
+  end: 1412873820,
+  num: 1083954
+}, {
+  end: 1412876400,
+  num: 1083992
+}, {
+  end: 1413213360,
+  num: 1089607
+}, {
+  end: 1413374820,
+  num: 1092297
+}, {
+  end: 1413390780,
+  num: 1092561
+}, {
+  end: 1413448030,
+  num: 1093515
+}, {
+  end: 1413448140,
+  num: 1093516
+}, {
+  end: 1413453060,
+  num: 1093594
+}, {
+  end: 1413569820,
+  num: 1095539
+}, {
+  end: 1413618540,
+  num: 1096350
+}, {
+  end: 1413619340,
+  num: 1096363
+}, {
+  end: 1413711730,
+  num: 1097903
+}, {
+  end: 1413787810,
+  num: 1099171
+}, {
+  end: 1413792910,
+  num: 1099255
+}, {
+  end: 1413793530,
+  num: 1099265
+}, {
+  end: 1413796840,
+  num: 1099320
+}, {
+  end: 1414003260,
+  num: 1102759
+}, {
+  end: 1414093560,
+  num: 1104263
+}, {
+  end: 1414099680,
+  num: 1104364
+}, {
+  end: 1414102140,
+  num: 1104404
+}, {
+  end: 1414104180,
+  num: 1104437
+}, {
+  end: 1414104780,
+  num: 1104445
+}, {
+  end: 1414108920,
+  num: 1104511
+}, {
+  end: 1414111680,
+  num: 1104556
+}, {
+  end: 1414158120,
+  num: 1105329
+}, {
+  end: 1414160760,
+  num: 1105370
+}, {
+  end: 1414162560,
+  num: 1105399
+}, {
+  end: 1414165020,
+  num: 1105435
+}, {
+  end: 1414328040,
+  num: 1108082
+}, {
+  end: 1414842780,
+  num: 1116659
+}, {
+  end: 1415401200,
+  num: 1125963
+}, {
+  end: 1415428140,
+  num: 1126411
+}, {
+  end: 1415712360,
+  num: 1131147
+}, {
+  end: 1415756940,
+  num: 1131886
+}, {
+  end: 1415763360,
+  num: 1131992
+}, {
+  end: 1415764500,
+  num: 1132010
+}, {
+  end: 1415773630,
+  num: 1132162
+}, {
+  end: 1415773710,
+  num: 1132163
+}, {
+  end: 1415777710,
+  num: 1132230
+}, {
+  end: 1415795110,
+  num: 1132520
+}, {
+  end: 1415799360,
+  num: 1132590
+}, {
+  end: 1415801040,
+  num: 1132617
+}, {
+  end: 1415803500,
+  num: 1132657
+}, {
+  end: 1415804520,
+  num: 1132672
+}, {
+  end: 1415806260,
+  num: 1132700
+}, {
+  end: 1415816160,
+  num: 1132864
+}, {
+  end: 1415819100,
+  num: 1132910
+}, {
+  end: 1415821920,
+  num: 1132954
+}, {
+  end: 1415824990,
+  num: 1133005
+}, {
+  end: 1415825100,
+  num: 1133006
+}, {
+  end: 1415885220,
+  num: 1134006
+}, {
+  end: 1415885760,
+  num: 1134013
+}, {
+  end: 1415890320,
+  num: 1134087
+}, {
+  end: 1415898420,
+  num: 1134221
+}, {
+  end: 1415899080,
+  num: 1134231
+}, {
+  end: 1415907540,
+  num: 1134371
+}, {
+  end: 1415908500,
+  num: 1134386
+}, {
+  end: 1415933160,
+  num: 1134796
+}, {
+  end: 1415933820,
+  num: 1134806
+}, {
+  end: 1415938380,
+  num: 1134881
+}, {
+  end: 1415946910,
+  num: 1135023
+}, {
+  end: 1415971860,
+  num: 1135438
+}, {
+  end: 1416034270,
+  num: 1136478
+}, {
+  end: 1416098100,
+  num: 1137539
+}, {
+  end: 1416119230,
+  num: 1137891
+}, {
+  end: 1416119310,
+  num: 1137892
+}, {
+  end: 1416198480,
+  num: 1139210
+}, {
+  end: 1416338830,
+  num: 1141549
+}, {
+  end: 1416359050,
+  num: 1141886
+}, {
+  end: 1416371110,
+  num: 1142087
+}, {
+  end: 1416372070,
+  num: 1142103
+}, {
+  end: 1416374890,
+  num: 1142150
+}, {
+  end: 1416402670,
+  num: 1142613
+}, {
+  end: 1416577140,
+  num: 1145520
+}, {
+  end: 1416661340,
+  num: 1146923
+}, {
+  end: 1416675600,
+  num: 1147160
+}, {
+  end: 1417094760,
+  num: 1154145
+}, {
+  end: 1417468080,
+  num: 1160366
+}, {
+  end: 1418060520,
+  num: 1170239
+}, {
+  end: 1418245380,
+  num: 1173317
+}, {
+  end: 1418422080,
+  num: 1176261
+}, {
+  end: 1418453220,
+  num: 1176776
+}, {
+  end: 1418494200,
+  num: 1177458
+}, {
+  end: 1418521080,
+  num: 1177515
+}, {
+  end: 1418525160,
+  num: 1177580
+}, {
+  end: 1418638140,
+  num: 1179460
+}, {
+  end: 1418666280,
+  num: 1179928
+}, {
+  end: 1418855160,
+  num: 1183072
+}, {
+  end: 1418888340,
+  num: 1183624
+}, {
+  end: 1418981460,
+  num: 1185175
+}, {
+  end: 1419024480,
+  num: 1185891
+}, {
+  end: 1419130020,
+  num: 1187649
+}, {
+  end: 1420033140,
+  num: 1202700
+}, {
+  end: 1420504020,
+  num: 1210544
+}, {
+  end: 1420505700,
+  num: 1210568
+}, {
+  end: 1420507440,
+  num: 1210593
+}, {
+  end: 1420509120,
+  num: 1210617
+}, {
+  end: 1420510860,
+  num: 1210642
+}, {
+  end: 1420673520,
+  num: 1213349
+}, {
+  end: 1420679340,
+  num: 1213442
+}, {
+  end: 1421074900,
+  num: 1220034
+}, {
+  end: 1421074980,
+  num: 1220035
+}, {
+  end: 1421086480,
+  num: 1220226
+}, {
+  end: 1421086590,
+  num: 1220227
+}, {
+  end: 1421086680,
+  num: 1220228
+}, {
+  end: 1421088230,
+  num: 1220253
+}, {
+  end: 1421088300,
+  num: 1220254
+}, {
+  end: 1421091050,
+  num: 1220299
+}, {
+  end: 1421091150,
+  num: 1220300
+}, {
+  end: 1421091440,
+  num: 1220302
+}, {
+  end: 1421091740,
+  num: 1220305
+}, {
+  end: 1421091880,
+  num: 1220307
+}, {
+  end: 1421091980,
+  num: 1220308
+}, {
+  end: 1421092110,
+  num: 1220309
+}, {
+  end: 1421092180,
+  num: 1220310
+}, {
+  end: 1421092280,
+  num: 1220311
+}, {
+  end: 1421092380,
+  num: 1220312
+}, {
+  end: 1421092500,
+  num: 1220313
+}, {
+  end: 1421092590,
+  num: 1220314
+}, {
+  end: 1421092680,
+  num: 1220315
+}, {
+  end: 1421176980,
+  num: 1221719
+}, {
+  end: 1421544840,
+  num: 1227849
+}, {
+  end: 1421632920,
+  num: 1229316
+}, {
+  end: 1421689740,
+  num: 1230262
+}, {
+  end: 1421691480,
+  num: 1230290
+}, {
+  end: 1421695380,
+  num: 1230353
+}, {
+  end: 1422060420,
+  num: 1236436
+}, {
+  end: 1422270900,
+  num: 1239943
+}, {
+  end: 1422287160,
+  num: 1240213
+}, {
+  end: 1422287820,
+  num: 1240223
+}, {
+  end: 1422355320,
+  num: 1241347
+}, {
+  end: 1422367510,
+  num: 1241550
+}, {
+  end: 1422367980,
+  num: 1241552
+}, {
+  end: 1422491700,
+  num: 1243613
+}, {
+  end: 1422492240,
+  num: 1243621
+}, {
+  end: 1422668580,
+  num: 1246559
+}, {
+  end: 1422775980,
+  num: 1248348
+}, {
+  end: 1422868380,
+  num: 1249411
+}, {
+  end: 1422868500,
+  num: 1249412
+}, {
+  end: 1423036200,
+  num: 1252203
+}, {
+  end: 1423041480,
+  num: 1252215
+}, {
+  end: 1423440780,
+  num: 1258869
+}, {
+  end: 1423450260,
+  num: 1259026
+}, {
+  end: 1423457580,
+  num: 1259146
+}, {
+  end: 1423467900,
+  num: 1259314
+}, {
+  end: 1423487700,
+  num: 1259639
+}, {
+  end: 1423492140,
+  num: 1259710
+}, {
+  end: 1423509120,
+  num: 1259991
+}, {
+  end: 1423570980,
+  num: 1261021
+}, {
+  end: 1423722480,
+  num: 1263545
+}, {
+  end: 1423723620,
+  num: 1263562
+}, {
+  end: 1423875240,
+  num: 1266086
+}, {
+  end: 1424052420,
+  num: 1269036
+}, {
+  end: 1424087160,
+  num: 1269614
+}, {
+  end: 1424092200,
+  num: 1269697
+}, {
+  end: 1424095680,
+  num: 1269751
+}, {
+  end: 1424104200,
+  num: 1269892
+}, {
+  end: 1424607420,
+  num: 1278278
+}, {
+  end: 1424657940,
+  num: 1279118
+}, {
+  end: 1424664600,
+  num: 1279225
+}, {
+  end: 1424679180,
+  num: 1279464
+}, {
+  end: 1424687460,
+  num: 1279600
+}, {
+  end: 1424695440,
+  num: 1279732
+}, {
+  end: 1424731260,
+  num: 1280328
+}, {
+  end: 1424736960,
+  num: 1280422
+}, {
+  end: 1424854440,
+  num: 1282375
+}, {
+  end: 1425307740,
+  num: 1289929
+}, {
+  end: 1425819840,
+  num: 1298463
+}, {
+  end: 1426104000,
+  num: 1303198
+}, {
+  end: 1426490340,
+  num: 1309636
+}, {
+  end: 1426529580,
+  num: 1310288
+}, {
+  end: 1426628280,
+  num: 1311932
+}, {
+  end: 1427417940,
+  num: 1325092
+}, {
+  end: 1427421960,
+  num: 1325158
+}, {
+  end: 1427502540,
+  num: 1326500
+}, {
+  end: 1427742120,
+  num: 1330492
+}, {
+  end: 1427752320,
+  num: 1330661
+}, {
+  end: 1428530580,
+  num: 1343631
+}, {
+  end: 1428596460,
+  num: 1344725
+}, {
+  end: 1428630120,
+  num: 1345285
+}, {
+  end: 1428870660,
+  num: 1349293
+}, {
+  end: 1428891540,
+  num: 1349639
+}, {
+  end: 1428916140,
+  num: 1350043
+}, {
+  end: 1428934860,
+  num: 1350354
+}, {
+  end: 1429113840,
+  num: 1353336
+}, {
+  end: 1429146960,
+  num: 1353881
+}, {
+  end: 1429225200,
+  num: 1355184
+}, {
+  end: 1429331760,
+  num: 1356952
+}, {
+  end: 1429500840,
+  num: 1359767
+}, {
+  end: 1429502700,
+  num: 1359795
+}, {
+  end: 1429506840,
+  num: 1359861
+}, {
+  end: 1429515900,
+  num: 1360011
+}, {
+  end: 1429516260,
+  num: 1360016
+}, {
+  end: 1429516740,
+  num: 1360023
+}, {
+  end: 1429517280,
+  num: 1360031
+}, {
+  end: 1429517820,
+  num: 1360039
+}, {
+  end: 1429518480,
+  num: 1360049
+}, {
+  end: 1429533360,
+  num: 1360292
+}, {
+  end: 1429616940,
+  num: 1361684
+}, {
+  end: 1429922940,
+  num: 1366783
+}, {
+  end: 1430000940,
+  num: 1368082
+}, {
+  end: 1430002260,
+  num: 1368103
+}, {
+  end: 1430115480,
+  num: 1369989
+}, {
+  end: 1430122020,
+  num: 1370096
+}, {
+  end: 1430122500,
+  num: 1370103
+}, {
+  end: 1430123940,
+  num: 1370126
+}, {
+  end: 1430163600,
+  num: 1370786
+}, {
+  end: 1430164020,
+  num: 1370792
+}, {
+  end: 1430168520,
+  num: 1370865
+}, {
+  end: 1430400960,
+  num: 1374687
+}, {
+  end: 1430525580,
+  num: 1376758
+}, {
+  end: 1430658360,
+  num: 1378970
+}, {
+  end: 1430717460,
+  num: 1379954
+}, {
+  end: 1430718360,
+  num: 1379968
+}, {
+  end: 1430748000,
+  num: 1380461
+}, {
+  end: 1430762280,
+  num: 1380697
+}, {
+  end: 1430766120,
+  num: 1380760
+}, {
+  end: 1430787960,
+  num: 1381122
+}, {
+  end: 1430831820,
+  num: 1381852
+}, {
+  end: 1431345660,
+  num: 1390414
+}, {
+  end: 1431364440,
+  num: 1390726
+}, {
+  end: 1431364860,
+  num: 1390732
+}, {
+  end: 1431365400,
+  num: 1390740
+}, {
+  end: 1431368580,
+  num: 1390792
+}, {
+  end: 1431369300,
+  num: 1390802
+}, {
+  end: 1431370260,
+  num: 1390816
+}, {
+  end: 1431941820,
+  num: 1400338
+}, {
+  end: 1431962160,
+  num: 1400676
+}, {
+  end: 1431973140,
+  num: 1400857
+}, {
+  end: 1431992760,
+  num: 1401183
+}, {
+  end: 1432138380,
+  num: 1403609
+}, {
+  end: 1432423200,
+  num: 1408355
+}, {
+  end: 1432514040,
+  num: 1409868
+}, {
+  end: 1432521600,
+  num: 1409993
+}, {
+  end: 1432524360,
+  num: 1410038
+}, {
+  end: 1432555800,
+  num: 1410561
+}, {
+  end: 1432594560,
+  num: 1411203
+}, {
+  end: 1432622460,
+  num: 1411667
+}, {
+  end: 1433122680,
+  num: 1420002
+}, {
+  end: 1433123280,
+  num: 1420011
+}, {
+  end: 1433194620,
+  num: 1421199
+}, {
+  end: 1433380080,
+  num: 1424289
+}, {
+  end: 1433691180,
+  num: 1429471
+}, {
+  end: 1433701020,
+  num: 1429634
+}, {
+  end: 1433703240,
+  num: 1429669
+}, {
+  end: 1433909100,
+  num: 1433099
+}, {
+  end: 1433910060,
+  num: 1433114
+}, {
+  end: 1434011580,
+  num: 1434803
+}, {
+  end: 1434011820,
+  num: 1434806
+}, {
+  end: 1434169500,
+  num: 1437433
+}, {
+  end: 1434217440,
+  num: 1438231
+}, {
+  end: 1434335700,
+  num: 1440200
+}, {
+  end: 1434382680,
+  num: 1440976
+}, {
+  end: 1434386940,
+  num: 1441032
+}, {
+  end: 1434411840,
+  num: 1441445
+}, {
+  end: 1434452820,
+  num: 1442127
+}, {
+  end: 1434603300,
+  num: 1444634
+}, {
+  end: 1434667740,
+  num: 1445707
+}, {
+  end: 1434682080,
+  num: 1445942
+}, {
+  end: 1434869100,
+  num: 1449058
+}, {
+  end: 1434931380,
+  num: 1450095
+}, {
+  end: 1434945900,
+  num: 1450333
+}, {
+  end: 1435023000,
+  num: 1451615
+}, {
+  end: 1435109940,
+  num: 1453062
+}, {
+  end: 1435567860,
+  num: 1460691
+}, {
+  end: 1435599980,
+  num: 1461226
+}, {
+  end: 1435608360,
+  num: 1461365
+}, {
+  end: 1435624800,
+  num: 1461638
+}, {
+  end: 1435670940,
+  num: 1462406
+}, {
+  end: 1435709520,
+  num: 1463048
+}, {
+  end: 1436014020,
+  num: 1468122
+}, {
+  end: 1436099230,
+  num: 1469542
+}, {
+  end: 1436146870,
+  num: 1470336
+}, {
+  end: 1436155090,
+  num: 1470473
+}, {
+  end: 1436171290,
+  num: 1470743
+}, {
+  end: 1436200330,
+  num: 1471227
+}, {
+  end: 1436258440,
+  num: 1472195
+}, {
+  end: 1436258580,
+  num: 1472196
+}, {
+  end: 1436330050,
+  num: 1473387
+}, {
+  end: 1436541850,
+  num: 1476917
+}, {
+  end: 1436549220,
+  num: 1477039
+}, {
+  end: 1436595010,
+  num: 1477802
+}, {
+  end: 1436597590,
+  num: 1477845
+}, {
+  end: 1436608800,
+  num: 1478031
+}, {
+  end: 1436613970,
+  num: 1478117
+}, {
+  end: 1436616610,
+  num: 1478161
+}, {
+  end: 1436635990,
+  num: 1478484
+}, {
+  end: 1436636830,
+  num: 1478498
+}, {
+  end: 1436672160,
+  num: 1479086
+}, {
+  end: 1436688300,
+  num: 1479351
+}, {
+  end: 1436733060,
+  num: 1479998
+}, {
+  end: 1436733720,
+  num: 1479999
+}, {
+  end: 1436875980,
+  num: 1482369
+}, {
+  end: 1437096660,
+  num: 1486045
+}, {
+  end: 1437683100,
+  num: 1495817
+}, {
+  end: 1437685020,
+  num: 1495848
+}, {
+  end: 1437750780,
+  num: 1496939
+}, {
+  end: 1437772020,
+  num: 1497292
+}, {
+  end: 1438002600,
+  num: 1501110
+}, {
+  end: 1438044000,
+  num: 1501799
+}, {
+  end: 1438044360,
+  num: 1501804
+}, {
+  end: 1438044780,
+  num: 1501810
+}, {
+  end: 1438045260,
+  num: 1501817
+}, {
+  end: 1438045800,
+  num: 1501825
+}, {
+  end: 1439575920,
+  num: 1527326
+}, {
+  end: 1439576940,
+  num: 1527342
+}, {
+  end: 1439577970,
+  num: 1527359
+}, {
+  end: 1439580540,
+  num: 1527401
+}, {
+  end: 1439581810,
+  num: 1527402
+}, {
+  end: 1439818440,
+  num: 1531344
+}, {
+  end: 1439824740,
+  num: 1531448
+}, {
+  end: 1439835000,
+  num: 1531616
+}, {
+  end: 1439944860,
+  num: 1533445
+}, {
+  end: 1440031440,
+  num: 1534886
+}, {
+  end: 1440033180,
+  num: 1534914
+}, {
+  end: 1440398580,
+  num: 1541003
+}, {
+  end: 1440637680,
+  num: 1544987
+}, {
+  end: 1440640020,
+  num: 1545025
+}, {
+  end: 1441060200,
+  num: 1552026
+}, {
+  end: 1442108040,
+  num: 1569487
+}, {
+  end: 1442247240,
+  num: 1571806
+}, {
+  end: 1442247720,
+  num: 1571813
+}, {
+  end: 1442895000,
+  num: 1582600
+}, {
+  end: 1443178200,
+  num: 1587297
+}, {
+  end: 1443549220,
+  num: 1593477
+}, {
+  end: 1443606370,
+  num: 1594427
+}, {
+  end: 1444609020,
+  num: 1611137
+}, {
+  end: 1444609680,
+  num: 1611147
+}, {
+  end: 1444679580,
+  num: 1612311
+}, {
+  end: 1444680420,
+  num: 1612324
+}, {
+  end: 1444695300,
+  num: 1612571
+}, {
+  end: 1444942380,
+  num: 1616688
+}, {
+  end: 1444977000,
+  num: 1617264
+}, {
+  end: 1445300460,
+  num: 1622654
+}, {
+  end: 1446686940,
+  num: 1645761
+}, {
+  end: 1446796680,
+  num: 1647589
+}, {
+  end: 1447036140,
+  num: 1651579
+}, {
+  end: 1447036620,
+  num: 1651586
+}, {
+  end: 1447037940,
+  num: 1651607
+}, {
+  end: 1447038420,
+  num: 1651614
+}, {
+  end: 1447039680,
+  num: 1651634
+}, {
+  end: 1447040520,
+  num: 1651647
+}, {
+  end: 1447044540,
+  num: 1651713
+}, {
+  end: 1447525620,
+  num: 1659730
+}, {
+  end: 1447912920,
+  num: 1666180
+}, {
+  end: 1447913040,
+  num: 1666181
+}, {
+  end: 1447913160,
+  num: 1666182
+}, {
+  end: 1447913400,
+  num: 1666185
+}, {
+  end: 1447915560,
+  num: 1666219
+}, {
+  end: 1447915680,
+  num: 1666220
+}, {
+  end: 1447916020,
+  num: 1666225
+}, {
+  end: 1447916460,
+  num: 1666232
+}, {
+  end: 1447916700,
+  num: 1666234
+}, {
+  end: 1447916880,
+  num: 1666236
+}, {
+  end: 1447917120,
+  num: 1666237
+}, {
+  end: 1447918020,
+  num: 1666241
+}, {
+  end: 1447918150,
+  num: 1666243
+}, {
+  end: 1447920210,
+  num: 1666277
+}, {
+  end: 1447925350,
+  num: 1666363
+}, {
+  end: 1447927730,
+  num: 1666402
+}, {
+  end: 1447929250,
+  num: 1666428
+}, {
+  end: 1448152860,
+  num: 1670154
+}, {
+  end: 1448315700,
+  num: 1672865
+}, {
+  end: 1448319420,
+  num: 1672926
+}, {
+  end: 1448322540,
+  num: 1672975
+}, {
+  end: 1448330580,
+  num: 1673108
+}, {
+  end: 1448333220,
+  num: 1673150
+}, {
+  end: 1448338500,
+  num: 1673237
+}, {
+  end: 1448453760,
+  num: 1675157
+}, {
+  end: 1448612460,
+  num: 1677801
+}, {
+  end: 1448858760,
+  num: 1681905
+}, {
+  end: 1448874420,
+  num: 1682165
+}, {
+  end: 1449154200,
+  num: 1686826
+}, {
+  end: 1449190080,
+  num: 1687423
+}, {
+  end: 1449248700,
+  num: 1688399
+}, {
+  end: 1449275700,
+  num: 1688848
+}, {
+  end: 1449522420,
+  num: 1692959
+}, {
+  end: 1449708900,
+  num: 1696066
+}, {
+  end: 1449930360,
+  num: 1699756
+}, {
+  end: 1450829400,
+  num: 1714738
+}, {
+  end: 1451292960,
+  num: 1722463
+}, {
+  end: 1451294040,
+  num: 1722480
+}, {
+  end: 1451295240,
+  num: 1722499
+}, {
+  end: 1451297040,
+  num: 1722528
+}, {
+  end: 1451315100,
+  num: 1722827
+}, {
+  end: 1451346420,
+  num: 1723346
+}, {
+  end: 1451578920,
+  num: 1727220
+}, {
+  end: 1451806810,
+  num: 1731018
+}, {
+  end: 1451844060,
+  num: 1731638
+}, {
+  end: 1451844240,
+  num: 1731640
+}, {
+  end: 1451844720,
+  num: 1731647
+}, {
+  end: 1451845260,
+  num: 1731655
+}, {
+  end: 1451845980,
+  num: 1731665
+}, {
+  end: 1451846700,
+  num: 1731675
+}, {
+  end: 1451847420,
+  num: 1731685
+}, {
+  end: 1451847780,
+  num: 1731690
+}, {
+  end: 1451874480,
+  num: 1732129
+}, {
+  end: 1452540120,
+  num: 1743222
+}, {
+  end: 1452551280,
+  num: 1743407
+}, {
+  end: 1452612420,
+  num: 1744422
+}, {
+  end: 1452902580,
+  num: 1749257
+}, {
+  end: 1452904500,
+  num: 1749288
+}, {
+  end: 1452904980,
+  num: 1749295
+}, {
+  end: 1453691160,
+  num: 1762396
+}, {
+  end: 1453701360,
+  num: 1762565
+}, {
+  end: 1453727760,
+  num: 1763004
+}, {
+  end: 1453737900,
+  num: 1763172
+}, {
+  end: 1453778340,
+  num: 1763842
+}, {
+  end: 1453796280,
+  num: 1764139
+}];
