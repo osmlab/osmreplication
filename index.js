@@ -6,12 +6,12 @@ var fixminutes = require('./util/fixMinutes');
 var date2osmdiffs = {
   minute: function(date) {
     var intervalMinute = 60;
-    var timeActual = date2timestamp(date);
-    var status = fixminutes(timeActual);
+    var timestamp = date2timestamp(date);
+    var status = fixminutes(timestamp);
     var startDateMinute = status.startDateMinute;
     var startNumberMinute = status.startNumberMinute;
-    timeActual = timeActual - timeActual % 10;
-    var diffDate = timeActual - startDateMinute;
+    timestamp = timestamp - timestamp % 10;
+    var diffDate = timestamp - startDateMinute;
     var number = parseInt(diffDate / intervalMinute) + startNumberMinute;
     return util.minute(number);
   },
