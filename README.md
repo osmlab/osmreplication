@@ -16,9 +16,9 @@ var date = '2016-01-28T01:06:07';
 #### For replication files per minute
 
 ```
-date2osmdiffs.minute(timestamp);
+date2osmdiffs(timestamp,'minute');
 //or 
-date2osmdiffs.minute(date);
+date2osmdiffs(date,'minute');
 ```
 *Result:*
 
@@ -32,9 +32,9 @@ date2osmdiffs.minute(date);
 #### For replication files per hour
 
 ```
-date2osmdiffs.hour(timestamp);
+date2osmdiffs(timestamp,'hour');
 //or 
-date2osmdiffs.hour(date);
+date2osmdiffs(date,'hour');
 ```
 *Result:*
 
@@ -48,9 +48,9 @@ date2osmdiffs.hour(date);
 #### For replication files per day
 
 ```
-date2osmdiffs.day(timestamp);
+date2osmdiffs(timestamp,'day');
 //or 
-date2osmdiffs.day(date);
+date2osmdiffs(date,'day');
 ```
 *Result:*
 
