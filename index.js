@@ -1,40 +1,56 @@
 'use strict';
 
-var util = require('./util');
 var fixminutes = require('./util/fixMinutes');
-
-var date2osmdiffs = {
-  minute: function(date) {
-    var intervalMinute = 60;
-    var timestamp = date2timestamp(date);
+var date2osmdiffs = function(date, type) {
+  var startDate;
+  var startNumber;
+  var interval;
+  var rest = 100;
+  var timestamp = date2timestamp(date);
+  if (type == 'minute') {
     var status = fixminutes(timestamp);
-    var startDateMinute = status.startDateMinute;
-    var startNumberMinute = status.startNumberMinute;
-    timestamp = timestamp - timestamp % 10;
-    var diffDate = timestamp - startDateMinute;
-    var number = parseInt(diffDate / intervalMinute) + startNumberMinute;
-    return util.minute(number);
-  },
-  hour: function(date) {
-    var startDateHour = 1351033200;
-    var startNumberHour = 1000;
-    var intervalHour = 3600;
-    var timestamp = date2timestamp(date);
-    timestamp = timestamp - timestamp % 100;
-    var diffDate = timestamp - startDateHour;
-    var number = parseInt(diffDate / intervalHour) + startNumberHour;
-    return util.hour(number);
-  },
-  day: function(date) {
-    var startDateDay = 1347494400;
-    var startNumberDay = 1;
-    var intervalDay = 86400;
-    var timestamp = date2timestamp(date);
-    timestamp = timestamp - timestamp % 100;
-    var diffDate = timestamp - startDateDay;
-    var number = parseInt(diffDate / intervalDay) + startNumberDay;
-    return util.day(number);
+    startDate = status.startDateMinute;
+    startNumber = status.startNumberMinute;
+    interval = 60;
+    rest = 10;
+  } else if (type == 'hour') {
+    startDate = 1351033200;
+    startNumber = 1000;
+    interval = 3600;
+  } else if (type == 'day') {
+    startDate = 1347494400;
+    startNumber = 1;
+    interval = 86400;
+  } else {
+    return 'Not found type :' + type;
   }
+  
+  timestamp = timestamp - timestamp % rest;
+  var diffDate = timestamp - startDate;
+  var number = parseInt(diffDate / interval) + startNumber;
+  return getURL(number, type);
+};
+
+function getURL(number, type) {
+  var sequence = number;
+  sequence = sequence.pad(9);
+  var dir1 = sequence.toString().substr(0, 3);
+  var dir2 = sequence.toString().substr(3, 3);
+  var file = sequence.toString().substr(6, 3);
+  var url = 'http://planet.openstreetmap.org/replication/' + type + '/' + dir1 + '/' + dir2 + '/' + file;
+  return {
+    sequenceNumber: number,
+    url_data: url + '.osc.gz',
+    url_state: url + '.state.txt'
+  };
+}
+
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {
+    s = '0' + s;
+  }
+  return s;
 };
 
 function date2timestamp(date) {
