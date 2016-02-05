@@ -9,7 +9,7 @@ function init(npage) {
   scraping(npage, function(status, pageResult) {
     if (status) {
       result = result.concat(pageResult);
-      numPage += 100;
+      numPage++;
       init(numPage);
     } else {
       result.reverse();
