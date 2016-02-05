@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(dates, done) {
   var result = [];
   var i = 1;

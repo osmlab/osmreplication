@@ -3,7 +3,7 @@
 var fixminutes = require('./src/fixMinutes');
 var getUrl = require('./src/url');
 
-var date2osmdiffs = function(date, type) {
+var file = function(date, type) {
   var startDate;
   var startNumber;
   var interval;
@@ -32,6 +32,28 @@ var date2osmdiffs = function(date, type) {
   return getUrl(number, type);
 };
 
+var range = function(dateStart, dateEnd, type) {
+  var interval;
+  if (type == 'minute') {
+    interval = 60;
+  } else if (type == 'hour') {
+    interval = 3600;
+  } else if (type == 'day') {
+    interval = 86400;
+  } else {
+    return 'Not found type :' + type;
+  }
+  var timeStart = date2timestamp(dateStart);
+  var timeEnd = date2timestamp(dateEnd);
+  var result = [];
+  var i = timeStart;
+  while (i <= timeEnd) {
+    result.push(file(i, type));
+    i += interval;
+  }
+  return result;
+};
+
 function date2timestamp(date) {
   if (typeof date == 'number') {
     return date;
@@ -40,4 +62,7 @@ function date2timestamp(date) {
   }
 }
 
+var date2osmdiffs = {};
+date2osmdiffs.file = file;
+date2osmdiffs.range = range;
 module.exports = date2osmdiffs;
