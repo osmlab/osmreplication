@@ -1,6 +1,6 @@
 'use strict';
-var intervals = require('./minutes.js').minutes;
 
+var intervals = require('./minutes.js').minutes;
 module.exports = function(timestamp) {
   var result = {};
   var num = 0;

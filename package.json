@@ -1,5 +1,5 @@
 {
-  "name": "date2osmdiffs",
+  "name": "osmreplication",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rub21/date2osmdiffs.git"
+    "url": "git+https://github.com/Rub21/osmreplication.git"
   },
   "author": "Ruben Lopez M <ruben@mapbox.com> (http://rub21.github.io/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rub21/date2osmdiffs/issues"
+    "url": "https://github.com/Rub21/osmreplication/issues"
   },
-  "homepage": "https://github.com/Rub21/date2osmdiffs#readme",
+  "homepage": "https://github.com/Rub21/osmreplication#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
     "request": "^2.69.0",

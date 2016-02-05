@@ -1,33 +1,34 @@
-# date2osmdiffs
+# osmreplication
 
 Easy way to convert date to number of [Planet.osm/diffs](http://wiki.openstreetmap.org/wiki/Planet.osm/diffs), the app support `timestamp` and `date(YYYY-MM-DDThh:mm:ss)` parameters.
 
 ## Installation
 
-`npm install date2osmdiffs`
+`npm install osmreplication`
 
 ## Usage
 
 ```js
-var date2osmdiffs = require('date2osmdiffs');
+var osmreplication = require('osmreplication');
 var timestamp = 1453943167;
 var date = '2016-01-28T01:06:07';
 ```
-## For replication files per minute
+## Replication files per minute
 
 **File:**
 
 ```js
-date2osmdiffs.file(timestamp,'minute');
+osmreplication.file(timestamp,'minute');
 //or 
-date2osmdiffs.file(date,'minute');
+osmreplication.file(date,'minute');
 ```
 *Output:*
 
 ```
-{ sequenceNumber: 1766587,
+{
   url_data: 'http://planet.openstreetmap.org/replication/minute/001/766/587.osc.gz',
-  url_state: 'http://planet.openstreetmap.org/replication/minute/001/766/587.state.txt' 
+  sequenceNumber: 1766587,
+  date: '2016-01-27T01:06'
 }
 ```
 
@@ -36,7 +37,7 @@ date2osmdiffs.file(date,'minute');
 ```js
 var dateStart = '2012-09-13T02:01';
 var dateEnd = '2012-09-13T02:03';
-var result = date2osmdiffs.range(dateStart, dateEnd, 'minute');
+var result = osmreplication.range(dateStart, dateEnd, 'minute');
 ```
 *Output:*
 
@@ -56,22 +57,23 @@ var result = date2osmdiffs.range(dateStart, dateEnd, 'minute');
 }]
 ```
 
-## For replication files per hour
+## Replication files per hour
 
 **File:**
 
 ```js
-date2osmdiffs.file(timestamp,'hour');
+osmreplication.file(timestamp,'hour');
 //or 
-date2osmdiffs.file(date,'hour');
+osmreplication.file(date,'hour');
 ```
 *Output:*
 
 ```
-{ sequenceNumber: 29586,
+{
   url_data: 'http://planet.openstreetmap.org/replication/hour/000/029/586.osc.gz',
-  url_state: 'http://planet.openstreetmap.org/replication/hour/000/029/586.state.txt' }
-
+  sequenceNumber: 29586,
+  date: '2016-01-27T01:05'
+}
 ```
 
 **Range:**
@@ -79,7 +81,7 @@ date2osmdiffs.file(date,'hour');
 ```js
 var dateStart = '2016-02-05T16:02';
 var dateEnd = '2016-02-05T18:02';
-var result = date2osmdiffs.range(dateStart, dateEnd, 'hour');
+var result = osmreplication.range(dateStart, dateEnd, 'hour');
 
 ```
 *Output:*
@@ -101,22 +103,23 @@ var result = date2osmdiffs.range(dateStart, dateEnd, 'hour');
 
 ```
 
-## For replication files per day
+## Replication files per day
 
 **File:**
 
 ```js
-date2osmdiffs.file(timestamp,'day');
+osmreplication.file(timestamp,'day');
 //or 
-date2osmdiffs.file(date,'day');
+osmreplication.file(date,'day');
 ```
 *Output:*
 
 ```
-{ sequenceNumber: 1233,
+{
   url_data: 'http://planet.openstreetmap.org/replication/day/000/001/233.osc.gz',
-  url_state: 'http://planet.openstreetmap.org/replication/day/000/001/233.state.txt' }
-  
+  sequenceNumber: 1233,
+  date: '2016-01-27T01:05'
+}
 ```
 
 **Range:**
@@ -124,7 +127,7 @@ date2osmdiffs.file(date,'day');
 ```js
   var dateStart = '2016-02-27T00:06';
   var dateEnd = '2016-02-29T00:06';
-  var result = date2osmdiffs.range(dateStart, dateEnd, 'day');
+  var result = osmreplication.range(dateStart, dateEnd, 'day');
 ```
 *Output:*
 
