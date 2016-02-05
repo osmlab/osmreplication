@@ -5,6 +5,7 @@ var scraping = require('./src/scraping');
 var analyze = require('./src/analyze');
 var path = require('path');
 var result = [];
+
 function init(npage) {
   scraping(npage, function(status, pageResult) {
     if (status) {
@@ -15,6 +16,7 @@ function init(npage) {
       result.reverse();
       analyze(result, function(intervals) {
         intervals.reverse();
+        intervals.splice(0, 1);
         storedIntervals = storedIntervals.concat(intervals);
         storedIntervals = _.sortBy(storedIntervals, function(obj) {
           return obj.end;
