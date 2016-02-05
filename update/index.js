@@ -1,6 +1,6 @@
 var _ = require('underscore');
 var fs = require('fs');
-var storedIntervals = require('./../util/minutes.js').minutes;
+var storedIntervals = require('./../src/minutes.js').minutes;
 var scraping = require('./src/scraping');
 var analyze = require('./src/analyze');
 var result = [];
@@ -13,13 +13,14 @@ function init(npage) {
       init(numPage);
     } else {
       result.reverse();
-      console.log(result.length);
       analyze(result, function(intervals) {
-        fs.writeFile('result.js', JSON.stringify(result), function(err) {});
-        fs.writeFile('storedIntervals.js', JSON.stringify(storedIntervals), function(err) {});
+        intervals.reverse();
         storedIntervals = storedIntervals.concat(intervals);
-        fs.writeFile('storedIntervals-result.js', JSON.stringify(storedIntervals), function(err) {});
-        console.log(intervals);
+        storedIntervals = _.sortBy(storedIntervals, function(obj) {
+          return obj.end;
+        });
+        var minuteFile = 'module.exports = { minutes:' + JSON.stringify(storedIntervals) + '}';
+        fs.writeFile('../src/minutes.js', minuteFile, function(err) {});
       });
     }
   });

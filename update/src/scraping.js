@@ -16,7 +16,7 @@ module.exports = function(npage, done) {
 
         if (file.substring(file.length - 7) === '.osc.gz') {
           var repliFile = {};
-          repliFile.date=date.replace(/(\r\n|\n|\r)/gm, "").trim().substr(0, 16);
+          repliFile.date = date.replace(/(\r\n|\n|\r)/gm, "").trim().substr(0, 16);
           repliFile.end = Date.parse(date.replace(/(\r\n|\n|\r)/gm, "").trim().substr(0, 16)) / 1000;
           repliFile.num = parseInt(npage + file.substring(0, 3));
           result.push(repliFile);

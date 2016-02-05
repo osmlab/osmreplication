@@ -1,6 +1,6 @@
 'use strict';
 
-var fixminutes = require('./util/fixMinutes');
+var fixminutes = require('./src/fixMinutes');
 var date2osmdiffs = function(date, type) {
   var startDate;
   var startNumber;
