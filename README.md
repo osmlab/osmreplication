@@ -2,9 +2,18 @@
 
 Easy way to convert date to number of [Planet.osm/diffs](http://wiki.openstreetmap.org/wiki/Planet.osm/diffs), the app support `timestamp` and `date(YYYY-MM-DDThh:mm:ss)` parameters.
 
+
 ## Installation
 
 `npm install osmreplication`
+
+## Update
+
+There are problems with file replication per minute, sometimes falls server replication and sequence files are lost, which is why we need to update the files before using. the upgrade take the [last date](https://github.com/Rub21/osmreplication/blob/master/src/minutes.js) of the update and start updating the latest incidents. This could take the around of 20sec, 1min depending on how old the last update. 
+
+the last incidence on the replication server was `2016-02-01 19:1`
+
+`npm run update`
 
 ## Usage
 
