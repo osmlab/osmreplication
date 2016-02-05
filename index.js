@@ -2,13 +2,14 @@
 
 var fixminutes = require('./src/fixMinutes');
 var getUrl = require('./src/url');
+var convDate = require('./src/date');
 
 var file = function(date, type) {
   var startDate;
   var startNumber;
   var interval;
   var rest = 100;
-  var timestamp = date2timestamp(date);
+  var timestamp = convDate.date2timestamp(date);
   if (type == 'minute') {
     var status = fixminutes(timestamp);
     startDate = status.startDateMinute;
@@ -29,7 +30,10 @@ var file = function(date, type) {
   timestamp = timestamp - timestamp % rest;
   var diffDate = timestamp - startDate;
   var number = parseInt(diffDate / interval) + startNumber;
-  return getUrl(number, type);
+  var fileInf = getUrl(number, type);
+  fileInf.sequenceNumber = number;
+  fileInf.date = convDate.timestamp2date(timestamp);
+  return fileInf;
 };
 
 var range = function(dateStart, dateEnd, type) {
@@ -43,8 +47,8 @@ var range = function(dateStart, dateEnd, type) {
   } else {
     return 'Not found type :' + type;
   }
-  var timeStart = date2timestamp(dateStart);
-  var timeEnd = date2timestamp(dateEnd);
+  var timeStart = convDate.date2timestamp(dateStart);
+  var timeEnd = convDate.date2timestamp(dateEnd);
   var result = [];
   var i = timeStart;
   while (i <= timeEnd) {
@@ -54,13 +58,13 @@ var range = function(dateStart, dateEnd, type) {
   return result;
 };
 
-function date2timestamp(date) {
-  if (typeof date == 'number') {
-    return date;
-  } else {
-    return (new Date(date)) / 1000;
-  }
-}
+// function date2timestamp(date) {
+//   if (typeof date == 'number') {
+//     return date;
+//   } else {
+//     return (new Date(date)) / 1000;
+//   }
+// }
 
 var date2osmdiffs = {};
 date2osmdiffs.file = file;

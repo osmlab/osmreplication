@@ -8,9 +8,8 @@ module.exports = function(number, type) {
   var file = sequence.toString().substr(6, 3);
   var url = 'http://planet.openstreetmap.org/replication/' + type + '/' + dir1 + '/' + dir2 + '/' + file;
   return {
-    sequenceNumber: number,
-    url_data: url + '.osc.gz',
-    url_state: url + '.state.txt'
+    url_data: url + '.osc.gz'
+    // url_state: url + '.state.txt'
   };
 };
 
