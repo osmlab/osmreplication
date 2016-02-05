@@ -3,13 +3,13 @@ var fs = require('fs');
 var storedIntervals = require('./../src/minutes.js').minutes;
 var scraping = require('./src/scraping');
 var analyze = require('./src/analyze');
+var path = require('path');
 var result = [];
-
 function init(npage) {
   scraping(npage, function(status, pageResult) {
     if (status) {
       result = result.concat(pageResult);
-      numPage++;
+      numPage += 100;
       init(numPage);
     } else {
       result.reverse();
@@ -19,8 +19,8 @@ function init(npage) {
         storedIntervals = _.sortBy(storedIntervals, function(obj) {
           return obj.end;
         });
-        var minuteFile = 'module.exports = { minutes:' + JSON.stringify(storedIntervals) + '}';
-        fs.writeFile('../src/minutes.js', minuteFile, function(err) {});
+        var minuteFile = 'module.exports = { minutes:' + JSON.stringify(storedIntervals) + '};';
+        fs.writeFile(path.join(__dirname, '../src/minutes.js'), minuteFile, function(err) {});
       });
     }
   });
