@@ -1,3 +1,5 @@
+'use strict';
+
 var _ = require('underscore');
 var fs = require('fs');
 var storedIntervals = require('./../src/minutes.js').minutes;

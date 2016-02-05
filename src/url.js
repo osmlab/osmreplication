@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(number, type) {
   var sequence = number;
   sequence = sequence.pad(9);
