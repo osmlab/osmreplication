@@ -19,7 +19,7 @@ function init(npage) {
         intervals.splice(0, 1);
         storedIntervals = storedIntervals.concat(intervals);
         storedIntervals = _.sortBy(storedIntervals, function(obj) {
-          return obj.end;
+          return obj.num;
         });
         var minuteFile = 'module.exports = { minutes:' + JSON.stringify(storedIntervals) + '};';
         fs.writeFile(path.join(__dirname, '../src/minutes.js'), minuteFile, function(err) {});
