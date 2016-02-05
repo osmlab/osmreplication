@@ -23,8 +23,7 @@ var date2osmdiffs = function(date, type) {
     interval = 86400;
   } else {
     return 'Not found type :' + type;
-  }
-  
+  }  
   timestamp = timestamp - timestamp % rest;
   var diffDate = timestamp - startDate;
   var number = parseInt(diffDate / interval) + startNumber;
