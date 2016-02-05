@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rub21/osmreplication.git"
+    "url": "git+https://github.com/osmlab/osmreplication.git"
   },
   "author": "Ruben Lopez M <ruben@mapbox.com> (http://rub21.github.io/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rub21/osmreplication/issues"
+    "url": "https://github.com/osmlab/osmreplication/issues"
   },
-  "homepage": "https://github.com/Rub21/osmreplication#readme",
+  "homepage": "https://github.com/osmlab/osmreplication#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
     "request": "^2.69.0",
