@@ -11,9 +11,10 @@ module.exports = function(npage, done) {
       links.each(function(i, link) {
         var date = $(link).toArray()[0].next.data;
         var file = $(link).text();
+        file = file.replace(/(\r\n|\n|\r)/gm, "").trim();
         if (file.substring(file.length - 7) === '.osc.gz') {
           var repliFile = {};
-          repliFile.end = Date.parse(date.replace(/(\r\n|\n|\r)/gm, "").trim().substr(0, 16))/1000;
+          repliFile.end = Date.parse(date.replace(/(\r\n|\n|\r)/gm, "").trim().substr(0, 16)) / 1000;
           repliFile.num = parseInt(npage + file.substring(0, 3));
           result.push(repliFile);
         }
