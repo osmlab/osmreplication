@@ -9,9 +9,3 @@ module.exports = function(dates, done) {
   }
   done(result);
 };
-
-function timeConverter(UNIX_timestamp) {
-  var timestamp = UNIX_timestamp;
-  var date = new Date(timestamp * 1000);
-  return date.toISOString();
-}
