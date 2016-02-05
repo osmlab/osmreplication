@@ -1,5 +1,5 @@
-var fs = require('fs');
 var _ = require('underscore');
+var fs = require('fs');
 var storedIntervals = require('./../util/minutes.js').minutes;
 var scraping = require('./src/scraping');
 var analyze = require('./src/analyze');
@@ -13,8 +13,12 @@ function init(npage) {
       init(numPage);
     } else {
       result.reverse();
-      fs.writeFile('result.js', JSON.stringify(result), function(err) {});
+      console.log(result.length);
       analyze(result, function(intervals) {
+        fs.writeFile('result.js', JSON.stringify(result), function(err) {});
+        fs.writeFile('storedIntervals.js', JSON.stringify(storedIntervals), function(err) {});
+        storedIntervals = storedIntervals.concat(intervals);
+        fs.writeFile('storedIntervals-result.js', JSON.stringify(storedIntervals), function(err) {});
         console.log(intervals);
       });
     }

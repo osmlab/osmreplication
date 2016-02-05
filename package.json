@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/Rub21/date2osmdiffs#readme",
   "dependencies": {
-    "htmlparser2": "^3.9.0",
-    "moment": "^2.11.2",
+    "cheerio": "^0.20.0",
     "request": "^2.69.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0",
